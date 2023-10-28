@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none !important;
+}
+
+.button {
+    @apply py-2 rounded inline-flex items-center w-max select-none uppercase !important;
+}
+
+.button-return {
+    @apply py-2 rounded inline-flex items-center w-max select-none uppercase !important;
+}
+
+.input-form {
+    @apply block w-full rounded-md border-0 py-2 p-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 !important;
+}
+
+.error-form {
+    @apply text-project-error block m-2 text-right !important;
+}
+
+.icon-container-hover {
+    position: relative;
+    display: inline-block;
+}
+
+.popper-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    transform: translateX(-50%) translateY(-200%) scale(1);
+    white-space: nowrap;
+    z-index: 50;
+}
+
+.icon-container-hover:hover .popper-content {
+    display: block;
+}
