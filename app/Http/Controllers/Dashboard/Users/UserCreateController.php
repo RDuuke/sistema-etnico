@@ -18,7 +18,7 @@ final class UserCreateController {
         try {
 
             $user = $this->repository->create($request->all());
-            $this->repository->assingRole('general', $user); //TODO Provisionalmente
+            $this->repository->assingRole('administrator', $user); //TODO Provisionalmente
             
             return redirect(route('dashboard.users.index'))->with('processResult', [
                 'status' => 1,
@@ -29,7 +29,7 @@ final class UserCreateController {
         } catch (Exception $e) {
             return redirect()->back()->with('processResult', [
                 'status' => 0,
-                $e->getMessage(), 'message' => __('app.user_create_failure')
+                'message' => __('app.user_create_failure')
             ]);
         }
     }

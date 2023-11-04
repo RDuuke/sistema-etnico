@@ -1,15 +1,21 @@
 <?php
 
 return [
-    /** A */
-    'actions' => 'Acciones',
 /** A */
+    'actions' => 'Acciones',
+    'age'     => 'Edad',
+/** A */
+
 /** B */
 /** B */
 
 /** C */
-    'create'        => 'Crear',
-    'create_user'   => 'Crear usuario',
+    'cancel'            => 'Cancelar',
+    'check_in'          => 'Registrarse',
+    'community'         => 'Comunidad',
+    'community_users'   => 'Usuarios comunidades',
+    'create'            => 'Crear',
+    'create_user'       => 'Crear usuario',
 /** C */
 
 /** D */
@@ -18,37 +24,58 @@ return [
 /** D */
 
 /** E */
-    'edit'          => 'Editar',
+    'edit'              => 'Editar',
+    'educational_level' => 'Nivel de escolaridad',
+    'email'             => 'Correo electrónico',
 /** E */
 
 /** F */
 /** F */
+
 /** G */
+    'gender'            => 'Género',
 /** G */
+
 /** H */
 /** H */
+
 /** I */
+    'incorrect_username_and_or_password' => 'Usuario y/o contraseña incorrectos',
 /** I */
+
 /** J */
 /** J */
 /** K */
 /** K */
+
 /** L */
+    'logout' => 'Cerrar sesión',
 /** L */
+
 /** M */
 /** M */
 
 /** N */
     'name'      => 'Nombre',
     'names'     => 'Nombres',
+
+    'not_registered' => '¿No estas registrado?',
 /** N */
 
 /** O */
+    'occupation'         => 'Ocupación',
+    'other_phone_number' => 'Otro número de teléfono',
+
 /** O */
+
 /** P */
+    'phone_number'       => 'Número de teléfono',
+    'platform_users'     => 'Usuarios plataforma',
 /** P */
+
 /** Q */
 /** Q */
+
 /** R */
     'result'    => 'Resultado',
     'results'   => 'Resultados',
@@ -56,12 +83,18 @@ return [
 /** R */
 
 /** S */
-    'search_in' => 'Buscar en',
-    'surnames'  => 'Apellidos',
+    'search_in'     => 'Buscar en',
+    'select_option' => 'Seleccione una opción',
+    'sign_in'       => 'Iniciar sesión',
+    'strategy'      => 'Estrategia',
+    'surnames'      => 'Apellidos',
 /** S */
 
 /** T */
     "there's_nothing_to_show_at_the_moment" => 'No hay nada que mostrar en este momento',
+
+    "training_area" => 'Área de formación',
+    "type_document" => 'Tipo de documento',
 /** T */
 
 /** U */

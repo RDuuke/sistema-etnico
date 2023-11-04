@@ -22,7 +22,7 @@ final class UserDeleteController {
         } catch (Exception $e) {
             return redirect()->back()->with('processResult', [
                 'status' => 0,
-                $e->getMessage(), 'message' => __('app.user_delete_failure')
+                'message' => __('app.user_delete_failure')
             ]);
         }
     }
