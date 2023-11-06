@@ -10,8 +10,15 @@ class GetAllUsersTable extends LivewireDatatable
 {
     public $model = User::class;
 
-    public function columns()
-    {
+    public function builder() {
+        return $this->model::query()
+            ->join('model_has_roles', 'model_has_roles.model_id', '=', 'users.id')
+            ->join('roles', 'roles.id', '=', 'model_has_roles.role_id')
+            ->whereNotIn('model_has_roles.role_id', [1, 3])
+            ->select('users.*', 'model_has_roles.role_id', 'roles.name');
+    }
+
+    public function columns() {
         return [
             Column::name('names')
                 ->label(__('app.names')),

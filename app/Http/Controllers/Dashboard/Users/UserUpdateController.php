@@ -29,7 +29,7 @@ final class UserUpdateController {
         } catch (Exception $e) {
             return redirect()->back()->with('processResult', [
                 'status' => 0,
-                $e->getMessage(), 'message' => __('app.user_update_failure')
+                'message' => __('app.user_update_failure')
             ]);
         }
     }

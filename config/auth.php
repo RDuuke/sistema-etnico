@@ -40,7 +40,12 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'community' => [
+            'driver' => 'session',
+            'provider' => 'community_users',
+        ],
     ],
+
 
     /*
     |--------------------------------------------------------------------------
@@ -63,6 +68,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'community_users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\CommunityUser::class,
         ],
 
         // 'users' => [
@@ -93,6 +102,12 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_reset_tokens',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'community_users' => [
+            'provider' => 'community_users',
             'table' => 'password_reset_tokens',
             'expire' => 60,
             'throttle' => 60,
