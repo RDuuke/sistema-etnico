@@ -30,7 +30,7 @@
             </div>
 
             <div class="sm:col-span-3">
-                <label for="email" class="block text-sm font-medium leading-6 text-gray-900">{{__('email')}}</label>
+                <label for="email" class="block text-sm font-medium leading-6 text-gray-900">{{__('app.email')}}</label>
                 <div class="mt-2">
                     <input type="text" name="email" id="email" value="{{ old('email', $user->email ?? '') }}" autocomplete="family-name" class="input-form">
                     @error('email') <span class="error-form">{{ $message }}</span>@enderror

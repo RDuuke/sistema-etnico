@@ -15,8 +15,6 @@
     * Function to load route files automatically from routers folder
 */
 
-use Illuminate\Support\Facades\Route;
-
 foreach (scandir(dirname(__FILE__)) as $dir) {
     $dirname = dirname(__FILE__) . DIRECTORY_SEPARATOR . $dir;
     if (is_dir($dirname) && !in_array($dir, [".", ".."])) {

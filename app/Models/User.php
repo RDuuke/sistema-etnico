@@ -18,6 +18,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    protected $guard_name = 'web';
     protected $fillable = [
         'names',
         'surnames',
@@ -45,4 +46,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function getFullNameAttribute() {
+        return "{$this->names} {$this->surnames}";
+    }
 }

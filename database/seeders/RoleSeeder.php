@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
 
-class RolesSeeder extends Seeder
+class RoleSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,7 +14,6 @@ class RolesSeeder extends Seeder
      */
     public function run()
     {
-        // Define los datos que deseas insertar o actualizar
         $data = [
             [
                 'id'         => '1',
@@ -28,8 +27,8 @@ class RolesSeeder extends Seeder
             ],
             [
                 'id'         => '3',
-                'name'       => 'general',
-                'guard_name' => 'web',
+                'name'       => 'community',
+                'guard_name' => 'community',
             ],
         ];
 
