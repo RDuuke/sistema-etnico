@@ -2,8 +2,9 @@
 
 return [
 /** A */
-    'actions' => 'Acciones',
-    'age'     => 'Edad',
+    'actions'       => 'Acciones',
+    'administrator' => 'Administrador',
+    'age'           => 'Edad',
 /** A */
 
 /** B */
@@ -14,6 +15,9 @@ return [
     'check_in'          => 'Registrarse',
     'community'         => 'Comunidad',
     'community_users'   => 'Usuarios comunidades',
+
+    'community_coordinator'   => 'Coordinador de comunidad',
+
     'create'            => 'Crear',
     'create_user'       => 'Crear usuario',
 /** C */
@@ -80,6 +84,8 @@ return [
     'result'    => 'Resultado',
     'results'   => 'Resultados',
     'return'    => 'Volver',
+
+    'platform_role'    => 'Rol en plataforma',
 /** R */
 
 /** S */

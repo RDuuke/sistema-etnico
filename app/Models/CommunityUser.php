@@ -60,8 +60,7 @@ class CommunityUser extends Authenticatable {
     {
         return $this->hasOne(Profile::class);
     }
-
-
+    
     public function getFullNameAttribute() {
         return "{$this->names} {$this->surnames}";
     }

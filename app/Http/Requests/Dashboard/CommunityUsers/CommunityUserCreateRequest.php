@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Dashboard\CommunityUsers;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 
 class CommunityUserCreateRequest extends FormRequest
 {
@@ -11,8 +12,10 @@ class CommunityUserCreateRequest extends FormRequest
      *
      * @return bool
      */
+    public $guardWeb = false;
     public function authorize()
     {
+        if (Auth::user()) $this->guardWeb = true; 
         return true;
     }
 
@@ -23,7 +26,7 @@ class CommunityUserCreateRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+        $commonRules = [
             'names'                 => 'required|max:50',
             'surnames'              => 'required|max:50',
             'type_document_id'      => 'required|numeric|exists:type_of_documents,id',
@@ -38,8 +41,11 @@ class CommunityUserCreateRequest extends FormRequest
             'training_area_id'      => 'required|numeric|exists:training_areas,id',
             'occupation_id'         => 'required|numeric|exists:occupations,id',
             'strategy_id'           => 'required|numeric|exists:strategies,id',
-
         ];
+
+        if ($this->guardWeb) return array_merge($commonRules, [ 'role' => 'required' ]);
+        return array_merge($commonRules, ['role' => 'nullable']);
+        
     }
 
     public function messages(): array
@@ -50,6 +56,7 @@ class CommunityUserCreateRequest extends FormRequest
             'email'    => 'El formato ingresado no es valido',
             'unique'   => 'Este valor ya registra en nuestro sistema',
             
+            'role.numeric'      => 'Este campo es requerido',    
             'type_document_id.numeric'      => 'Este campo es requerido',    
             'gender_id.numeric'             => 'Este campo es requerido',
             'community_id.numeric'          => 'Este campo es requerido',
