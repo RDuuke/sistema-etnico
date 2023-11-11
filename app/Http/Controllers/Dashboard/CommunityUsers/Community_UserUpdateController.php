@@ -9,6 +9,7 @@ use Exception;
 
 final class Community_UserUpdateController {
 
+    const COMMUNITY_ROLE = 'community';
     public function __construct(private CommunityUserRepository $repository)
     {
     }
@@ -18,8 +19,15 @@ final class Community_UserUpdateController {
         $request->validated();
 
         try {
+            $role = $request->role;
+
             $community_user = $this->repository->update($id, $request->all());
-            $this->repository->syncRoles($community_user->getRoleNames()[0], $community_user);
+
+            if (is_null($role)) {
+                $this->repository->assingRole(self::COMMUNITY_ROLE, $community_user);
+            } else {
+                $this->repository->assingRole($role, $community_user);
+            }
             
             return redirect(route('dashboard.community-users.index', ['user_id' => $id]))->with('processResult', [
                 'status' => 1,

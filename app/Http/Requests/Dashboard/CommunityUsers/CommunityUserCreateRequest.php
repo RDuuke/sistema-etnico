@@ -26,7 +26,7 @@ class CommunityUserCreateRequest extends FormRequest
      */
     public function rules()
     {
-        $commonRules = [
+        $rules = [
             'names'                 => 'required|max:50',
             'surnames'              => 'required|max:50',
             'type_document_id'      => 'required|numeric|exists:type_of_documents,id',
@@ -43,8 +43,8 @@ class CommunityUserCreateRequest extends FormRequest
             'strategy_id'           => 'required|numeric|exists:strategies,id',
         ];
 
-        if ($this->guardWeb) return array_merge($commonRules, [ 'role' => 'required' ]);
-        return array_merge($commonRules, ['role' => 'nullable']);
+        if ($this->guardWeb) return array_merge($rules, [ 'role' => 'required' ]);
+        return array_merge($rules, ['role' => 'nullable']);
         
     }
 

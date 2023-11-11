@@ -19,8 +19,8 @@
                         @error('role') <span class="error-form">{{ $message }}</span>@enderror
                     </div>
                 </div>
+                <br>
             @endif
-            <br>
             <div class="sm:col-span-3">
                 <label for="names" class="block text-sm font-medium leading-6 text-gray-900">{{__('app.names')}}</label>
                 <div class="mt-2">
