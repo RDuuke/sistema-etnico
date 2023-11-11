@@ -18,16 +18,7 @@ class PermissionSeeder extends Seeder
         $dev        = Role::where('name', 'dev')->first();
         $admin      = Role::where('name', 'administrator')->first();
         $community  = Role::where('name', 'community')->first();
-
-        /** COMMUNITY_USERS */
-            Permission::updateOrCreate(['name' => 'community-users.index'])->syncRoles([$dev, $admin]);
-            Permission::updateOrCreate(['name' => 'community-users.create'])->syncRoles([$dev, $admin]);
-            Permission::updateOrCreate(['name' => 'community-users.store'])->syncRoles([$dev, $admin]);
-            Permission::updateOrCreate(['name' => 'community-users.edit'])->syncRoles([$dev, $admin]);
-            Permission::updateOrCreate(['name' => 'community-users.update'])->syncRoles([$dev, $admin]);
-            Permission::updateOrCreate(['name' => 'community-users.delete'])->syncRoles([$dev, $admin]);
-        /** COMMUNITY_USERS */
-
+        $commCoordinator  = Role::where('name', 'community')->first();
         /** USERS */
             Permission::updateOrCreate(['name' => 'users.index'])->syncRoles([$dev, $admin]);
             Permission::updateOrCreate(['name' => 'users.create'])->syncRoles([$dev, $admin]);
@@ -36,6 +27,7 @@ class PermissionSeeder extends Seeder
             Permission::updateOrCreate(['name' => 'users.update'])->syncRoles([$dev, $admin]);
             Permission::updateOrCreate(['name' => 'users.delete'])->syncRoles([$dev, $admin]);
         /** USERS */
+        
         
     }
 }

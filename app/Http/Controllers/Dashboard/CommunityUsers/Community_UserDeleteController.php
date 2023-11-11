@@ -5,11 +5,12 @@ declare(strict_types=1);
 namespace App\Http\Controllers\Dashboard\CommunityUsers;
 
 use App\Models\CommunityUser;
+use App\Utilities\ValidateRoles;
 use Exception;
 
 final class Community_UserDeleteController {
     public function __invoke(string $id) {
-
+        ValidateRoles::communityCoordinator();
         try {
             $user = CommunityUser::findOrFail($id);
             $user->delete();

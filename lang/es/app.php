@@ -104,6 +104,8 @@ return [
 /** T */
 
 /** U */
+    'unauthorized_access'   => 'Acceso no autorizado',
+
     'update'      => 'Actualizar',
     'update_user' => 'Actualizar usuario',
 

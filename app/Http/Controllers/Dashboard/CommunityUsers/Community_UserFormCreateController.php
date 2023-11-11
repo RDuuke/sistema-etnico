@@ -13,12 +13,13 @@ use App\Models\{
     TrainingArea,
     TypeDocument,
 };
+use App\Utilities\ValidateRoles;
 use Illuminate\Support\Facades\Auth;
 
 final class Community_UserFormCreateController {
     
     public function __invoke() {
-
+        ValidateRoles::communityCoordinator();
         $types_documents    = TypeDocument::all();
         $genders            = Gender::all();
         $communities        = Community::all();
