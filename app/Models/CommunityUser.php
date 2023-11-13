@@ -28,7 +28,6 @@ class CommunityUser extends Authenticatable {
         'phone_1',
         'phone_2',
         'email',
-        'community_id',
         'educational_level_id',
         'training_area_id',
         'occupation_id',
@@ -71,10 +70,6 @@ class CommunityUser extends Authenticatable {
 
     public function belongsToGender() {
         return $this->belongsTo(Gender::class, 'gender_id', 'id');
-    }
-    
-    public function belongsToCommunity() {
-        return $this->belongsTo(Community::class, 'community_id', 'id');
     }
 
     public function belongsToEducationalLevel() {

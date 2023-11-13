@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
                 GenderSeeder::class,
                 EducationalLevelSeeder::class,
                 TrainingAreaSeeder::class,
-                CommunitySeeder::class,
+                TypeCommunitySeeder::class,
                 OccupationSeeder::class,
                 StrategySeeder::class,
                 PermissionSeeder::class
