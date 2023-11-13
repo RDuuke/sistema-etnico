@@ -15,5 +15,10 @@ class Community extends Model
         'name',
         'type_community_id'
     ];
+
+    public function communityUsersPivot() {
+        return $this->belongsToMany(CommunityUser::class)
+            ->withPivot('id', 'community_id', 'community_name', 'user_id', 'user_name', 'user_document', 'user_email');
+    }
     
 }

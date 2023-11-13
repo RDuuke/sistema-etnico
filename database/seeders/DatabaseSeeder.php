@@ -22,7 +22,8 @@ class DatabaseSeeder extends Seeder
                 TypeCommunitySeeder::class,
                 OccupationSeeder::class,
                 StrategySeeder::class,
-                PermissionSeeder::class
+                PermissionSeeder::class,
+                UserAdministratorRole::class,
             ]
         );
     }

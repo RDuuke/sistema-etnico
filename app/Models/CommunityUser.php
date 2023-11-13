@@ -87,4 +87,16 @@ class CommunityUser extends Authenticatable {
     public function belongsToStrategy() {
         return $this->belongsTo(Strategy::class, 'strategy_id', 'id');
     }
+
+    public function communityPivot() {
+        return $this->belongsToMany(Community::class)
+            ->withPivot('id', 'community_id', 'community_name', 'user_id', 'user_name', 'user_document', 'user_email');
+    }
+
+    // public function companiesPivot()
+    // {
+    //     return $this->belongsToMany(Company::class)
+    //         ->withPivot('id', 'user_id', 'user_full_name', 'user_document', 'user_email', 'company_id',  'company_code', 'company_name', 'company_nit');
+    // }
+
 }

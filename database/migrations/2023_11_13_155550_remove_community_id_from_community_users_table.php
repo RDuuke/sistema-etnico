@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('community_users', function (Blueprint $table) {
-            if(! Schema::hasColumn('community_users', 'community_id')) {
+            if( Schema::hasColumn('community_users', 'community_id')) {
                 $table->dropForeign('community_users_community_id_foreign');
                 $table->dropColumn('community_id');
             }
