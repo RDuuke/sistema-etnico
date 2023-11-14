@@ -28,12 +28,14 @@
                                     <a href="{{ route('dashboard.users.index') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium @if(request()->routeIs('dashboard.users.index')) bg-gray-700 @endif">{{__('app.platform_users')}}</a>
                                     <a href="{{ route('dashboard.community-users.index') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium @if(request()->routeIs('dashboard.community-users.index')) bg-gray-700 @endif">{{__('app.community_users')}}</a>
                                     <a href="{{ route('dashboard.communities.index') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium @if(request()->routeIs('dashboard.communities.index')) bg-gray-700 @endif"">{{__('app.communities')}}</a>
+
                                 @endif
 
 
                                 @if(!is_null(Auth::guard('community')->user()) && Auth::guard('community')->user()->hasRole('community_coordinator') && !Auth::guard('web')->user())
                                     <a href="{{ route('dashboard.community-users.index') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium @if(request()->routeIs('dashboard.community-users.index')) bg-gray-700 @endif">{{__('app.community_users')}}</a>
                                     <a href="{{ route('dashboard.communities.index') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium @if(request()->routeIs('dashboard.communities.index')) bg-gray-700 @endif">{{__('app.communities')}}</a>
+
                                 @endif
                             </div>
                         </div>

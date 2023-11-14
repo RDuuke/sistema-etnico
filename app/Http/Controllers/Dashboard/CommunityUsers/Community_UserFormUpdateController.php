@@ -49,5 +49,9 @@ final class Community_UserFormUpdateController {
                 'current_community'
             ]
         ));
+
+        if (Auth::user()) $guardWeb = true; 
+
+        return view('dashboard.community_users.create_and_edit', compact(['types_documents','genders','communities','educational_levels','training_areas','occupations','strategies', 'community_user', 'roles', 'guardWeb']));
     }
 }

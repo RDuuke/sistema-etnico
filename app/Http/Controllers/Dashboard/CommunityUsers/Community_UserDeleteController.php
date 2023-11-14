@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Controllers\Dashboard\CommunityUsers;
 
 use App\Models\CommunityUser;
+
 use App\Models\PivotCommunityUser;
 use App\Repository\CommunityUserRepository;
 use App\Utilities\ValidateRoles;

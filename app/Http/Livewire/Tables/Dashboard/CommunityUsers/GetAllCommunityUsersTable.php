@@ -22,7 +22,6 @@ class GetAllCommunityUsersTable extends LivewireDatatable
         return $this->model::query()
                 ->join('community_community_user', 'community_users.id', 'community_community_user.user_id');
         }
-            
     public function columns() {
         $this->users = CommunityUser::all();
         return [
@@ -36,6 +35,7 @@ class GetAllCommunityUsersTable extends LivewireDatatable
                 ->label(__('app.user')),
             Column::name('community_community_user.community_name')
                 ->label(__('app.community')),
+
             Column::callback('id', function ($id) {
                 $roleId = DB::table('model_has_roles')->where('model_id', $id)->first()->role_id;
                 if ($roleId == self::COMMUNITY) {

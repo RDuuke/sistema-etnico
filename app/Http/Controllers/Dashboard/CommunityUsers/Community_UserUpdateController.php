@@ -35,13 +35,10 @@ final class Community_UserUpdateController {
                 } //TODO momentáneamente para poder actualizar a un coordinador -- porque aun no se definen multiples roles para un usuario
             }
 
-
             $community_user = $this->repository->update($id, $request->all());
             $this->repository->assingRole($userRole, $community_user);
 
             Functions_CommunityUser::validatePivotCommunityUser($community_user, $request->community_id, $this->repository);
-
-
             return redirect(route('dashboard.community-users.index', ['user_id' => $id]))->with('processResult', [
                 'status' => 1,
                 'message' => __('app.user_update_successfully')
