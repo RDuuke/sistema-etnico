@@ -9,6 +9,9 @@ use App\Repository\CommunityUserRepository;
 
 final class Functions_CommunityUser {
     const COMMUNITY_ROLE = 'community';
+    const COMMUNITY_COORDINATOR_ROLE = 'community_coordinator';
+    const PENDING_ENABLEMENT = 0;
+    const ENABLE_USER        = 1;
 
     public static function validatePivotCommunityUser($user, $new_community, CommunityUserRepository $repository) {
         
@@ -21,6 +24,7 @@ final class Functions_CommunityUser {
     public static function addCommunityUser($request, CommunityUserRepository $repository) {
         
         isset($request['role']) ? $role = $request['role'] : $role = null;
+        isset($request['role']) && $request['role'] == self::COMMUNITY_COORDINATOR_ROLE ? $request['enable'] = self::ENABLE_USER : $request['enable'] = self::PENDING_ENABLEMENT;
         
         $community_user = $repository->create($request);
 

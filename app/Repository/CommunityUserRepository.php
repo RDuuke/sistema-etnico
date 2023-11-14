@@ -6,7 +6,6 @@ use App\Models\Community;
 use App\Models\CommunityUser;
 use App\Models\PivotCommunityUser;
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Role;
 
@@ -15,6 +14,7 @@ final class CommunityUserRepository {
 
     public function createPublic(array $data) : CommunityUser {
         return $this->model::create([
+            'enable '              => $data['enable'],
             'names'                => ucwords(strtolower($data['names'])),
             'surnames'             => ucwords(strtolower($data['surnames'])),
             'type_document_id'     => $data['type_document_id'],
@@ -34,6 +34,7 @@ final class CommunityUserRepository {
 
     public function create(array $data) : CommunityUser {
         return $this->model::create([
+            'enable'               => $data['enable'],
             'names'                => ucwords(strtolower($data['names'])),
             'surnames'             => ucwords(strtolower($data['surnames'])),
             'type_document_id'     => $data['type_document_id'],
@@ -68,6 +69,7 @@ final class CommunityUserRepository {
             'occupation_id'        => $data['occupation_id'],
             'strategy_id'          => $data['strategy_id'],
             'password'             => Hash::make($data['document']),
+            'enable'               => $user['enable'],
         ]);
         $user->refresh();
         return $user;

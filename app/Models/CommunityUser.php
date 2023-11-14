@@ -33,6 +33,7 @@ class CommunityUser extends Authenticatable {
         'occupation_id',
         'strategy_id',
         'password',
+        'enable',
     ];
 
     /**

@@ -30,6 +30,7 @@ final class PublicCommunityUserCreateController {
             ]);
             
         } catch (Exception $e) {
+
             return redirect(route('form-login'))->with('processResult', [
                 'status' => 0,
                 'message' => __('app.user_create_failure')

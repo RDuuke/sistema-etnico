@@ -12,9 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('community_users', function (Blueprint $table) {
-            if( Schema::hasColumn('community_users', 'community_id')) {
-                $table->dropForeign('community_users_community_id_foreign');
-                $table->dropColumn('community_id');
+             if(! Schema::hasColumn('community_users', 'enable')) {
+                $table->tinyInteger('enable')->after('id')->comment('1: Verdadero', '0: Falso');
             }
         });
     }
@@ -25,7 +24,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('community_users', function (Blueprint $table) {
-            if(! Schema::hasColumn('community_users', 'community_id')) {
+            if(Schema::hasColumn('community_users', 'enable')) {
+                $table->dropColumn('enable');
             }
         });
     }

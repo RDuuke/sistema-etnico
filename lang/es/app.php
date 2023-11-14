@@ -33,6 +33,8 @@ return [
     'edit'              => 'Editar',
     'educational_level' => 'Nivel de escolaridad',
     'email'             => 'Correo electrónico',
+
+    'disabled_community_user' => 'Usted se encuentra pendiente aprobación, comuníquese con el coordinador de su comunidad',
 /** E */
 
 /** F */

@@ -29,7 +29,7 @@ final class Community_UserCreateController {
             return redirect(route('dashboard.community-users.index'));
 
         } catch (Exception $e) {
-
+            dd($e->getMessage());
             return redirect()->back()->with('processResult', [
                 'status' => 0,
                 'message' => __('app.user_create_failure')
