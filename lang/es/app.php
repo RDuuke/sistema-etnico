@@ -13,6 +13,7 @@ return [
 /** C */
     'cancel'            => 'Cancelar',
     'check_in'          => 'Registrarse',
+    'communities'       => 'Comunidades',
     'community'         => 'Comunidad',
     'community_users'   => 'Usuarios comunidades',
 
@@ -20,6 +21,7 @@ return [
 
     'create'            => 'Crear',
     'create_user'       => 'Crear usuario',
+    'create_community'  => 'Crear comunidad',
 /** C */
 
 /** D */
@@ -99,8 +101,9 @@ return [
 /** T */
     "there's_nothing_to_show_at_the_moment" => 'No hay nada que mostrar en este momento',
 
-    "training_area" => 'Área de formación',
-    "type_document" => 'Tipo de documento',
+    "training_area"     => 'Área de formación',
+    "type_document"     => 'Tipo de documento',
+    "type_of_community" => 'Tipo de comunidad',
 /** T */
 
 /** U */
