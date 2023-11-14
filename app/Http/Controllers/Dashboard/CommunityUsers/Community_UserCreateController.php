@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Dashboard\CommunityUsers;
 
 use App\Http\Requests\Dashboard\CommunityUsers\CommunityUserCreateRequest;
 use App\Repository\CommunityUserRepository;
+use App\Utilities\ValidateRoles;
 use Exception;
+use Illuminate\Support\Facades\Auth;
 
 final class Community_UserCreateController {
 
@@ -15,16 +17,18 @@ final class Community_UserCreateController {
     {}
 
     public function __invoke(CommunityUserCreateRequest $request) {
+        ValidateRoles::communityCoordinator();
         $request->validated();
         try {
 
-            $rol = $request->rol;
+            $role = $request->role;
             $community_user = $this->repository->create($request->all());
 
-            if (is_null($rol)) {
+            if (is_null($role)) {
                 $this->repository->assingRole(self::COMMUNITY_ROLE, $community_user);
             } else {
-                $this->repository->assingRole($rol, $community_user);
+
+                $this->repository->assingRole($role, $community_user);
             }
             
             return redirect(route('dashboard.community-users.index'))->with('processResult', [
