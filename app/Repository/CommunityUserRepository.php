@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Models\Community;
 use App\Models\CommunityUser;
 use App\Models\PivotCommunityUser;
+use App\Utilities\CommunityUser\Constants;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Role;
@@ -121,6 +122,16 @@ final class CommunityUserRepository {
 
     public function deleteUserToPivotCommunityUser(PivotCommunityUser $pivotCommunityUser): void {
         $pivotCommunityUser->delete();
+    }
+
+    public function enableCommunityUser(CommunityUser $user): void {
+        $user->enable = Constants::ENABLE_USER;
+        $user->update();
+    }
+
+    public function disabledCommunityUser(CommunityUser $user): void {
+        $user->enable = Constants::PENDING_ENABLEMENT;
+        $user->update();
     }
 }
 

@@ -3,28 +3,26 @@
 declare(strict_types=1);
 namespace App\Http\Controllers\Dashboard\CommunityUsers;
 
-use App\Http\Requests\Dashboard\CommunityUsers\CommunityUserCreateRequest;
+use App\Models\CommunityUser;
 use App\Repository\CommunityUserRepository;
-use App\Utilities\CommunityUser\Functions_CommunityUser;
 use App\Utilities\ValidateRoles;
 use Exception;
 
-final class Community_UserCreateController {
+final class Community_EnableUserController {
 
     public function __construct(private CommunityUserRepository $repository)
     {}
 
-    public function __invoke(CommunityUserCreateRequest $request) {
+    public function __invoke($id) {
         ValidateRoles::communityCoordinator();
-        $request->validated();
 
         try {
-            
-            Functions_CommunityUser::addCommunityUser($request->all(), $this->repository);
-            
+
+            $this->repository->enableCommunityUser(CommunityUser::find($id));
+
             return redirect(route('dashboard.community-users.index'))->with('processResult', [
                 'status' => 1,
-                'message' => __('app.user_create_successfully')
+                'message' => __('app.user_enable_successfully')
             ]);
             return redirect(route('dashboard.community-users.index'));
 
@@ -32,7 +30,7 @@ final class Community_UserCreateController {
 
             return redirect()->back()->with('processResult', [
                 'status' => 0,
-                'message' => __('app.user_create_failure')
+                'message' => __('app.user_enable_failure')
             ]);
 
         }

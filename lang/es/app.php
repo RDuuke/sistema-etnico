@@ -27,14 +27,17 @@ return [
 /** D */
     'delete'        => 'Eliminar',
     'document'      => 'Documento',
+
+    'disabled_community_user' => 'Usted se encuentra pendiente aprobación, comuníquese con el coordinador de su comunidad',
+    'disabled_user'           => 'Deshabilitar usuario',
 /** D */
 
 /** E */
     'edit'              => 'Editar',
     'educational_level' => 'Nivel de escolaridad',
     'email'             => 'Correo electrónico',
+    'enable_user'       => 'Habilitar usuario',
 
-    'disabled_community_user' => 'Usted se encuentra pendiente aprobación, comuníquese con el coordinador de su comunidad',
 /** E */
 
 /** F */
@@ -123,6 +126,10 @@ return [
     'user_delete_successfully'       => '¡Usuario eliminado exitosamente!',
     'user_update_failure'            => '¡Error al actualizar usuario!',
     'user_update_successfully'       => '¡Usuario actualizado exitosamente!',
+    'user_enable_failure'            => '¡Error al habilitar usuario!',
+    'user_enable_successfully'       => '¡Usuario habilitado exitosamente!',
+    'user_disabled_failure'          => '¡Error al deshabilitar usuario!',
+    'user_disabled_successfully'     => '¡Usuario deshabilitado exitosamente!',
 /** U */
 
 /** V */

@@ -3,6 +3,8 @@
 namespace App\Http\Livewire\Tables\Dashboard\CommunityUsers;
 
 use App\Models\CommunityUser;
+use App\Models\User;
+use App\Utilities\CommunityUser\Constants;
 use Illuminate\Support\Facades\DB;
 use Mediconesystems\LivewireDatatables\Column;
 use Mediconesystems\LivewireDatatables\Http\Livewire\LivewireDatatable;
@@ -14,13 +16,15 @@ class GetAllCommunityUsersTable extends LivewireDatatable
     const COMMUNITY_COORDINATOR = 4;
     const ROLE_COMMUNITY_COORDINATOR = 'community_coordinator';
     public $model = CommunityUser::class;
+    public $users;
 
     public function builder() {
         return $this->model::query()
                 ->join('community_community_user', 'community_users.id', 'community_community_user.user_id');
-    }
-
+        }
+            
     public function columns() {
+        $this->users = CommunityUser::all();
         return [
             Column::name('names')
                 ->label(__('app.names')),
@@ -44,7 +48,8 @@ class GetAllCommunityUsersTable extends LivewireDatatable
                 ->label(__('app.platform_role')),
 
             Column::callback(['id'], function ($id) {
-                return view('livewire.dashboard.community_users.actions.community_users-table-actions', ['id' => $id]);
+                $enable_user = Constants::ENABLE_USER;
+                return view('livewire.dashboard.community_users.actions.community_users-table-actions', ['id' => $id, 'enable' => $this->users->find($id)->enable, 'enable_user' => $enable_user]);
             })
                 ->label(__('app.actions'))
                 ->unsortable()

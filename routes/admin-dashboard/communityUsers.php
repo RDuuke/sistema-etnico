@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Dashboard\CommunityUsers\{
+    Community_DisabledUserController,
+    Community_EnableUserController,
     Community_UserCreateController,
     Community_UserDeleteController,
     Community_UserFormCreateController,
@@ -21,6 +23,8 @@ Route::middleware(['multi.auth:web|community'])->group(function () {
             Route::get('/{id}/edit', Community_UserFormUpdateController::class)->name('dashboard.community-users.edit');
             Route::put('/{id}/update', Community_UserUpdateController::class)->name('dashboard.community-users.update');
             Route::get('/{id}/delete', Community_UserDeleteController::class)->name('dashboard.community-users.delete');
+            Route::get('/{id}/enable', Community_EnableUserController::class)->name('dashboard.community-users.enable');
+            Route::get('/{id}/disabled', Community_DisabledUserController::class)->name('dashboard.community-users.disabled');
         });
     });
 });
