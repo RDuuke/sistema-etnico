@@ -46,3 +46,9 @@
 .icon-container-hover:hover .popper-content {
     display: block;
 }
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: wait;
+}

@@ -12,10 +12,13 @@ class Community extends Model
 
     protected $table = 'communities';
     protected $fillable = [
-        'name'
+        'name',
+        'type_community_id'
     ];
 
-    public function hasManyCommunityUsers() {
-        return $this->hasMany(CommunityUser::class, 'community_id', 'id');
+    public function communityUsersPivot() {
+        return $this->belongsToMany(CommunityUser::class)
+            ->withPivot('id', 'community_id', 'community_name', 'user_id', 'user_name', 'user_document', 'user_email');
     }
+    
 }

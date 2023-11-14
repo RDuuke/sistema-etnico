@@ -5,13 +5,12 @@ namespace App\Http\Controllers\Dashboard\CommunityUsers;
 
 use App\Http\Requests\Dashboard\CommunityUsers\CommunityUserCreateRequest;
 use App\Repository\CommunityUserRepository;
+use App\Utilities\CommunityUser\Functions_CommunityUser;
 use App\Utilities\ValidateRoles;
 use Exception;
 use Illuminate\Support\Facades\Auth;
 
 final class Community_UserCreateController {
-
-    const COMMUNITY_ROLE = 'community';
 
     public function __construct(private CommunityUserRepository $repository)
     {}
@@ -19,7 +18,11 @@ final class Community_UserCreateController {
     public function __invoke(CommunityUserCreateRequest $request) {
         ValidateRoles::communityCoordinator();
         $request->validated();
+
+
         try {
+            
+            Functions_CommunityUser::addCommunityUser($request->all(), $this->repository);
 
             $role = $request->role;
             $community_user = $this->repository->create($request->all());
@@ -38,10 +41,12 @@ final class Community_UserCreateController {
             return redirect(route('dashboard.community-users.index'));
 
         } catch (Exception $e) {
+
             return redirect()->back()->with('processResult', [
                 'status' => 0,
                 'message' => __('app.user_create_failure')
             ]);
+
         }
     }
 }

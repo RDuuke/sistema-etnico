@@ -9,6 +9,7 @@ use App\Models\{
     EducationalLevel,
     Gender,
     Occupation,
+    PivotCommunityUser,
     Strategy,
     TrainingArea,
     TypeDocument,
@@ -30,6 +31,24 @@ final class Community_UserFormUpdateController {
         $strategies         = Strategy::all();
         $roles              = Role::where('guard_name', 'community')->get(['id', 'name']);
         $guardWeb           = false;
+        $current_community  = PivotCommunityUser::where('user_id', $id)->first();
+
+        if (Auth::user()) $guardWeb = true; 
+
+        return view('dashboard.community_users.create_and_edit', compact(
+            [   'types_documents',
+                'genders',
+                'communities',
+                'educational_levels',
+                'training_areas',
+                'occupations',
+                'strategies',
+                'community_user',
+                'roles',
+                'guardWeb',
+                'current_community'
+            ]
+        ));
 
         if (Auth::user()) $guardWeb = true; 
 

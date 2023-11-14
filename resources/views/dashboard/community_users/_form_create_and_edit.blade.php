@@ -136,7 +136,7 @@
                         <option>{{ __('app.select_option') }}</option>
                         @foreach($communities as $community)
                         <option value="{{ $community->id }}"
-                                {{(old('community_id', (isset($community_user->community_id) ? $community_user->community_id : '')) == $community->id) ? 'selected' : '' }}>
+                                {{(old('community_id', (isset($current_community->community_id) ? $current_community->community_id : '')) == $community->id) ? 'selected' : '' }}>
                             {{ $community->name }}
                         </option>
                         @endforeach
