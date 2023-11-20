@@ -10,48 +10,60 @@
     @livewireStyles
     @stack('styles')
     @yield('style')
+    <style>
+        body {
+            background-image: url('images/login.png');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: #FFF;
+            text-shadow: 0px 2px 0px #000;
+        }
+    </style>
 </head>
 
-<body>
+<body style="margin-top: 20px;">
+    
     @if(! is_null(session('processResult')))
         <x-helpers.alert type="{{ session('processResult')['status'] }}" message="{{ session('processResult')['message'] }}"></x-helpers.alert>
     @endif
-    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img class="mx-auto h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Sistema étnico">
-            <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">SISTEMA ÉTNICO</h2>
-        </div>
-
-        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-
-            <form class="space-y-6" action="{{ route('login') }}" method="POST">
-                <div>
-                    <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Usuario</label>
-                    <div class="mt-2">
-                        <input name="email" id="email" value="{{ old('email', $user->document ?? '') }}" autocomplete="given-name" class="input-form">
-                        @error('email') <span class="error-form">{{ $message }}</span>@enderror
+    <div class="flex flex-col items-center justify-center h-screen">
+        <h1 class="text-center text-5xl font-bold text-white mb-12">SISTEMA DE INFORMACIÓN ÉTNICO</h1>
+        <div class="border w-[30rem] h-[28rem]" style="background: rgba(29, 27, 27, 0.72);">
+            <h2 class="text-center text-2xl font-bold text-white pt-10 pb-4">Bienvenido</h2>
+            <div class="mx-10">
+                <form class="space-y-6" action="{{ route('login') }}" method="POST">
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-white">Usuario</label>
+                        <div class="mt-2">
+                            <input name="email" id="email" value="{{ old('email', $user->document ?? '') }}" autocomplete="given-name" class="input-form-login">
+                            @error('email') <span class="error-form">{{ $message }}</span>@enderror
+                        </div>
                     </div>
-                </div>
-
-                <div>
-                    <div class="flex items-center justify-between">
-                        <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Contraseña</label>
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <label for="password" class="block text-sm font-medium text-white">Contraseña</label>
+                        </div>
+                        <div class="mt-2">
+                            <input type="password" name="password" id="password" autocomplete="current-password" value="{{ old('password', $user->document ?? '') }}" autocomplete="given-name" class="input-form-login">
+                            @error('password') <span class="error-form">{{ $message }}</span>@enderror
+                            @error('incorrect-credentials') <span class="error-form">{{ $message }}</span>@enderror
+                        </div>
                     </div>
-                    <div class="mt-2">
-                        <input type="password" name="password" id="password" autocomplete="current-password" value="{{ old('password', $user->document ?? '') }}" autocomplete="given-name" class="input-form">
-                        @error('password') <span class="error-form">{{ $message }}</span>@enderror
-                        @error('incorrect-credentials') <span class="error-form">{{ $message }}</span>@enderror
+                    @csrf
+                    <div>
+                        <button type="submit" class="flex justify-center px-3 py-2 text-white button-login font-bold">{{__('app.begin')}}</button>
                     </div>
-                </div>
-                @csrf
-                <div>
-                    <button type="submit" class="flex w-full justify-center rounded-md px-3 py-2 bg-gray-800 hover:bg-gray-700 text-white ">{{__('app.sign_in')}}</button>
-                </div>
-            </form>
-
-            <p class="mt-10 text-center text-sm text-gray-500"> {{__('app.not_registered')}}
-                <a href="{{route('form-register')}}" class="font-semibold leading-6 text-gray-800 hover:text-gray-700">{{__('app.check_in')}}</a>
-            </p>
+                </form>
+                <p class="select-none mt-4 mb-2 text-center text-sm text-white font-bold opacity-50 cursor-not-allowed"> {{__('app.you_lost_your_password')}}</p>
+                <p class="select-none text-center text-sm text-white font-bold"> {{__('app.not_registered')}}
+                    <a href="{{route('form-register')}}" class="font-bold underline text-white">{{__('app.check_in')}}</a>
+                </p>
+            </div>
         </div>
     </div>
     @livewireScripts

@@ -8,11 +8,12 @@ return [
 /** A */
 
 /** B */
+    'begin' => 'Inicio',
 /** B */
 
 /** C */
     'cancel'            => 'Cancelar',
-    'check_in'          => 'Registrarse',
+    'check_in'          => 'Registrarte',
     'communities'       => 'Comunidades',
     'community'         => 'Comunidad',
     'community_users'   => 'Usuarios comunidades',
@@ -70,7 +71,7 @@ return [
     'name'      => 'Nombre',
     'names'     => 'Nombres',
 
-    'not_registered' => '¿No estas registrado?',
+    'not_registered' => '¿No tienes cuenta?',
 /** N */
 
 /** O */
@@ -139,6 +140,7 @@ return [
 /** X */
 /** X */
 /** Y */
+    'you_lost_your_password' => '¿Perdiste tu contraseña?',
 /** Y */
 /** Z */
 /** Z */
