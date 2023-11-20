@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Community;
+use App\Models\TypeCommunity;
 use Illuminate\Database\Seeder;
 
-class CommunitySeeder extends Seeder
+class TypeCommunitySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -23,6 +23,6 @@ class CommunitySeeder extends Seeder
             ['id' => '6', 'name' => 'otros '],
         ];
 
-        Community::upsert($data, ['id'], ['name']);
+        TypeCommunity::upsert($data, ['id'], ['name']);
     }
 }

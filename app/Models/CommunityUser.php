@@ -28,12 +28,12 @@ class CommunityUser extends Authenticatable {
         'phone_1',
         'phone_2',
         'email',
-        'community_id',
         'educational_level_id',
         'training_area_id',
         'occupation_id',
         'strategy_id',
         'password',
+        'enable',
     ];
 
     /**
@@ -60,8 +60,7 @@ class CommunityUser extends Authenticatable {
     {
         return $this->hasOne(Profile::class);
     }
-
-
+    
     public function getFullNameAttribute() {
         return "{$this->names} {$this->surnames}";
     }
@@ -72,10 +71,6 @@ class CommunityUser extends Authenticatable {
 
     public function belongsToGender() {
         return $this->belongsTo(Gender::class, 'gender_id', 'id');
-    }
-    
-    public function belongsToCommunity() {
-        return $this->belongsTo(Community::class, 'community_id', 'id');
     }
 
     public function belongsToEducationalLevel() {
@@ -93,4 +88,16 @@ class CommunityUser extends Authenticatable {
     public function belongsToStrategy() {
         return $this->belongsTo(Strategy::class, 'strategy_id', 'id');
     }
+
+    public function communityPivot() {
+        return $this->belongsToMany(Community::class)
+            ->withPivot('id', 'community_id', 'community_name', 'user_id', 'user_name', 'user_document', 'user_email');
+    }
+
+    // public function companiesPivot()
+    // {
+    //     return $this->belongsToMany(Company::class)
+    //         ->withPivot('id', 'user_id', 'user_full_name', 'user_document', 'user_email', 'company_id',  'company_code', 'company_name', 'company_nit');
+    // }
+
 }

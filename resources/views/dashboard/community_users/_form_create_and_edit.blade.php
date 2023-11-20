@@ -2,6 +2,25 @@
     <div class="border-b border-gray-900/10 pb-12">
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
 
+            @if ($guardWeb)                
+                <div class="sm:col-span-3">
+                    <label for="role" class="block text-sm font-medium leading-6 text-gray-900">{{__('app.rol para el usuario')}}</label>
+                    <div class="mt-2">
+                        <select id="role" name="role" autocomplete="role"
+                            class="select-form">
+                            <option value="">{{ __('app.select_option') }}</option>
+                            @foreach($roles as $role)
+                            <option value="{{ $role->name }}"
+                                    {{(old('role', (isset($community_user) ? $community_user->hasRole($role->name) : '')) == $role->name) ? 'selected' : '' }}>
+                                {{ __('app.' . $role->name) }}
+                            </option>
+                            @endforeach
+                        </select>
+                        @error('role') <span class="error-form">{{ $message }}</span>@enderror
+                    </div>
+                </div>
+                <br>
+            @endif
             <div class="sm:col-span-3">
                 <label for="names" class="block text-sm font-medium leading-6 text-gray-900">{{__('app.names')}}</label>
                 <div class="mt-2">
@@ -117,7 +136,7 @@
                         <option>{{ __('app.select_option') }}</option>
                         @foreach($communities as $community)
                         <option value="{{ $community->id }}"
-                                {{(old('community_id', (isset($community_user->community_id) ? $community_user->community_id : '')) == $community->id) ? 'selected' : '' }}>
+                                {{(old('community_id', (isset($current_community->community_id) ? $current_community->community_id : '')) == $community->id) ? 'selected' : '' }}>
                             {{ $community->name }}
                         </option>
                         @endforeach

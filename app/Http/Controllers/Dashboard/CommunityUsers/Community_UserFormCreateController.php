@@ -3,6 +3,7 @@
 declare(strict_types=1);
 namespace App\Http\Controllers\Dashboard\CommunityUsers;
 
+use Spatie\Permission\Models\Role;
 use App\Models\{
     Community,
     EducationalLevel,
@@ -12,11 +13,13 @@ use App\Models\{
     TrainingArea,
     TypeDocument,
 };
+use App\Utilities\ValidateRoles;
+use Illuminate\Support\Facades\Auth;
 
 final class Community_UserFormCreateController {
     
     public function __invoke() {
-
+        ValidateRoles::communityCoordinator();
         $types_documents    = TypeDocument::all();
         $genders            = Gender::all();
         $communities        = Community::all();
@@ -24,7 +27,11 @@ final class Community_UserFormCreateController {
         $training_areas     = TrainingArea::all();
         $occupations        = Occupation::all();
         $strategies         = Strategy::all();
+        $roles              = Role::where('guard_name', 'community')->get(['id', 'name']);
+        $guardWeb           = false;
 
-        return view('dashboard.community_users.create_and_edit', compact('types_documents','genders','communities','educational_levels','training_areas','occupations','strategies'));
+        if (Auth::user()) $guardWeb = true; 
+
+        return view('dashboard.community_users.create_and_edit', compact('types_documents','genders','communities','educational_levels','training_areas','occupations','strategies', 'roles', 'guardWeb'));
     }
 }

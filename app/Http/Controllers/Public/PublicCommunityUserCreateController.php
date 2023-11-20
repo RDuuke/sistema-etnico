@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Public;
 
 use App\Http\Requests\Dashboard\CommunityUsers\PublicCommunityUserRequest;
 use App\Repository\CommunityUserRepository;
+use App\Utilities\CommunityUser\Functions_CommunityUser;
 use Exception;
 
 final class PublicCommunityUserCreateController {
@@ -21,23 +22,16 @@ final class PublicCommunityUserCreateController {
 
         try {
 
-            $rol = $request->rol;
-            $community_user = $this->repository->createPublic($request->all());
-            
-            if(is_null($rol)) {
-                $this->repository->assingRole(self::COMMUNITY_ROLE , $community_user);
-            } else {
-                $this->repository->assingRole($rol, $community_user);
-            }
-            
-            
+            Functions_CommunityUser::addCommunityUser($request->all(), $this->repository);
+
             return redirect(route('form-login'))->with('processResult', [
                 'status' => 1,
                 'message' => __('app.user_create_successfully')
             ]);
             
         } catch (Exception $e) {
-            return redirect()->back()->with('processResult', [
+
+            return redirect(route('form-login'))->with('processResult', [
                 'status' => 0,
                 'message' => __('app.user_create_failure')
             ]);

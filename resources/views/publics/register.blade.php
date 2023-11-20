@@ -10,36 +10,39 @@
     @livewireStyles
     @stack('styles')
     @yield('style')
+    <style>
+        body {
+            background-image: url('images/register.png');
+            background-size: cover;
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
 </head>
 
 <body>
-    <form
-        action="{{route('register')}}"
-        method="POST" enctype="multipart/form-data">
+    <form action="{{route('register')}}" method="POST" enctype="multipart/form-data">
         @if(isset($user))
         @method('put')
         @endif
         @csrf
-        <div class="shadow">
-            <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-28">
-                <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{__('app.check_in')}}</h1>
+    <div class="flex items-center justify-center h-screen">
+        <div class="px-14 py-4" style="background: rgba(29, 27, 27, 0.72);">
+            <div class="border-b border-gray-900/10 pb-12">
+            <h1 class="text-center text-3xl font-bold text-white">{{__('app.check_in')}}</h1>
+                <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-12">
+                    @include('publics._form_register')
+                </div>
+            </div>
+            <div class=" flex flex-col items-center justify-center gap-x-6">
+                <button type="submit" class="px-20 py-2 mb-2 button-register text-white">{{__('app.check_in')}}</button>
+                <a class="font-bold text-white underline" href="{{route('form-login')}}">{{__('app.cancel')}}</a>
             </div>
         </div>
-    
-        <div class="px-40 py-10">
-
-            @include('publics._form_register')
-
-        <div class="mt-6 flex items-center justify-end gap-x-6">
-            <button type="button" class="px-10 py-2 button-return  hover:bg-gray-200 text-black font-bold">
-                <a href="{{route('form-login')}}">{{__('app.cancel')}}</a>
-            </button>
-            <button type="submit" class="px-10 py-2 button bg-gray-800 hover:bg-gray-700 text-white">{{__('app.check_in')}}</button>
-        </div>
-        </div>
+    </div>
     </form>
 
-    
+
     @livewireScripts
     @stack('scripts')
     @stack('js')

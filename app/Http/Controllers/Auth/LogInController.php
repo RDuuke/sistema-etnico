@@ -19,6 +19,12 @@ class LogInController extends Controller
         }
 
         if (Auth::guard('community')->attempt($credentials)) {
+            if(Auth::guard('community')->user()->enable == 0) {
+                return redirect(route('form-login'))->with('processResult', [
+                    'status' => 0,
+                    'message' => __('app.disabled_community_user')
+                ]);
+            };
             $request->session()->regenerate();
             return redirect()->intended('dashboard');
         }

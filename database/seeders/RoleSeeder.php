@@ -30,6 +30,11 @@ class RoleSeeder extends Seeder
                 'name'       => 'community',
                 'guard_name' => 'community',
             ],
+            [
+                'id'         => '4',
+                'name'       => 'community_coordinator',
+                'guard_name' => 'community',
+            ],
         ];
 
         Role::upsert($data, ['id'], ['name', 'guard_name']);
