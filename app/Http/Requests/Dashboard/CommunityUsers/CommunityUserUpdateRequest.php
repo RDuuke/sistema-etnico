@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Dashboard\CommunityUsers;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
 
 class CommunityUserUpdateRequest extends FormRequest
@@ -12,8 +13,10 @@ class CommunityUserUpdateRequest extends FormRequest
      *
      * @return bool
      */
+    public $guardWeb = false;
     public function authorize()
     {
+        if (Auth::user()) $this->guardWeb = true; 
         return true;
     }
 
@@ -24,7 +27,7 @@ class CommunityUserUpdateRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+        $rules = [
             'names'                 => 'required|max:50',
             'surnames'              => 'required|max:50',
             'type_document_id'      => 'required|numeric|exists:type_of_documents,id',
@@ -40,6 +43,9 @@ class CommunityUserUpdateRequest extends FormRequest
             'occupation_id'         => 'required|numeric|exists:occupations,id',
             'strategy_id'           => 'required|numeric|exists:strategies,id',
         ];
+
+        if ($this->guardWeb) return array_merge($rules, ['role' => 'required']);
+        return array_merge($rules, ['role' => 'nullable']);
     }
 
     public function messages(): array

@@ -2,31 +2,43 @@
 
 return [
 /** A */
-    'actions' => 'Acciones',
-    'age'     => 'Edad',
+    'actions'       => 'Acciones',
+    'administrator' => 'Administrador',
+    'age'           => 'Edad',
 /** A */
 
 /** B */
+    'begin' => 'Inicio',
 /** B */
 
 /** C */
     'cancel'            => 'Cancelar',
-    'check_in'          => 'Registrarse',
+    'check_in'          => 'Regístrate',
+    'communities'       => 'Comunidades',
     'community'         => 'Comunidad',
     'community_users'   => 'Usuarios comunidades',
+
+    'community_coordinator'   => 'Coordinador de comunidad',
+
     'create'            => 'Crear',
     'create_user'       => 'Crear usuario',
+    'create_community'  => 'Crear comunidad',
 /** C */
 
 /** D */
     'delete'        => 'Eliminar',
     'document'      => 'Documento',
+
+    'disabled_community_user' => 'Usted se encuentra pendiente aprobación, comuníquese con el coordinador de su comunidad',
+    'disabled_user'           => 'Deshabilitar usuario',
 /** D */
 
 /** E */
     'edit'              => 'Editar',
     'educational_level' => 'Nivel de escolaridad',
     'email'             => 'Correo electrónico',
+    'enable_user'       => 'Habilitar usuario',
+
 /** E */
 
 /** F */
@@ -59,7 +71,7 @@ return [
     'name'      => 'Nombre',
     'names'     => 'Nombres',
 
-    'not_registered' => '¿No estas registrado?',
+    'not_registered' => '¿No tienes cuenta?',
 /** N */
 
 /** O */
@@ -80,6 +92,8 @@ return [
     'result'    => 'Resultado',
     'results'   => 'Resultados',
     'return'    => 'Volver',
+
+    'platform_role'    => 'Rol en plataforma',
 /** R */
 
 /** S */
@@ -93,11 +107,14 @@ return [
 /** T */
     "there's_nothing_to_show_at_the_moment" => 'No hay nada que mostrar en este momento',
 
-    "training_area" => 'Área de formación',
-    "type_document" => 'Tipo de documento',
+    "training_area"     => 'Área de formación',
+    "type_document"     => 'Tipo de documento',
+    "type_of_community" => 'Tipo de comunidad',
 /** T */
 
 /** U */
+    'unauthorized_access'   => 'Acceso no autorizado',
+
     'update'      => 'Actualizar',
     'update_user' => 'Actualizar usuario',
 
@@ -110,6 +127,10 @@ return [
     'user_delete_successfully'       => '¡Usuario eliminado exitosamente!',
     'user_update_failure'            => '¡Error al actualizar usuario!',
     'user_update_successfully'       => '¡Usuario actualizado exitosamente!',
+    'user_enable_failure'            => '¡Error al habilitar usuario!',
+    'user_enable_successfully'       => '¡Usuario habilitado exitosamente!',
+    'user_disabled_failure'          => '¡Error al deshabilitar usuario!',
+    'user_disabled_successfully'     => '¡Usuario deshabilitado exitosamente!',
 /** U */
 
 /** V */
@@ -119,6 +140,7 @@ return [
 /** X */
 /** X */
 /** Y */
+    'you_lost_your_password' => '¿Perdiste tu contraseña?',
 /** Y */
 /** Z */
 /** Z */
