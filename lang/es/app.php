@@ -13,7 +13,7 @@ return [
 
 /** C */
     'cancel'            => 'Cancelar',
-    'check_in'          => 'Registrarte',
+    'check_in'          => 'Regístrate',
     'communities'       => 'Comunidades',
     'community'         => 'Comunidad',
     'community_users'   => 'Usuarios comunidades',

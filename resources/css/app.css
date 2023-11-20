@@ -18,6 +18,17 @@
     background: rgba(16, 231, 218, 0.5);
 }
 
+.button-register {
+    font-weight: bold;
+    border-radius: 1.625rem 0rem;
+    background: rgba(16, 231, 218, 0.70);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.button-register:hover {
+    background: rgba(16, 231, 218, 0.5);
+}
+
 .button {
     @apply py-2 rounded inline-flex items-center w-max select-none uppercase !important;
 }
@@ -28,6 +39,18 @@
 
 .input-form-login {
     @apply block w-full border-0 py-3 p-3 text-gray-900 !important;
+    background: rgba(255, 255, 255, 0.70)!important;
+    opacity: 50%;
+}
+
+.input-form-register {
+    @apply block w-full border-0 py-1 p-1 text-gray-900 !important;
+    background: rgba(255, 255, 255, 0.70)!important;
+    opacity: 50%;
+}
+
+.select-form-register{
+    @apply block w-full border-0 py-1.5 p-3 text-gray-900 focus:ring-2 focus:ring-inset sm:text-sm !important;
     background: rgba(255, 255, 255, 0.70)!important;
     opacity: 50%;
 }

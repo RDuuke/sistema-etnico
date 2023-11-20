@@ -33,7 +33,7 @@
     @endif
     <div class="flex flex-col items-center justify-center h-screen">
         <h1 class="text-center text-5xl font-bold text-white mb-12">SISTEMA DE INFORMACIÓN ÉTNICO</h1>
-        <div class="border w-[30rem] h-[28rem]" style="background: rgba(29, 27, 27, 0.72);">
+        <div class="w-[30rem] h-[28rem]" style="background: rgba(29, 27, 27, 0.72);">
             <h2 class="text-center text-2xl font-bold text-white pt-10 pb-4">Bienvenido</h2>
             <div class="mx-10">
                 <form class="space-y-6" action="{{ route('login') }}" method="POST">
