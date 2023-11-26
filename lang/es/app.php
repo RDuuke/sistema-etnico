@@ -53,6 +53,8 @@ return [
 
 /** I */
     'incorrect_username_and_or_password' => 'Usuario y/o contraseña incorrectos',
+
+    'internal_user' => 'Usuarios internos',
 /** I */
 
 /** J */
@@ -118,7 +120,9 @@ return [
     'update'      => 'Actualizar',
     'update_user' => 'Actualizar usuario',
 
-    'user'        => 'Usuario',
+    'user'              => 'Usuario',
+    'user_management'   => 'Gestión de usuarios',
+
     'users'       => 'Usuarios',
 
     'user_create_failure'            => '¡Error al crear usuario!',

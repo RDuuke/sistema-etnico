@@ -16,6 +16,7 @@ final class UserUpdateController {
 
     public function __invoke(UserUpdateRequest $request, string $id)
     {
+        session(['actualSection' => 'users']);
         $request->validated();
 
         try {

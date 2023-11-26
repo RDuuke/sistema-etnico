@@ -16,6 +16,7 @@ final class Community_UserCreateController {
     {}
 
     public function __invoke(CommunityUserCreateRequest $request) {
+        session(['actualSection' => 'communities']);
         ValidateRoles::communityCoordinator();
         $request->validated();
 
