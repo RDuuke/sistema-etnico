@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+module.exports = {  
   content: [
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
@@ -10,7 +10,9 @@ module.exports = {
         project: {
           'base': '#F43F5E',
           'error': '#F43F5E',
-          'icon-hover': '#0369A1'
+          'icon-hover': '#0369A1',
+          'sidebar': '#847267',
+          'primary': '#10e7da80',
         }
       }, padding: {
         '0': '0',

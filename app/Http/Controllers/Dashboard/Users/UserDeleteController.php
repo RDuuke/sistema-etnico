@@ -10,6 +10,7 @@ use Exception;
 final class UserDeleteController {
     public function __invoke(string $id) {
 
+        session(['actualSection' => 'users']);
         try {
 
             $user = User::findOrFail($id);

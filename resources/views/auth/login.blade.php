@@ -12,7 +12,7 @@
     @yield('style')
     <style>
         body {
-            background-image: url('images/login.png');
+            background-image: url('images/login-v2.png');
             background-size: cover;
             background-position: center;
             margin: 0;
@@ -61,7 +61,7 @@
                 </form>
                 <p class="select-none mt-4 mb-2 text-center text-sm text-white font-bold opacity-50 cursor-not-allowed"> {{__('app.you_lost_your_password')}}</p>
                 <p class="select-none text-center text-sm text-white font-bold"> {{__('app.not_registered')}}
-                    <a href="{{route('form-register')}}" class="font-bold underline text-white">{{__('app.check_in')}}</a>
+                    <a href="{{route('form-register')}}" class="font-bold underline text-[#18AC9F]">{{__('app.check_in')}}</a>
                 </p>
             </div>
         </div>
