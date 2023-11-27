@@ -6,10 +6,18 @@
     display: none !important;
 }
 
+body {
+    background-image: url("/public/images/background-body.png");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+}
+
 .button-login {
-    background: rgba(16, 231, 218, 0.70);
-    box-shadow: 0px 3px 3px 0px rgba(255, 255, 255, 0.70),
-                3px 0px 3px 0px rgba(255, 255, 255, 0.70);
+    border-radius: 1.625rem 0rem;
+    background: rgba(16, 231, 218, 0.7);
+    box-shadow: 0px 3px 3px 0px rgba(255, 255, 255, 0.7),
+        3px 0px 3px 0px rgba(255, 255, 255, 0.7);
     width: 100%;
     margin-top: 35px;
 }
@@ -21,7 +29,7 @@
 .button-register {
     font-weight: bold;
     border-radius: 1.625rem 0rem;
-    background: rgba(16, 231, 218, 0.70);
+    background: rgba(16, 231, 218, 0.7);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -39,28 +47,32 @@
 
 .input-form-login {
     @apply block w-full border-0 py-3 p-3 text-gray-900 !important;
-    background: rgba(255, 255, 255, 0.70)!important;
-    opacity: 50%;
+    background: rgba(255, 255, 255, 0.7) !important;
+    opacity: 80%;
 }
 
 .input-form-register {
-    @apply block w-full border-0 py-1 p-1 text-gray-900 !important;
-    background: rgba(255, 255, 255, 0.70)!important;
-    opacity: 50%;
+    @apply block w-full border-0 py-1 p-2 text-gray-900 !important;
+    background: rgba(255, 255, 255, 0.7) !important;
+    opacity: 80%;
 }
 
-.select-form-register{
+.select-form-register {
     @apply block w-full border-0 py-1.5 p-3 text-gray-900 focus:ring-2 focus:ring-inset sm:text-sm !important;
-    background: rgba(255, 255, 255, 0.70)!important;
-    opacity: 50%;
+    background: rgba(255, 255, 255, 0.7) !important;
+    opacity: 80%;
 }
 
 .input-form {
-    @apply block w-full border-0 py-2 p-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 !important;
+    @apply block w-full border border-black py-1 p-2 text-gray-900 !important;
+    background: rgba(255, 255, 255, 0.7) !important;
+    opacity: 80%;
 }
 
 .select-form {
-    @apply block w-full border-0 py-2 p-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 !important;
+    @apply block w-full border border-black py-1.5 p-3 text-gray-900 focus:ring-2 focus:ring-inset sm:text-sm !important;
+    background: rgba(255, 255, 255, 0.7) !important;
+    opacity: 80%;
 }
 
 .error-form {
@@ -92,4 +104,22 @@
     opacity: 0.5;
     pointer-events: none;
     cursor: wait;
+}
+
+.sidebar {
+    @apply h-full px-3 py-4 overflow-y-auto;
+    background-color: rgba(132, 114, 103, 0.67);
+    color: #fff;
+}
+
+.sidebar__button {
+    @apply flex items-center w-full p-2 text-base transition duration-75 hover:bg-project-sidebar select-none;
+}
+
+.sidebar__li {
+    @apply flex items-center w-full p-2 transition duration-75 pl-11 hover:bg-project-sidebar select-none;
+}
+
+.label-form {
+    @apply text-sm font-bold text-black !important;
 }

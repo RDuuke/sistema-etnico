@@ -16,6 +16,7 @@ final class Community_UserDeleteController {
     {
     }
     public function __invoke(string $id) {
+        session(['actualSection' => 'communities']);
         ValidateRoles::communityCoordinator();
         try {
             $user = CommunityUser::findOrFail($id);
