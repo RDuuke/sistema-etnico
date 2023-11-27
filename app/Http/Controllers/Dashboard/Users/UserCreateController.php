@@ -14,6 +14,7 @@ final class UserCreateController {
 
     public function __invoke(UserCreateRequest $request) {
 
+        session(['actualSection' => 'users']);
         $request->validated();
         try {
 

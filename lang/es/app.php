@@ -21,7 +21,7 @@ return [
     'community_coordinator'   => 'Coordinador de comunidad',
 
     'create'            => 'Crear',
-    'create_user'       => 'Crear usuario',
+    'create_user'       => 'Adicionar usuario',
     'create_community'  => 'Crear comunidad',
 /** C */
 
@@ -42,6 +42,8 @@ return [
 /** E */
 
 /** F */
+    'platform_users'     => 'Usuarios plataforma',
+    'platform_role'      => 'Rol en plataforma',
 /** F */
 
 /** G */
@@ -53,11 +55,14 @@ return [
 
 /** I */
     'incorrect_username_and_or_password' => 'Usuario y/o contraseña incorrectos',
+
+    'internal_user' => 'Usuarios internos',
 /** I */
 
 /** J */
 /** J */
 /** K */
+    'keep' => 'Guardar',
 /** K */
 
 /** L */
@@ -82,7 +87,6 @@ return [
 
 /** P */
     'phone_number'       => 'Número de teléfono',
-    'platform_users'     => 'Usuarios plataforma',
 /** P */
 
 /** Q */
@@ -93,7 +97,9 @@ return [
     'results'   => 'Resultados',
     'return'    => 'Volver',
 
-    'platform_role'    => 'Rol en plataforma',
+    'role_for_user'    => 'Rol para el usuario',
+    
+
 /** R */
 
 /** S */
@@ -118,7 +124,9 @@ return [
     'update'      => 'Actualizar',
     'update_user' => 'Actualizar usuario',
 
-    'user'        => 'Usuario',
+    'user'              => 'Usuario',
+    'user_management'   => 'Gestión de usuarios',
+
     'users'       => 'Usuarios',
 
     'user_create_failure'            => '¡Error al crear usuario!',
