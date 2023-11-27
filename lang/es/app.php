@@ -42,6 +42,8 @@ return [
 /** E */
 
 /** F */
+    'platform_users'     => 'Usuarios plataforma',
+    'platform_role'      => 'Rol en plataforma',
 /** F */
 
 /** G */
@@ -85,7 +87,6 @@ return [
 
 /** P */
     'phone_number'       => 'Número de teléfono',
-    'platform_users'     => 'Usuarios plataforma',
 /** P */
 
 /** Q */
@@ -96,7 +97,9 @@ return [
     'results'   => 'Resultados',
     'return'    => 'Volver',
 
-    'platform_role'    => 'Rol en plataforma',
+    'role_for_user'    => 'Rol para el usuario',
+    
+
 /** R */
 
 /** S */

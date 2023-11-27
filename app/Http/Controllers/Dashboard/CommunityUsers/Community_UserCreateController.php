@@ -8,10 +8,11 @@ use App\Repository\CommunityUserRepository;
 use App\Utilities\CommunityUser\Functions_CommunityUser;
 use App\Utilities\ValidateRoles;
 use Exception;
-use Illuminate\Support\Facades\Auth;
 
 final class Community_UserCreateController {
 
+    const COMMUNITY_ROLE = 'community';
+    const COORDINATOR_COMMUNITY_ROLE = 'community_coordinator';
     public function __construct(private CommunityUserRepository $repository)
     {}
 
@@ -22,18 +23,13 @@ final class Community_UserCreateController {
 
 
         try {
+            $role = $request->role;
+            $request['enable'] = 0;
+            if (!is_null($role) && $role == SELF::COORDINATOR_COMMUNITY_ROLE) {
+                $request['enable'] = 1;
+            }
             
             Functions_CommunityUser::addCommunityUser($request->all(), $this->repository);
-
-            $role = $request->role;
-            $community_user = $this->repository->create($request->all());
-
-            if (is_null($role)) {
-                $this->repository->assingRole(self::COMMUNITY_ROLE, $community_user);
-            } else {
-
-                $this->repository->assingRole($role, $community_user);
-            }
             
             return redirect(route('dashboard.community-users.index'))->with('processResult', [
                 'status' => 1,
@@ -42,7 +38,6 @@ final class Community_UserCreateController {
             return redirect(route('dashboard.community-users.index'));
 
         } catch (Exception $e) {
-
             return redirect()->back()->with('processResult', [
                 'status' => 0,
                 'message' => __('app.user_create_failure')
