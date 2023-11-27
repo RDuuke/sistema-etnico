@@ -21,7 +21,7 @@ return [
     'community_coordinator'   => 'Coordinador de comunidad',
 
     'create'            => 'Crear',
-    'create_user'       => 'Crear usuario',
+    'create_user'       => 'Adicionar usuario',
     'create_community'  => 'Crear comunidad',
 /** C */
 
@@ -60,6 +60,7 @@ return [
 /** J */
 /** J */
 /** K */
+    'keep' => 'Guardar',
 /** K */
 
 /** L */

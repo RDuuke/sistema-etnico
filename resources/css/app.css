@@ -52,7 +52,7 @@ body {
 }
 
 .input-form-register {
-    @apply block w-full border-0 py-1 p-1 text-gray-900 !important;
+    @apply block w-full border-0 py-1 p-2 text-gray-900 !important;
     background: rgba(255, 255, 255, 0.7) !important;
     opacity: 80%;
 }
@@ -64,11 +64,15 @@ body {
 }
 
 .input-form {
-    @apply block w-full border-0 py-2 p-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 !important;
+    @apply block w-full border border-black py-1 p-2 text-gray-900 !important;
+    background: rgba(255, 255, 255, 0.7) !important;
+    opacity: 80%;
 }
 
 .select-form {
-    @apply block w-full border-0 py-2 p-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 !important;
+    @apply block w-full border border-black py-1.5 p-3 text-gray-900 focus:ring-2 focus:ring-inset sm:text-sm !important;
+    background: rgba(255, 255, 255, 0.7) !important;
+    opacity: 80%;
 }
 
 .error-form {
@@ -114,4 +118,8 @@ body {
 
 .sidebar__li {
     @apply flex items-center w-full p-2 transition duration-75 pl-11 hover:bg-project-sidebar select-none;
+}
+
+.label-form {
+    @apply text-sm font-bold text-black !important;
 }
