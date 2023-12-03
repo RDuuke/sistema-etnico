@@ -19,5 +19,9 @@ class Territorial extends Model
     public function belongsToSubregion() {
         return $this->belongsTo(Subregion::class, 'subregion_id', 'id');
     }
+
+    public function hasManyCommunities() {
+        return $this->hasMany(Community::class, 'territorial_id', 'id');
+    }
    
 }

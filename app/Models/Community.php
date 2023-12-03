@@ -13,12 +13,48 @@ class Community extends Model
     protected $table = 'communities';
     protected $fillable = [
         'name',
-        'type_community_id'
+        'type_community_id',
+        'collective_title',
+        'name_community_council',
+        'reservation_name',
+        'town_name',
+        'type_of_area_id',
+        'occupied_area',
+        'coordinates',
+        'territorial_id',
+        'subregion_id',
+        'hamlet_id',
+        'district_id',
+        'municipality_id',
     ];
 
     public function communityUsersPivot() {
         return $this->belongsToMany(CommunityUser::class)
             ->withPivot('id', 'community_id', 'community_name', 'user_id', 'user_name', 'user_document', 'user_email');
+    }
+
+    public function belongsToTypeArea() {
+        return $this->belongsTo(TypeArea::class, 'type_of_area_id', 'id');
+    }
+
+    public function belongsToTerritorial() {
+        return $this->belongsTo(Territorial::class, 'territorial_id', 'id');
+    }
+
+    public function belongsToSubregion() {
+        return $this->belongsTo(Subregion::class, 'subregion_id', 'id');
+    }
+
+    public function belongsToHamlet() {
+        return $this->belongsTo(Hamlet::class, 'hamlet_id', 'id');
+    }
+
+    public function belongsToDistrict() {
+        return $this->belongsTo(District::class, 'district_id', 'id');
+    }
+
+    public function belongsToMunicipality() {
+        return $this->belongsTo(Municipality::class, 'municipality_id', 'id');
     }
     
 }

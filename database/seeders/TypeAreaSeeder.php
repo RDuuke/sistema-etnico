@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\TypeCommunity;
+use App\Models\TypeArea;
 use Illuminate\Database\Seeder;
 
-class TypeCommunitySeeder extends Seeder
+class TypeAreaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -23,6 +23,6 @@ class TypeCommunitySeeder extends Seeder
             ['id' => '6', 'name' => 'otros '],
         ];
 
-        TypeCommunity::upsert($data, ['id'], ['name']);
+        TypeArea::upsert($data, ['id'], ['name']);
     }
 }

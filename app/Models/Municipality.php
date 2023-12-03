@@ -18,5 +18,9 @@ class Municipality extends Model
     public function hasManyDistricts() {
         return $this->hasMany(District::class, 'municipality_id', 'id');
     }
+
+    public function hasManyCommunities() {
+        return $this->hasMany(Community::class, 'municipality_id', 'id');
+    }
    
 }

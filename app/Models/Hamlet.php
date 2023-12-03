@@ -23,5 +23,9 @@ class Hamlet extends Model
     public function hasManySubregions() {
         return $this->hasMany(Subregion::class, 'hamlet_id', 'id');
     }
+
+    public function hasManyCommunities() {
+        return $this->hasMany(Community::class, 'hamlet_id', 'id');
+    }
    
 }

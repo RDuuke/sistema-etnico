@@ -23,5 +23,9 @@ class District extends Model
     public function hasManyHamlets() {
         return $this->hasMany(Hamlet::class, 'district_id', 'id');
     }
+
+    public function hasManyCommunities() {
+        return $this->hasMany(Community::class, 'district_id', 'id');
+    }
    
 }

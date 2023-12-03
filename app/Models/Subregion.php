@@ -23,5 +23,9 @@ class Subregion extends Model
     public function hasManyTerritorials() {
         return $this->hasMany(Territorial::class, 'subregion_id', 'id');
     }
+
+    public function hasManyCommunities() {
+        return $this->hasMany(Community::class, 'subregion_id', 'id');
+    }
    
 }

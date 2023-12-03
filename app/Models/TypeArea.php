@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class TypeCommunity extends Model
+class TypeArea extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $table = 'type_of_communities';
+    protected $table = 'types_of_areas';
     protected $fillable = [
         'name'
     ];
 
-    // public function hasManyCommunityUsers() { //TODO relación con comunidades
-        // return $this->hasMany(Com::class, 'community_id', 'id');
-    // }
+    public function hasManyCommunities() {
+        return $this->hasMany(Community::class, 'type_of_area_id', 'id');
+    }
 }
