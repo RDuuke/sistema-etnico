@@ -18,7 +18,7 @@ return [
     'community'         => 'Comunidad',
     'community_users'   => 'Usuarios comunidades',
 
-    'community_management'   => 'Gestión comunidades',
+    'community_management'   => 'Gestión de comunidades',
     'community_coordinator'   => 'Coordinador de comunidad',
 
     'create'            => 'Crear',
