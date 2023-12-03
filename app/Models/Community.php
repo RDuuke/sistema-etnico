@@ -13,11 +13,6 @@ class Community extends Model
     protected $table = 'communities';
     protected $fillable = [
         'name',
-        'type_community_id',
-        'collective_title',
-        'name_community_council',
-        'reservation_name',
-        'town_name',
         'type_of_area_id',
         'occupied_area',
         'coordinates',
@@ -26,6 +21,13 @@ class Community extends Model
         'hamlet_id',
         'district_id',
         'municipality_id',
+
+        /**Optionals */
+        'name_community_council',
+        'collective_title',
+        'reservation_name',
+        'town_name',
+
     ];
 
     public function communityUsersPivot() {

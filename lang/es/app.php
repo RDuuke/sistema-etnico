@@ -5,6 +5,7 @@ return [
     'actions'       => 'Acciones',
     'administrator' => 'Administrador',
     'age'           => 'Edad',
+    'occupied_area' => 'Area ocupada (Ha)',
 /** A */
 
 /** B */
@@ -14,8 +15,11 @@ return [
 /** C */
     'cancel'            => 'Cancelar',
     'check_in'          => 'Regístrate',
-    'communities'       => 'Comunidades',
+    'coordinates'       => 'Coordenadas',
+    'collective_title'  => 'Título colectivo',
     'community'         => 'Comunidad',
+    'communities'       => 'Comunidades',
+    'community_name'    => 'Nombre de la comunidad',
     'community_users'   => 'Usuarios comunidades',
 
     'community_management'   => 'Gestión de comunidades',
@@ -28,6 +32,8 @@ return [
 
 /** D */
     'delete'        => 'Eliminar',
+    'district'      => 'Corregimiento',
+    'districts'     => 'Corregimientos',
     'document'      => 'Documento',
 
     'disabled_community_user' => 'Usted se encuentra pendiente aprobación, comuníquese con el coordinador de su comunidad',
@@ -52,6 +58,8 @@ return [
 /** G */
 
 /** H */
+    'hamlet'    => 'Vereda',
+    'hamlets'   => 'Veredas',
 /** H */
 
 /** I */
@@ -71,13 +79,15 @@ return [
 /** L */
 
 /** M */
+    'municipalities'    => 'Municipios',
+    'municipality'      => 'Municipio',
 /** M */
 
 /** N */
     'name'      => 'Nombre',
     'names'     => 'Nombres',
-
-    'not_registered' => '¿No tienes cuenta?',
+    'name_community_council'    => 'Nombre consejo comunitario',
+    'not_registered'            => '¿No tienes cuenta?',
 /** N */
 
 /** O */
@@ -94,6 +104,8 @@ return [
 /** Q */
 
 /** R */
+    'reservation_name' => 'Nombre del resguardo',
+
     'result'    => 'Resultado',
     'results'   => 'Resultados',
     'return'    => 'Volver',
@@ -108,15 +120,23 @@ return [
     'select_option' => 'Seleccione una opción',
     'sign_in'       => 'Iniciar sesión',
     'strategy'      => 'Estrategia',
+    'subregion'     => 'Sub region',
+    'subregions'    => 'Sub regiones',
     'surnames'      => 'Apellidos',
 /** S */
 
 /** T */
+    "territorial"   => 'Territorial',
+    "territorials"  => 'Territoriales',
+
     "there's_nothing_to_show_at_the_moment" => 'No hay nada que mostrar en este momento',
 
+    "town_name"         => 'Nombre pueblo',
     "training_area"     => 'Área de formación',
     "type_document"     => 'Tipo de documento',
     "type_of_community" => 'Tipo de comunidad',
+    "type_of_area"      => 'Tipo de área',
+    "types_of_areas"    => 'Tipos de áreas',
 /** T */
 
 /** U */
