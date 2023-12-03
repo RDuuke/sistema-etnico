@@ -24,6 +24,11 @@ class DatabaseSeeder extends Seeder
                 StrategySeeder::class,
                 PermissionSeeder::class,
                 UserAdministratorRole::class,
+                MunicipalitySeeder::class,
+                DistrictSeeder::class,
+                HamletSeeder::class,
+                SubregionSeeder::class,
+                TerritorialSeeder::class,
             ]
         );
     }
