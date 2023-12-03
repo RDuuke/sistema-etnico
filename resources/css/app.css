@@ -13,6 +13,29 @@ body {
     margin: 0;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #dbd8d8;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+}
+
+/*B*/
+.button {
+    @apply py-2 rounded inline-flex items-center w-max select-none uppercase !important;
+}
+
 .button-login {
     border-radius: 1.625rem 0rem;
     background: rgba(16, 231, 218, 0.7);
@@ -37,28 +60,39 @@ body {
     background: rgba(16, 231, 218, 0.5);
 }
 
-.button {
-    @apply py-2 rounded inline-flex items-center w-max select-none uppercase !important;
-}
-
 .button-return {
     @apply py-2 rounded inline-flex items-center w-max select-none uppercase !important;
+}
+/*B*/
+
+/*D*/
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: wait;
+}
+/*D*/
+
+/*E*/
+
+.error-form {
+    @apply text-project-error block -mb-6 text-right !important;
+}
+
+/*E*/
+
+/*I*/
+.icon-container-hover {
+    position: relative;
+    display: inline-block;
+}
+
+.icon-container-hover:hover .popper-content {
+    display: block;
 }
 
 .input-form-login {
     @apply block w-full border-0 py-3 p-3 text-gray-900 !important;
-    background: rgba(255, 255, 255, 0.7) !important;
-    opacity: 80%;
-}
-
-.input-form-register {
-    @apply block w-full border-0 py-1 p-2 text-gray-900 !important;
-    background: rgba(255, 255, 255, 0.7) !important;
-    opacity: 80%;
-}
-
-.select-form-register {
-    @apply block w-full border-0 py-1.5 p-3 text-gray-900 focus:ring-2 focus:ring-inset sm:text-sm !important;
     background: rgba(255, 255, 255, 0.7) !important;
     opacity: 80%;
 }
@@ -69,21 +103,20 @@ body {
     opacity: 80%;
 }
 
-.select-form {
-    @apply block w-full border border-black py-1.5 p-3 text-gray-900 focus:ring-2 focus:ring-inset sm:text-sm !important;
+.input-form-register {
+    @apply block w-full border-0 py-1 p-2 text-gray-900 !important;
     background: rgba(255, 255, 255, 0.7) !important;
     opacity: 80%;
 }
+/*I*/
 
-.error-form {
-    @apply text-project-error block -mb-6 text-right !important;
+/*L*/
+.label-form {
+    @apply text-sm font-bold text-black !important;
 }
+/*L*/
 
-.icon-container-hover {
-    position: relative;
-    display: inline-block;
-}
-
+/*P*/
 .popper-content {
     display: none;
     position: absolute;
@@ -95,15 +128,19 @@ body {
     white-space: nowrap;
     z-index: 50;
 }
+/*P*/
 
-.icon-container-hover:hover .popper-content {
-    display: block;
+/*S*/
+.select-form {
+    @apply block w-full border border-black py-1.5 p-3 text-gray-900 focus:ring-2 focus:ring-inset sm:text-sm !important;
+    background: rgba(255, 255, 255, 0.7) !important;
+    opacity: 80%;
 }
 
-.disabled {
-    opacity: 0.5;
-    pointer-events: none;
-    cursor: wait;
+.select-form-register {
+    @apply block w-full border-0 py-1.5 p-3 text-gray-900 focus:ring-2 focus:ring-inset sm:text-sm !important;
+    background: rgba(255, 255, 255, 0.7) !important;
+    opacity: 80%;
 }
 
 .sidebar {
@@ -119,7 +156,4 @@ body {
 .sidebar__li {
     @apply flex items-center w-full p-2 transition duration-75 pl-11 hover:bg-project-sidebar select-none;
 }
-
-.label-form {
-    @apply text-sm font-bold text-black !important;
-}
+/*S*/
