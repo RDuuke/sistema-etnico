@@ -17,8 +17,16 @@ return new class extends Migration
                 $table->dropColumn('type_community_id');
             }
 
+            if (!Schema::hasColumn('communities', 'contact_phone')) {
+                $table->string('contact_phone')->after('name');
+            }
+
+            if (!Schema::hasColumn('communities', 'contact_email')) {
+                $table->string('contact_email')->after('name');
+            }
+
             if (!Schema::hasColumn('communities', 'collective_title')) {
-                $table->tinyInteger('collective_title')->after('name')->comment('1: Si', '0: No')->nullable();;
+                $table->tinyInteger('collective_title')->after('name')->comment('1: Si', '0: No')->nullable();
             }
 
             if (!Schema::hasColumn('communities', 'name_community_council')) {
@@ -26,11 +34,11 @@ return new class extends Migration
             }
 
             if (!Schema::hasColumn('communities', 'reservation_name')) {
-                $table->string('reservation_name')->after('name');
+                $table->string('reservation_name')->after('name')->nullable();
             }
 
             if (!Schema::hasColumn('communities', 'town_name')) {
-                $table->string('town_name')->after('name');
+                $table->string('town_name')->after('name')->nullable();
             }
 
             if (!Schema::hasColumn('communities', 'type_of_area_id')) {
@@ -73,6 +81,14 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('communities', function (Blueprint $table) {
+            if (Schema::hasColumn('communities', 'contact_phone')) {
+                $table->dropColumn('contact_phone');
+            }
+            
+            if (Schema::hasColumn('communities', 'contact_email')) {
+                $table->dropColumn('contact_email');
+            }
+
             if (Schema::hasColumn('communities', 'collective_title')) {
                 $table->dropColumn('collective_title');
             }

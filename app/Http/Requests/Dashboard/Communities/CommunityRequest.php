@@ -6,6 +6,8 @@ final class CommunityRequest {
     public static function rules() {
         return  [
             'community.name'                    => 'required',
+            'community.contact_phone'           => 'required',            
+            'community.contact_email'           => 'required|email:rfc|regex:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/',            
             'community.type_of_area_id'         => 'required|numeric',            
             'community.occupied_area'           => 'required',            
             'community.coordinates'             => 'required',        
@@ -16,10 +18,10 @@ final class CommunityRequest {
             'community.municipality_id'         => 'required|numeric',
 
             /**Optionals */
-            'community.reservation_name'        => 'required',
-            'community.town_name'               => 'required',        
-            'community.collective_title'        => 'nullable',            
-            'community.name_community_council'  => 'nullable',                    
+            'community.reservation_name'        => 'nullable|required_if:checkReservationName,true',
+            'community.town_name'               => 'nullable|required_if:checkTownName,true',        
+            'community.collective_title'        => 'nullable|required_if:checkCollectiveTitle,true',            
+            'community.name_community_council'  => 'nullable|required_if:checkNameCommunityCouncil,true',                    
         ];
     }
 
@@ -32,6 +34,9 @@ final class CommunityRequest {
             'required'    => 'El campo es requerido',
             'required_if' => 'El campo es requerido',
             'numeric'     => 'El campo es requerido',
+            'email'       => 'El correo electrónico ingresado no es valido',
+            'regex'       => 'El correo electrónico ingresado no es valido',
+            'unique'      => 'Este nombre ya registra en nuestro sistema',
         ];
     }
 }

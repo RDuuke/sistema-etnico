@@ -4,6 +4,7 @@ return [
 /** A */
     'actions'       => 'Acciones',
     'administrator' => 'Administrador',
+    'add_community' => 'Agregar comunidad',
     'age'           => 'Edad',
     'occupied_area' => 'Area ocupada (Ha)',
 /** A */
@@ -22,8 +23,20 @@ return [
     'community_name'    => 'Nombre de la comunidad',
     'community_users'   => 'Usuarios comunidades',
 
+    'community_management_failure'        => '¡Error al gestionar la comunidad!',
+    'community_create_failure'            => '¡Error al crear la comunidad!',
+    'community_create_successfully'       => '¡Comunidad creada exitosamente!',
+    'community_delete_failure'            => '¡Error al eliminar la comunidad!',
+    'community_delete_successfully'       => '¡Comunidad eliminado exitosamente!',
+    'community_update_failure'            => '¡Error al actualizar la comunidad!',
+    'community_update_successfully'       => '¡Comunidad actualizado exitosamente!',
+
+
     'community_management'   => 'Gestión de comunidades',
-    'community_coordinator'   => 'Coordinador de comunidad',
+    'community_coordinator'  => 'Coordinador de comunidad',
+    'contact_email'          => 'Correo electrónico de contacto',
+    'contact_phone'          => 'Teléfono de contacto',
+    'council_email'          => 'Correo electrónico cabildo',
 
     'create'            => 'Crear',
     'create_user'       => 'Adicionar usuario',
@@ -42,6 +55,7 @@ return [
 
 /** E */
     'edit'              => 'Editar',
+    'edit_community'    => 'Editar comunidad',
     'educational_level' => 'Nivel de escolaridad',
     'email'             => 'Correo electrónico',
     'enable_user'       => 'Habilitar usuario',
@@ -92,8 +106,8 @@ return [
 
 /** O */
     'occupation'         => 'Ocupación',
+    'optional_fields'    => 'Campos opcionales',
     'other_phone_number' => 'Otro número de teléfono',
-
 /** O */
 
 /** P */

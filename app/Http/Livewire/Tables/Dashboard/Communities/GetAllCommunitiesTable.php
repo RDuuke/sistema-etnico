@@ -19,8 +19,21 @@ class GetAllCommunitiesTable extends LivewireDatatable
         return [
             Column::name('name')
                 ->label(__('app.name')),
-            Column::name('types_of_areas.name')
-                ->label(__('app.type_of_community')),
+            Column::name('belongsToMunicipality.name')
+                ->label(__('app.municipality')),
+
+            Column::name('belongsToDistrict.name')
+                ->label(__('app.district')),
+
+            Column::name('belongsToHamlet.name')
+                ->label(__('app.hamlet')),
+
+            Column::name('belongsToSubregion.name')
+                ->label(__('app.subregion')),
+                
+            Column::name('belongsToTerritorial.name')
+                ->label(__('app.territorial')),
+
             Column::callback(['id'], function ($id) {
                 return view('livewire.dashboard.communities.actions.communities-table-actions', ['id' => $id]);
             })

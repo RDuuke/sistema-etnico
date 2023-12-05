@@ -2,11 +2,20 @@
     <button type="button" wire:click="preview" class="close-form-livewire">
         <x-icons.close-form></x-icons.close-form>
     </button>
-    <h2 class="text-black pt-6 text-xl text-center font-bold">Agregar una comunidad</h2>
+    <h2 class="text-black pt-6 text-xl text-center font-bold">
+        @if ($this->add_community)
+            {{__('app.add_community')}}
+        @else
+            {{__('app.edit_community')}}
+        @endif
+    </h2>
     <form wire:submit.prevent="save">
         @csrf
 
         @include('livewire.dashboard.communities.includes.form.form_create_and_edit')
+        @if($errors->any())
+        <span class="error-form font-bold block text-right pb-10">Por favor revisa el formulario y vuelve a intentar.</span>
+        @endif
 
         <div class="pb-10 flex justify-center">
             <div class="flex flex-col">
