@@ -20,7 +20,7 @@ use Spatie\Permission\Models\Role;
 
 final class Community_UserFormUpdateController {
     public function __invoke(string $id) {
-        session(['actualSection' => 'communities']);
+        session(['actualSection' => 'community_user']);
         ValidateRoles::communityCoordinator();
         $community_user     = CommunityUser::findOrFail($id);
         $types_documents    = TypeDocument::all();

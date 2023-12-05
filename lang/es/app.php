@@ -4,7 +4,9 @@ return [
 /** A */
     'actions'       => 'Acciones',
     'administrator' => 'Administrador',
+    'add_community' => 'Agregar comunidad',
     'age'           => 'Edad',
+    'occupied_area' => 'Area ocupada (Ha)',
 /** A */
 
 /** B */
@@ -14,11 +16,27 @@ return [
 /** C */
     'cancel'            => 'Cancelar',
     'check_in'          => 'Regístrate',
-    'communities'       => 'Comunidades',
+    'coordinates'       => 'Coordenadas',
+    'collective_title'  => 'Título colectivo',
     'community'         => 'Comunidad',
+    'communities'       => 'Comunidades',
+    'community_name'    => 'Nombre de la comunidad',
     'community_users'   => 'Usuarios comunidades',
 
-    'community_coordinator'   => 'Coordinador de comunidad',
+    'community_management_failure'        => '¡Error al gestionar la comunidad!',
+    'community_create_failure'            => '¡Error al crear la comunidad!',
+    'community_create_successfully'       => '¡Comunidad creada exitosamente!',
+    'community_delete_failure'            => '¡Error al eliminar la comunidad!',
+    'community_delete_successfully'       => '¡Comunidad eliminado exitosamente!',
+    'community_update_failure'            => '¡Error al actualizar la comunidad!',
+    'community_update_successfully'       => '¡Comunidad actualizado exitosamente!',
+
+
+    'community_management'   => 'Gestión de comunidades',
+    'community_coordinator'  => 'Coordinador de comunidad',
+    'contact_email'          => 'Correo electrónico de contacto',
+    'contact_phone'          => 'Teléfono de contacto',
+    'council_email'          => 'Correo electrónico cabildo',
 
     'create'            => 'Crear',
     'create_user'       => 'Adicionar usuario',
@@ -27,6 +45,8 @@ return [
 
 /** D */
     'delete'        => 'Eliminar',
+    'district'      => 'Corregimiento',
+    'districts'     => 'Corregimientos',
     'document'      => 'Documento',
 
     'disabled_community_user' => 'Usted se encuentra pendiente aprobación, comuníquese con el coordinador de su comunidad',
@@ -35,6 +55,7 @@ return [
 
 /** E */
     'edit'              => 'Editar',
+    'edit_community'    => 'Editar comunidad',
     'educational_level' => 'Nivel de escolaridad',
     'email'             => 'Correo electrónico',
     'enable_user'       => 'Habilitar usuario',
@@ -51,6 +72,8 @@ return [
 /** G */
 
 /** H */
+    'hamlet'    => 'Vereda',
+    'hamlets'   => 'Veredas',
 /** H */
 
 /** I */
@@ -70,19 +93,21 @@ return [
 /** L */
 
 /** M */
+    'municipalities'    => 'Municipios',
+    'municipality'      => 'Municipio',
 /** M */
 
 /** N */
     'name'      => 'Nombre',
     'names'     => 'Nombres',
-
-    'not_registered' => '¿No tienes cuenta?',
+    'name_community_council'    => 'Nombre consejo comunitario',
+    'not_registered'            => '¿No tienes cuenta?',
 /** N */
 
 /** O */
     'occupation'         => 'Ocupación',
+    'optional_fields'    => 'Campos opcionales',
     'other_phone_number' => 'Otro número de teléfono',
-
 /** O */
 
 /** P */
@@ -93,6 +118,8 @@ return [
 /** Q */
 
 /** R */
+    'reservation_name' => 'Nombre del resguardo',
+
     'result'    => 'Resultado',
     'results'   => 'Resultados',
     'return'    => 'Volver',
@@ -107,15 +134,23 @@ return [
     'select_option' => 'Seleccione una opción',
     'sign_in'       => 'Iniciar sesión',
     'strategy'      => 'Estrategia',
+    'subregion'     => 'Sub region',
+    'subregions'    => 'Sub regiones',
     'surnames'      => 'Apellidos',
 /** S */
 
 /** T */
+    "territorial"   => 'Territorial',
+    "territorials"  => 'Territoriales',
+
     "there's_nothing_to_show_at_the_moment" => 'No hay nada que mostrar en este momento',
 
+    "town_name"         => 'Nombre pueblo',
     "training_area"     => 'Área de formación',
     "type_document"     => 'Tipo de documento',
     "type_of_community" => 'Tipo de comunidad',
+    "type_of_area"      => 'Tipo de área',
+    "types_of_areas"    => 'Tipos de áreas',
 /** T */
 
 /** U */

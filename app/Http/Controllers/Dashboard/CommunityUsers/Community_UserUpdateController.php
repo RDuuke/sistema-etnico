@@ -19,7 +19,7 @@ final class Community_UserUpdateController {
 
     public function __invoke(CommunityUserUpdateRequest $request, string $id)
     {
-        session(['actualSection' => 'communities']);
+        session(['actualSection' => 'community_user']);
         ValidateRoles::communityCoordinator();
         $request->validated();
 
