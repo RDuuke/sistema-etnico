@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Dashboard\Communities\{
+    CommunityDeleteController,
     CommunityIndexController,
 };
 
@@ -11,6 +12,8 @@ Route::middleware(['multi.auth:web|community'])->group(function () {
     Route::prefix('/dashboard')->group(function () {
         Route::prefix('/communities')->group(function () {
             Route::get('', CommunityIndexController::class)->name('dashboard.communities.index');
+            Route::get('/{id}/delete', CommunityDeleteController::class)->name('dashboard.communities.delete');
+
         });
     });
 });

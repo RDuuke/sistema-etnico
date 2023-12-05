@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Auth;
 final class Community_UserFormCreateController {
     
     public function __invoke() {
-        session(['actualSection' => 'communities']);
+        session(['actualSection' => 'community_user']);
         ValidateRoles::communityCoordinator();
         $types_documents    = TypeDocument::all();
         $genders            = Gender::all();

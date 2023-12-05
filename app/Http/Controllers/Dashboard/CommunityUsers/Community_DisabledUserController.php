@@ -14,7 +14,7 @@ final class Community_DisabledUserController {
     {}
 
     public function __invoke($id) {
-        session(['actualSection' => 'communities']);
+        session(['actualSection' => 'community_user']);
         ValidateRoles::communityCoordinator();
 
         try {

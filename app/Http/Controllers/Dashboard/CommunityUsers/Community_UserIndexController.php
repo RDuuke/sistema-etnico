@@ -9,7 +9,7 @@ use App\Utilities\ValidateRoles;
 final class Community_UserIndexController {
     
     public function __invoke() {
-        session(['actualSection' => 'communities']);
+        session(['actualSection' => 'community_user']);
         ValidateRoles::communityCoordinator();
         $communities = count(Community::all());
         
