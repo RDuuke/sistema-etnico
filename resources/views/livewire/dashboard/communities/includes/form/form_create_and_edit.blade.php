@@ -17,12 +17,13 @@
                 @if($community['type_community'] == 1)
                     <label for="name" class="label-form">{{__('app.community_name')}}</label>
                     <input type="text" name="name" wire:model="community.name" placeholder="{{__('app.community_name')}}" class="input-form">
+                    @error('community.name') <span class="error-form">{{ $message }}</span>@enderror
                 @endif
                 @if($community['type_community'] == 2)
                     <label for="name" class="label-form">{{__('app.name_community_council')}}</label>
                     <input type="text" name="name" wire:model="community.name" placeholder="{{__('app.name_community_council')}}" class="input-form">
+                    @error('community.name') <span class="error-form">{{ $message }}</span>@enderror
                 @endif
-                @error('community.name') <span class="error-form">{{ $message }}</span>@enderror
             </div>
 
             @if($community['type_community'] != 0)
