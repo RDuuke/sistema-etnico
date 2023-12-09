@@ -5,6 +5,7 @@ return [
     'actions'       => 'Acciones',
     'administrator' => 'Administrador',
     'add_community' => 'Agregar comunidad',
+    'afro'          => 'Afro',
     'age'           => 'Edad',
     'occupied_area' => 'Area ocupada (Ha)',
 /** A */
@@ -79,6 +80,7 @@ return [
 /** I */
     'incorrect_username_and_or_password' => 'Usuario y/o contraseña incorrectos',
 
+    'indigenous'    => 'Indígena',
     'internal_user' => 'Usuarios internos',
 /** I */
 

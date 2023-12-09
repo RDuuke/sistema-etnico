@@ -17,7 +17,6 @@ use Exception;
 use Livewire\Component;
 
 final class IndexCommunity extends Component {
-//TODO recordar que debo organizar los select dependientes de la ubicación
     public $add_community;
     public $edit_community;
     public $municipalities;
@@ -70,7 +69,7 @@ final class IndexCommunity extends Component {
     }
 
     public function save() {
-        
+
         if ($this->add_community) {
             $this->validate(array_merge(
                 $this->rules,['community.name' => 'required|unique:communities,name']
@@ -112,18 +111,6 @@ final class IndexCommunity extends Component {
         $this->edit_community = true;
         $this->community_id = $id;
         $this->community = Community::find($id);
-        $this->resetChecks();
-        if ($this->community->name_community_council != "") $this->checkNameCommunityCouncil = true;
-        if (!is_null($this->community->collective_title))   $this->checkCollectiveTitle = true;
-        if ($this->community->reservation_name  != "")      $this->checkReservationName = true;
-        if ($this->community->town_name  != "")             $this->checkTownName = true;
-    }
-
-    public function resetChecks() {
-        $this->checkNameCommunityCouncil = false;
-        $this->checkCollectiveTitle      = false;
-        $this->checkReservationName      = false;
-        $this->checkTownName             = false;
     }
 
     public function add() {
@@ -134,11 +121,6 @@ final class IndexCommunity extends Component {
     public function preview() {
         $this->add_community = false;
         $this->edit_community = false;
-        $this->checkNameCommunityCouncil = false;
-        $this->checkCollectiveTitle      = false;
-        $this->checkReservationName      = false;
-        $this->checkTownName             = false;
-        $this->resetChecks();
         $this->mount();
     }
 }

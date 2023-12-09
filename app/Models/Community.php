@@ -13,6 +13,7 @@ class Community extends Model
     protected $table = 'communities';
     protected $fillable = [
         'name',
+        'type_community',
         'contact_phone',
         'contact_email',
         'type_of_area_id',
@@ -25,7 +26,6 @@ class Community extends Model
         'municipality_id',
 
         /**Optionals */
-        'name_community_council',
         'collective_title',
         'reservation_name',
         'town_name',
