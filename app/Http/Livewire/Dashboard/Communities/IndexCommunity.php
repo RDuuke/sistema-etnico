@@ -32,6 +32,7 @@ final class IndexCommunity extends Component {
     public $editMode = false;
     public $community_id = null;
     public Community $community;
+    public $administrator;
 
 
     protected array $rules;
@@ -53,6 +54,7 @@ final class IndexCommunity extends Component {
     }
 
     public function mount() {
+        $this->administrator = auth()->user();
         $this->add_community    = false;
         $this->edit_community   = false;
 

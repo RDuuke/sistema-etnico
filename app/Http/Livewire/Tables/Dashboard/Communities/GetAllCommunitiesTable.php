@@ -3,16 +3,25 @@
 namespace App\Http\Livewire\Tables\Dashboard\Communities;
 
 use App\Models\Community;
+use App\Models\PivotCommunityUser;
 use Mediconesystems\LivewireDatatables\Column;
 use Mediconesystems\LivewireDatatables\Http\Livewire\LivewireDatatable;
 
 class GetAllCommunitiesTable extends LivewireDatatable
 {
     public $model = Community::class;
+    public $user;
 
     public function builder() {
+        $this->user = auth()->user();
+        if (!is_null($this->user)) return $this->model::query()
+            ->join('types_of_areas', 'communities.type_of_area_id', 'types_of_areas.id');
+
+        $communities = PivotCommunityUser::where('user_id', auth()->guard('community')->user()->id)->pluck('community_id');
+
         return $this->model::query()
-                ->join('types_of_areas', 'communities.type_of_area_id', 'types_of_areas.id');
+            ->join('types_of_areas', 'communities.type_of_area_id', 'types_of_areas.id')
+            ->whereIn('communities.id', $communities);
     }
 
     public function columns() {
@@ -35,7 +44,8 @@ class GetAllCommunitiesTable extends LivewireDatatable
                 ->label(__('app.territorial')),
 
             Column::callback(['id'], function ($id) {
-                return view('livewire.dashboard.communities.actions.communities-table-actions', ['id' => $id]);
+                $administrator = is_null($this->user) ? false : true;
+                return view('livewire.dashboard.communities.actions.communities-table-actions', ['id' => $id, 'administrator' => $administrator ]);
             })
                 ->label(__('app.actions'))
                 ->unsortable()
