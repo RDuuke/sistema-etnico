@@ -28,16 +28,16 @@ class PublicCommunityUserRequest extends FormRequest
             'surnames'              => 'required|max:50',
             'type_document_id'      => 'required|numeric|exists:type_of_documents,id',
             'document'              => 'required|unique:community_users,document|max:30',
-            'age'                   => 'required|numeric',
-            'gender_id'             => 'required|numeric|exists:genders,id',
-            'phone_1'               => 'required|numeric',
+            'age'                   => 'nullable|numeric',
+            'gender_id'             => 'nullable|numeric|exists:genders,id',
+            'phone_1'               => 'nullable|numeric',
             'phone_2'               => 'nullable|numeric',
             'email'                 => 'required|email|unique:community_users,email|max:50',
             'community_id'          => 'required|numeric|exists:communities,id',
-            'educational_level_id'  => 'required|numeric|exists:educational_levels,id',
-            'training_area_id'      => 'required|numeric|exists:training_areas,id',
-            'occupation_id'         => 'required|numeric|exists:occupations,id',
-            'strategy_id'           => 'required|numeric|exists:strategies,id',
+            'educational_level_id'  => 'nullable|numeric|exists:educational_levels,id',
+            'training_area_id'      => 'nullable|numeric|exists:training_areas,id',
+            'occupation_id'         => 'nullable|numeric|exists:occupations,id',
+            'strategy_id'           => 'nullable|numeric|exists:strategies,id',
 
         ];
     }
