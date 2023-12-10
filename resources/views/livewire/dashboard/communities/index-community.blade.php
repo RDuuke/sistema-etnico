@@ -1,5 +1,5 @@
 <div>
-    @if (!$edit_community)
+    @if (!$edit_community && !is_null($administrator))
         <div class="w-12 -mb-3 -mt-6 cursor-pointer">
             <a onclick="scrollToBottom();" wire:click="add">
                 <img src="{{ asset('images/add-user.png') }}" alt="Logo modules menu">

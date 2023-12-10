@@ -74,7 +74,7 @@
     </div>
 </div>
 
-<div class="sm:col-span-3">
+{{-- <div class="sm:col-span-3">
     <label for="phone_1"
         class="block text-sm font-medium text-white">{{__('app.phone_number')}}</label>
     <div class="mt-1">
@@ -94,7 +94,7 @@
             class="input-form-register">
         @error('phone_2') <span class="error-form">{{ $message }}</span>@enderror
     </div>
-</div>
+</div> --}}
 
 <div class="sm:col-span-3">
     <label for="email" class="block text-sm font-medium text-white">{{__('app.email')}}</label>
@@ -122,7 +122,7 @@
     </div>
 </div>
 
-<div class="sm:col-span-3">
+{{-- <div class="sm:col-span-3">
     <label for="educational_level_id" class="block text-sm font-medium text-white">{{__('app.educational_level')}}</label>
     <div class="mt-1">
         <select id="educational_level_id" name="educational_level_id" autocomplete="educational_level_id"
@@ -188,4 +188,4 @@
         </select>
         @error('strategy_id') <span class="error-form">{{ $message }}</span>@enderror
     </div>
-</div>
+</div> --}}

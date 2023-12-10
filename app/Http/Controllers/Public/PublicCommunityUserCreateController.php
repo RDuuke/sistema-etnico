@@ -18,11 +18,10 @@ final class PublicCommunityUserCreateController {
 
     public function __invoke(PublicCommunityUserRequest $request) {
 
+        try {
         $request->validated();
 
-        try {
-
-            Functions_CommunityUser::addCommunityUser($request->all(), $this->repository);
+            Functions_CommunityUser::publicAddCommunityUser($request->all(), $this->repository);
 
             return redirect(route('form-login'))->with('processResult', [
                 'status' => 1,
@@ -30,7 +29,7 @@ final class PublicCommunityUserCreateController {
             ]);
             
         } catch (Exception $e) {
-
+            dd($e->getMessage());
             return redirect(route('form-login'))->with('processResult', [
                 'status' => 0,
                 'message' => __('app.user_create_failure')

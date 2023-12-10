@@ -3,7 +3,7 @@
 namespace App\Http\Livewire\Tables\Dashboard\CommunityUsers;
 
 use App\Models\CommunityUser;
-use App\Models\User;
+use App\Models\PivotCommunityUser;
 use App\Utilities\CommunityUser\Constants;
 use Illuminate\Support\Facades\DB;
 use Mediconesystems\LivewireDatatables\Column;
@@ -19,9 +19,16 @@ class GetAllCommunityUsersTable extends LivewireDatatable
     public $users;
 
     public function builder() {
+
+       if(!is_null(auth()->user())) return $this->model::query()
+            ->join('community_community_user', 'community_users.id', 'community_community_user.user_id');
+
+        $communities = PivotCommunityUser::where('user_id', auth()->guard('community')->user()->id)->pluck('community_id');
+
         return $this->model::query()
-                ->join('community_community_user', 'community_users.id', 'community_community_user.user_id');
-        }
+            ->join('community_community_user', 'community_users.id', 'community_community_user.user_id')
+            ->whereIn('community_id', $communities);
+    }
     public function columns() {
         $this->users = CommunityUser::all();
         return [
