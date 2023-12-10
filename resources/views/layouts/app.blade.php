@@ -49,6 +49,13 @@
                     </a>
                 </li>
             </ul>
+            @php
+                $admin = !is_null(auth()->user()) ? true : false;
+            @endphp
+            <div class="absolute bottom-28 inset-x-0 text-center font-bold bg-project-sidebar w-full p-4 select-none" >{{
+                    !$admin ? 'Comunidad ' . App\Models\PivotCommunityUser::where('user_id', auth()->guard('community')->user()->id)->first()->community_name : 'Administrador'
+                }}
+            </div>
         </div>
     </aside>
 
