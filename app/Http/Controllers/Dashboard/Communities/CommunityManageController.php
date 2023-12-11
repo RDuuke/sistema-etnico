@@ -16,12 +16,7 @@ final class CommunityManageController
         $community = Community::find($id);
 
         $sections = [
-            ['section' => 'Censo',     'route' => 'dashboard.communities.manage', 'params' => ['id' => $id]],
-            ['section' => 'Programas', 'route' => 'dashboard.communities.manage', 'params' => ['id' => $id]],
-            ['section' => 'Programas', 'route' => 'dashboard.communities.manage', 'params' => ['id' => $id]],
-            ['section' => 'Censo',     'route' => 'dashboard.communities.manage', 'params' => ['id' => $id]],
-            ['section' => 'Programas', 'route' => 'dashboard.communities.manage', 'params' => ['id' => $id]],
-            ['section' => 'Programas', 'route' => 'dashboard.communities.manage', 'params' => ['id' => $id]],
+            ['section' => 'Censo',     'route' => 'dashboard.census.index', 'params' => ['community_id' => $id]],
         ];
 
         return view('dashboard.communities.management', compact('community', 'sections'));

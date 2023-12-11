@@ -5,6 +5,9 @@ return [
     'actions'       => 'Acciones',
     'administrator' => 'Administrador',
     'add_community' => 'Agregar comunidad',
+
+    'add_community_census'  => 'Agregar censo para la comunidad',
+
     'afro'          => 'Afro',
     'age'           => 'Edad',
     'occupied_area' => 'Area ocupada (Ha)',
@@ -16,11 +19,16 @@ return [
 
 /** C */
     'cancel'            => 'Cancelar',
+
+    'census_create_failure'           => '¡Error al crear el censo!',
+    'census_create_successfully'       => '¡Censo creado exitosamente!',
+
     'check_in'          => 'Regístrate',
     'coordinates'       => 'Coordenadas',
     'collective_title'  => 'Título colectivo',
     'community'         => 'Comunidad',
     'communities'       => 'Comunidades',
+    'community_census'  => 'Censo para la comunidad',
     'community_name'    => 'Nombre de la comunidad',
     'community_users'   => 'Usuarios comunidades',
 
@@ -45,6 +53,7 @@ return [
 /** C */
 
 /** D */
+    'date'          => 'Fecha',
     'delete'        => 'Eliminar',
     'district'      => 'Corregimiento',
     'districts'     => 'Corregimientos',
@@ -105,6 +114,8 @@ return [
     'names'     => 'Nombres',
     'name_community_council'    => 'Nombre consejo comunitario',
     'not_registered'            => '¿No tienes cuenta?',
+    'number_of_families'        => 'Número de familias',
+    'number_of_people'          => 'Número de personas',
 /** N */
 
 /** O */
@@ -162,6 +173,8 @@ return [
     'update'      => 'Actualizar',
     'update_user' => 'Actualizar usuario',
 
+    'update_community_census'  => 'Actualizar censo para la comunidad',
+
     'user'              => 'Usuario',
     'user_management'   => 'Gestión de usuarios',
 
@@ -186,6 +199,8 @@ return [
 /** X */
 /** X */
 /** Y */
+    'year' => 'Año',
+
     'you_lost_your_password' => '¿Perdiste tu contraseña?',
 /** Y */
 /** Z */
