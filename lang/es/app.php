@@ -32,8 +32,8 @@ return [
     'community_update_failure'            => '¡Error al actualizar la comunidad!',
     'community_update_successfully'       => '¡Comunidad actualizado exitosamente!',
 
-
-    'community_management'   => 'Gestión de comunidades',
+    'community_management'   => 'Gestión de comunidad',
+    'community_managements'  => 'Gestión de comunidades',
     'community_coordinator'  => 'Coordinador de comunidad',
     'contact_email'          => 'Correo electrónico de contacto',
     'contact_phone'          => 'Teléfono de contacto',
