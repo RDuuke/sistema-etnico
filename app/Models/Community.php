@@ -60,5 +60,9 @@ class Community extends Model
     public function belongsToMunicipality() {
         return $this->belongsTo(Municipality::class, 'municipality_id', 'id');
     }
+
+    public function hasManyCensus() {
+        return $this->hasMany(Census::class, 'community_id', 'id');
+    }
     
 }

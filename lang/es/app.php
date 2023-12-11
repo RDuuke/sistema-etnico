@@ -95,6 +95,7 @@ return [
 /** L */
 
 /** M */
+    'manage_community'  => 'Gestionar comunidad',
     'municipalities'    => 'Municipios',
     'municipality'      => 'Municipio',
 /** M */
