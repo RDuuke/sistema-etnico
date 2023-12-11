@@ -14,8 +14,20 @@ final class CensusRepository {
             'year'                  => $data['year'],
             'community_id'          => $data['community_id'],
         ]);
-
     }
+
+    public function update(string $id, array $data): Census {
+        $census = Census::findOrFail($id);
+        $census->update([
+            'number_of_families'    => $data['number_of_families'],
+            'number_of_people'      => $data['number_of_people'],
+            'year'                  => $data['year'],
+            'community_id'          => $census['community_id'],
+        ]);
+        $census->refresh();
+        return $census;
+    }
+
 
 }
 

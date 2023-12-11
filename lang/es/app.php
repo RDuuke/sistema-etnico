@@ -21,7 +21,9 @@ return [
     'cancel'            => 'Cancelar',
 
     'census_create_failure'           => '¡Error al crear el censo!',
+    'census_update_failure'           => '¡Error al actualizar el censo!',
     'census_create_successfully'       => '¡Censo creado exitosamente!',
+    'census_update_successfully'       => '¡Censo actualizado exitosamente!',
 
     'check_in'          => 'Regístrate',
     'coordinates'       => 'Coordenadas',
@@ -29,6 +31,7 @@ return [
     'community'         => 'Comunidad',
     'communities'       => 'Comunidades',
     'community_census'  => 'Censo para la comunidad',
+    'community_of_census'  => 'Censo de la comunidad',
     'community_name'    => 'Nombre de la comunidad',
     'community_users'   => 'Usuarios comunidades',
 
@@ -134,9 +137,12 @@ return [
 /** R */
     'reservation_name' => 'Nombre del resguardo',
 
-    'result'    => 'Resultado',
-    'results'   => 'Resultados',
-    'return'    => 'Volver',
+    'result'         => 'Resultado',
+    'results'        => 'Resultados',
+    'return'         => 'Volver',
+    'return_census' => 'Volver al censo',
+    
+    'return_to_community_management' => 'Volver a gestionar la comunidad',
 
     'role_for_user'    => 'Rol para el usuario',
     
@@ -173,6 +179,7 @@ return [
     'update'      => 'Actualizar',
     'update_user' => 'Actualizar usuario',
 
+    'update_census'  => 'Actualizar censo',
     'update_community_census'  => 'Actualizar censo para la comunidad',
 
     'user'              => 'Usuario',
