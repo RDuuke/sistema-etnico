@@ -138,6 +138,8 @@ return [
     'phone_number'       => 'Número de teléfono',
     'program_create_failure'            => '¡Error al crear el programa!',
     'program_create_successfully'       => '¡Programa creado exitosamente!',
+    'program_delete_failure'            => '¡Error al eliminar el programa!',
+    'program_delete_successfully'       => '¡Programa eliminado exitosamente!',
 /** P */
 
 /** Q */
