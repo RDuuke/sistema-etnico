@@ -7,10 +7,14 @@ return [
     'add_community' => 'Agregar comunidad',
 
     'add_community_census'  => 'Agregar censo para la comunidad',
+    'add_community_program' => 'Agregar programa para la comunidad',
 
     'afro'          => 'Afro',
     'age'           => 'Edad',
     'occupied_area' => 'Area ocupada (Ha)',
+
+    'amount_of_participants' => 'Cantidad de participantes',
+    'apply' => 'Aplica',
 /** A */
 
 /** B */
@@ -35,6 +39,7 @@ return [
     'community_census'  => 'Censo para la comunidad',
     'community_of_census'  => 'Censo de la comunidad',
     'community_name'    => 'Nombre de la comunidad',
+    'community_programs'=> 'Programas de la comunidad',
     'community_users'   => 'Usuarios comunidades',
 
     'community_management_failure'        => '¡Error al gestionar la comunidad!',
@@ -131,6 +136,10 @@ return [
 
 /** P */
     'phone_number'       => 'Número de teléfono',
+    'program_create_failure'            => '¡Error al crear el programa!',
+    'program_create_successfully'       => '¡Programa creado exitosamente!',
+    'program_delete_failure'            => '¡Error al eliminar el programa!',
+    'program_delete_successfully'       => '¡Programa eliminado exitosamente!',
 /** P */
 
 /** Q */
@@ -173,16 +182,20 @@ return [
     "type_of_community" => 'Tipo de comunidad',
     "type_of_area"      => 'Tipo de área',
     "types_of_areas"    => 'Tipos de áreas',
+    "type_of_program"   => 'Tipo de programa',
+    "types_of_programs" => 'Tipos de programas',
 /** T */
 
 /** U */
     'unauthorized_access'   => 'Acceso no autorizado',
+    'unit_of_measurement'   => 'Unidad de medida',
 
     'update'      => 'Actualizar',
     'update_user' => 'Actualizar usuario',
 
     'update_census'  => 'Actualizar censo',
     'update_community_census'  => 'Actualizar censo para la comunidad',
+    'update_community_program' => 'Actualizar programa para la comunidad',
 
     'user'              => 'Usuario',
     'user_management'   => 'Gestión de usuarios',
@@ -204,6 +217,7 @@ return [
 /** V */
 /** V */
 /** W */
+    'which' => 'Cual',
 /** W */
 /** X */
 /** X */
