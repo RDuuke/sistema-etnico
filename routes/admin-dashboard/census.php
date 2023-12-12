@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Dashboard\Census\CensusCreateController;
+use App\Http\Controllers\Dashboard\Census\CensusDeleteController;
 use App\Http\Controllers\Dashboard\Census\CensusFormCreateController;
 use App\Http\Controllers\Dashboard\Census\CensusFormUpdateController;
 use App\Http\Controllers\Dashboard\Census\CensusIndexController;
@@ -17,6 +18,7 @@ Route::middleware(['multi.auth:web|community'])->group(function () {
                 Route::post('/store', CensusCreateController::class)->name('dashboard.census.store');
                 Route::get('/{id}/edit', CensusFormUpdateController::class)->name('dashboard.census.edit');
                 Route::put('/{id}/update', CensusUpdateController::class)->name('dashboard.census.update');
+                Route::get('/{id}/delete', CensusDeleteController::class)->name('dashboard.census.delete');
             });
         });
     });

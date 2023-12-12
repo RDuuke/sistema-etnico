@@ -22,8 +22,10 @@ return [
 
     'census_create_failure'           => '¡Error al crear el censo!',
     'census_update_failure'           => '¡Error al actualizar el censo!',
-    'census_create_successfully'       => '¡Censo creado exitosamente!',
-    'census_update_successfully'       => '¡Censo actualizado exitosamente!',
+    'census_create_successfully'      => '¡Censo creado exitosamente!',
+    'census_update_successfully'      => '¡Censo actualizado exitosamente!',
+    'census_delete_failure'           => '¡Error al eliminar el censo!',
+    'census_delete_successfully'      => '¡Usuario eliminado exitosamente!',
 
     'check_in'          => 'Regístrate',
     'coordinates'       => 'Coordenadas',
