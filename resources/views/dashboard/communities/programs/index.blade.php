@@ -13,7 +13,7 @@
         <div class="bg-project-primary font-bold py-1 px-4">Todos los programas ya fueron creados</div>
     @else
         <div class="w-12 -mb-3 -mt-6">
-            <a href="{{route('dashboard.programs.create-and-edit', ['community_id' => $community->id])}}">
+            <a href="{{route('dashboard.programs.create-and-edit', ['community_id' => $community->id, 'id' => 0])}}">
                 <img src="{{ asset('images/add-user.png') }}" alt="">
             </a>
         </div>

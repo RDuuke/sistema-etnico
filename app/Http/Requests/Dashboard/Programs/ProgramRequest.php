@@ -8,7 +8,7 @@ final class ProgramRequest
     public static function rules()
     {
         return  [
-            'program.apply'                   => 'required|numeric',
+            'program.apply'                   => 'required',
             'program.unit_of_measurement'     => 'required',
             'program.amount_of_participants'  => 'required',
             'program.type_program_id'         => 'required|numeric',

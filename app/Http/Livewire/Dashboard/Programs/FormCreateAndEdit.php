@@ -15,9 +15,11 @@ use Livewire\Component;
 final class FormCreateAndEdit extends Component
 {
     public $add_program = false;
+    public $edit_program = false;
     public $administrator;
     public $community;
     public $program;
+    public $program_id;
     public $programs;
     public $types_programs;
 
@@ -37,16 +39,25 @@ final class FormCreateAndEdit extends Component
         return view('livewire.dashboard.programs.form_create_and_edit');
     }
 
-    public function mount(string $community_id)
+    public function mount(string $community_id, $program_id)
     {
         
         $this->administrator = auth()->user();
         $this->community = Community::find($community_id);
         $this->add_program   = true;
         $this->program       = new Programs();
-
         $this->programs         = Programs::where('community_id', $community_id)->get();
         $this->types_programs   = TypeProgram::whereNotIn('id', $this->programs->pluck('type_program_id'))->get();
+
+        $this->program_id    = $program_id;
+
+        if ($this->program_id) {
+            $this->add_program  = false;
+            $this->edit_program = true;
+            $this->program       = Programs::find($this->program_id);
+            
+        }
+
     }
 
     public function save() {

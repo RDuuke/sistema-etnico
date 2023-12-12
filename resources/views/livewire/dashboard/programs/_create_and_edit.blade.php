@@ -28,8 +28,8 @@
             <label for="apply" class="label-form">{{ '¿' . __('app.apply') . '?'}}</label>
             <select name="apply" wire:model="program.apply" class="select-form">
                 <option value="">{{ __('app.select_option') }}</option>
-                <option value="1">{{ 'Si' }}</option>
-                <option value="0">{{ 'No' }}</option>
+                <option value="true">{{ 'Si' }}</option>
+                <option value="false">{{ 'No' }}</option>
             </select>
             @error('program.apply') <span class="error-form">{{ $message }}</span>@enderror
         </div>

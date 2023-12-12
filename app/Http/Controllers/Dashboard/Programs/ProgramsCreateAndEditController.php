@@ -7,10 +7,10 @@ use App\Utilities\ValidateRoles;
 
 final class ProgramsCreateAndEditController {
     
-    public function __invoke(string $community_id, $program_id = null) {
+    public function __invoke(string $community_id, $id = null) {
         session(['actualSection' => 'communities']);
         ValidateRoles::communityCoordinator();
         
-        return view('dashboard.communities.programs.create_and_edit', compact('community_id', 'program_id'));
+        return view('dashboard.communities.programs.create_and_edit', compact('community_id', 'id'));
     }
 }
