@@ -15,6 +15,7 @@ class Programs extends Model
         'apply',
         'unit_of_measurement',
         'amount_of_participants',
+        'which',
         'community_id',
         'type_program_id',
     ];

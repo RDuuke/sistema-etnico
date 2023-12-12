@@ -18,6 +18,7 @@ return new class extends Migration
             $table->boolean('apply');
             $table->string('unit_of_measurement');
             $table->string('amount_of_participants');
+            $table->string('which')->nullable();
             $table->foreignId('community_id')->constrained('communities')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('type_program_id')->constrained('types_of_programs')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
