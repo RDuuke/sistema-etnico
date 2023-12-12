@@ -64,5 +64,9 @@ class Community extends Model
     public function hasManyCensus() {
         return $this->hasMany(Census::class, 'community_id', 'id');
     }
+
+    public function hasManyPrograms() {
+        return $this->hasMany(Programs::class, 'community_id', 'id');
+    }
     
 }

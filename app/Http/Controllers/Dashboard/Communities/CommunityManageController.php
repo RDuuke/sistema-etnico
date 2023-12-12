@@ -17,6 +17,7 @@ final class CommunityManageController
 
         $sections = [
             ['section' => 'Censo',     'route' => 'dashboard.census.index', 'params' => ['community_id' => $id]],
+            ['section' => 'Programa RF47',     'route' => 'dashboard.census.index', 'params' => ['community_id' => $id]],
         ];
 
         return view('dashboard.communities.management', compact('community', 'sections'));
