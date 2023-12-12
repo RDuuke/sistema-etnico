@@ -5,6 +5,9 @@ return [
     'actions'       => 'Acciones',
     'administrator' => 'Administrador',
     'add_community' => 'Agregar comunidad',
+
+    'add_community_census'  => 'Agregar censo para la comunidad',
+
     'afro'          => 'Afro',
     'age'           => 'Edad',
     'occupied_area' => 'Area ocupada (Ha)',
@@ -16,11 +19,21 @@ return [
 
 /** C */
     'cancel'            => 'Cancelar',
+
+    'census_create_failure'           => '¡Error al crear el censo!',
+    'census_update_failure'           => '¡Error al actualizar el censo!',
+    'census_create_successfully'      => '¡Censo creado exitosamente!',
+    'census_update_successfully'      => '¡Censo actualizado exitosamente!',
+    'census_delete_failure'           => '¡Error al eliminar el censo!',
+    'census_delete_successfully'      => '¡Usuario eliminado exitosamente!',
+
     'check_in'          => 'Regístrate',
     'coordinates'       => 'Coordenadas',
     'collective_title'  => 'Título colectivo',
     'community'         => 'Comunidad',
     'communities'       => 'Comunidades',
+    'community_census'  => 'Censo para la comunidad',
+    'community_of_census'  => 'Censo de la comunidad',
     'community_name'    => 'Nombre de la comunidad',
     'community_users'   => 'Usuarios comunidades',
 
@@ -32,8 +45,8 @@ return [
     'community_update_failure'            => '¡Error al actualizar la comunidad!',
     'community_update_successfully'       => '¡Comunidad actualizado exitosamente!',
 
-
-    'community_management'   => 'Gestión de comunidades',
+    'community_management'   => 'Gestión de comunidad',
+    'community_managements'  => 'Gestión de comunidades',
     'community_coordinator'  => 'Coordinador de comunidad',
     'contact_email'          => 'Correo electrónico de contacto',
     'contact_phone'          => 'Teléfono de contacto',
@@ -45,6 +58,7 @@ return [
 /** C */
 
 /** D */
+    'date'          => 'Fecha',
     'delete'        => 'Eliminar',
     'district'      => 'Corregimiento',
     'districts'     => 'Corregimientos',
@@ -95,6 +109,7 @@ return [
 /** L */
 
 /** M */
+    'manage_community'  => 'Gestionar comunidad',
     'municipalities'    => 'Municipios',
     'municipality'      => 'Municipio',
 /** M */
@@ -104,6 +119,8 @@ return [
     'names'     => 'Nombres',
     'name_community_council'    => 'Nombre consejo comunitario',
     'not_registered'            => '¿No tienes cuenta?',
+    'number_of_families'        => 'Número de familias',
+    'number_of_people'          => 'Número de personas',
 /** N */
 
 /** O */
@@ -122,9 +139,12 @@ return [
 /** R */
     'reservation_name' => 'Nombre del resguardo',
 
-    'result'    => 'Resultado',
-    'results'   => 'Resultados',
-    'return'    => 'Volver',
+    'result'         => 'Resultado',
+    'results'        => 'Resultados',
+    'return'         => 'Volver',
+    'return_census' => 'Volver al censo',
+    
+    'return_to_community_management' => 'Volver a gestionar la comunidad',
 
     'role_for_user'    => 'Rol para el usuario',
     
@@ -161,6 +181,9 @@ return [
     'update'      => 'Actualizar',
     'update_user' => 'Actualizar usuario',
 
+    'update_census'  => 'Actualizar censo',
+    'update_community_census'  => 'Actualizar censo para la comunidad',
+
     'user'              => 'Usuario',
     'user_management'   => 'Gestión de usuarios',
 
@@ -185,6 +208,8 @@ return [
 /** X */
 /** X */
 /** Y */
+    'year' => 'Año',
+
     'you_lost_your_password' => '¿Perdiste tu contraseña?',
 /** Y */
 /** Z */
