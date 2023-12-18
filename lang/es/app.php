@@ -11,10 +11,14 @@ return [
 
     'afro'          => 'Afro',
     'age'           => 'Edad',
-    'occupied_area' => 'Area ocupada (Ha)',
 
     'amount_of_participants' => 'Cantidad de participantes',
+
     'apply' => 'Aplica',
+
+    'aqueduct'               => 'Acueducto',
+    'aqueduct_date'          => 'Año (Acueducto)',
+    'aqueduct_status'        => 'Estado (Acueducto)',
 /** A */
 
 /** B */
@@ -49,6 +53,7 @@ return [
     'community_delete_successfully'       => '¡Comunidad eliminado exitosamente!',
     'community_update_failure'            => '¡Error al actualizar la comunidad!',
     'community_update_successfully'       => '¡Comunidad actualizado exitosamente!',
+    'community_water_strategy'            => 'Estrategia del agua de la comunidad',
 
     'community_management'   => 'Gestión de comunidad',
     'community_managements'  => 'Gestión de comunidades',
@@ -71,6 +76,9 @@ return [
 
     'disabled_community_user' => 'Usted se encuentra pendiente aprobación, comuníquese con el coordinador de su comunidad',
     'disabled_user'           => 'Deshabilitar usuario',
+    'drinking_water'          => 'Agua potable',
+    'drinking_water_date'     => 'Año (Agua potable)',
+    'drinking_water_status'   => 'Estado (Agua potable)',
 /** D */
 
 /** E */
@@ -83,8 +91,8 @@ return [
 /** E */
 
 /** F */
-    'platform_users'     => 'Usuarios plataforma',
-    'platform_role'      => 'Rol en plataforma',
+    'families_with_drinking_water'  => 'Familias con agua potable',
+    'families_with_sewer'           => 'Familias con alcantarillado',
 /** F */
 
 /** G */
@@ -130,11 +138,14 @@ return [
 
 /** O */
     'occupation'         => 'Ocupación',
+    'occupied_area'      => 'Area ocupada (Ha)',
     'optional_fields'    => 'Campos opcionales',
     'other_phone_number' => 'Otro número de teléfono',
 /** O */
 
 /** P */
+    'platform_users'     => 'Usuarios plataforma',
+    'platform_role'      => 'Rol en plataforma',
     'phone_number'       => 'Número de teléfono',
     'program_create_failure'            => '¡Error al crear el programa!',
     'program_create_successfully'       => '¡Programa creado exitosamente!',
@@ -170,6 +181,10 @@ return [
     'subregion'     => 'Sub region',
     'subregions'    => 'Sub regiones',
     'surnames'      => 'Apellidos',
+    
+    'septic_tank_sewer'     => 'Alcantarillado - Pozo séptico',
+    'septic_tank_date'      => 'Año (Alcantarillado)',
+    'septic_tank_status'    => 'Estado (Alcantarillado)',
 /** S */
 
 /** T */
@@ -220,6 +235,10 @@ return [
 /** V */
 /** W */
     'which' => 'Cual',
+
+    'water_purification_system'        => 'Sistema de potabilización de agua (SPA)',
+    'water_purification_system_date'   => 'Año (SPA)',
+    'water_purification_system_status' => 'Estado (SPA)',
 /** W */
 /** X */
 /** X */
@@ -231,3 +250,4 @@ return [
 /** Z */
 /** Z */
 ];
+
