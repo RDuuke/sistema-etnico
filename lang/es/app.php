@@ -239,6 +239,13 @@ return [
     'water_purification_system'        => 'Sistema de potabilización de agua (SPA)',
     'water_purification_system_date'   => 'Año (SPA)',
     'water_purification_system_status' => 'Estado (SPA)',
+    
+    'water_strategy_create_failure'         => '¡Error al crear la estrategia de agua!',
+    'water_strategy_create_successfully'    => '¡Estrategia de agua creado exitosamente!',
+    'water_strategy_delete_failure'         => '¡Error al eliminar la estrategia de agua!',
+    'water_strategy_delete_successfully'    => '¡Estrategia de agua eliminado exitosamente!',
+    'water_strategy_update_failure'         => '¡Error al actualizar la estrategia de agua!',
+    'water_strategy_update_successfully'    => '¡Estrategia de agua actualizado exitosamente!',
 /** W */
 /** X */
 /** X */

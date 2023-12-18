@@ -1,16 +1,17 @@
 <?php
 
 declare(strict_types=1);
-namespace App\Http\Controllers\Dashboard\Programs;
+namespace App\Http\Controllers\Dashboard\WaterStrategies;
 
 use App\Utilities\ValidateRoles;
 
-final class ProgramsCreateAndEditController {
+final class WaterStrategyCreateAndEditController {
     
     public function __invoke(string $community_id, $id = null) {
         session(['actualSection' => 'communities']);
         ValidateRoles::communityCoordinator();
         
-        return view('dashboard.communities.programs.create_and_edit', compact('community_id', 'id'));
+        dd(WaterStrategyCreateAndEditController::class);
+        return view('dashboard.communities.water_strategies.create_and_edit', compact('community_id', 'id'));
     }
 }

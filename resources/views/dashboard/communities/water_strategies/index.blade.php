@@ -10,7 +10,7 @@
     </a>
 
     <div class="w-12 -mb-3 -mt-6">
-        <a {{-- href="{{route('dashboard.programs.create-and-edit', ['community_id' => $community->id, 'id' => 0])}}" --}}>
+        <a href="{{route('dashboard.water.create-and-edit', ['community_id' => $community->id, 'id' => 0])}}">
             <img src="{{ asset('images/add-user.png') }}" alt="">
         </a>
     </div>
