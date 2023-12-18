@@ -140,6 +140,8 @@ return [
     'program_create_successfully'       => '¡Programa creado exitosamente!',
     'program_delete_failure'            => '¡Error al eliminar el programa!',
     'program_delete_successfully'       => '¡Programa eliminado exitosamente!',
+    'program_update_failure'            => '¡Error al actualizar el programa!',
+    'program_update_successfully'       => '¡Programa actualizado exitosamente!',
 /** P */
 
 /** Q */

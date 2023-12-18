@@ -41,39 +41,53 @@ final class FormCreateAndEdit extends Component
 
     public function mount(string $community_id, $program_id)
     {
-        
         $this->administrator = auth()->user();
         $this->community = Community::find($community_id);
         $this->add_program   = true;
         $this->program       = new Programs();
         $this->programs         = Programs::where('community_id', $community_id)->get();
-        $this->types_programs   = TypeProgram::whereNotIn('id', $this->programs->pluck('type_program_id'))->get();
-
         $this->program_id    = $program_id;
 
         if ($this->program_id) {
-            $this->add_program  = false;
-            $this->edit_program = true;
-            $this->program       = Programs::find($this->program_id);
-            
-        }
+            $this->add_program      = false;
+            $this->edit_program     = true;
+            $this->program          = Programs::find($this->program_id);
+            $this->types_programs   = TypeProgram::whereNotIn('id', $this->programs->pluck('type_program_id'))
+                ->orWhere('id', $this->program->type_program_id)
+                ->get();
+        } else {
+            $this->types_programs   = TypeProgram::whereNotIn('id', $this->programs->pluck('type_program_id'))->get();
 
+        }
     }
 
     public function save() {
         $this->validate();
-
         try {
-            $this->program->community_id = $this->community->id;
-            $this->repository->create($this->program);
+            if ($this->add_program) {
+                $this->program->community_id = $this->community->id;
+                $this->repository->create($this->program);
+                return redirect(route('dashboard.programs.index', ['community_id' => $this->community->id]))->with('processResult', [
+                    'status' => 1,
+                    'message' => __('app.program_create_successfully')
+                ]);
+            }
+
+            $this->repository->update($this->program_id, $this->program);
             return redirect(route('dashboard.programs.index', ['community_id' => $this->community->id]))->with('processResult', [
                 'status' => 1,
-                'message' => __('app.program_create_successfully')
+                'message' => __('app.program_update_successfully')
             ]);
         } catch (Exception $e) {
+            if ($this->add_program) {
+                return redirect()->back()->with('processResult', [
+                    'status' => 0,
+                    'message' => __('app.program_create_failure')
+                ]);
+            }
             return redirect()->back()->with('processResult', [
                 'status' => 0,
-                'message' => __('app.program_create_failure')
+                'message' => __('app.program_update_failure')
             ]);
         }
     }

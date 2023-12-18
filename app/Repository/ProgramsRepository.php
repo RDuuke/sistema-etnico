@@ -17,4 +17,18 @@ final class ProgramsRepository {
             'type_program_id'        => $data['type_program_id'],           
         ]);
     }
+
+     public function update(string|int $id, Programs $data): Programs {
+        $program = Programs::findOrFail($id);
+        $program->update([
+            'apply'                  => $data['apply'],
+            'unit_of_measurement'    => $data['unit_of_measurement'],           
+            'amount_of_participants' => $data['amount_of_participants'],           
+            'which'                  => $data['which'],           
+            'community_id'           => $data['community_id'],           
+            'type_program_id'        => $data['type_program_id'],   
+        ]);
+        $program->refresh();
+        return $program;
+    }
 }

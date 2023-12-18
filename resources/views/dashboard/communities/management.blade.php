@@ -3,6 +3,10 @@
 <div class="mx-6 py-6 sm:px-6 lg:px-10">
     <h1 class="text-2xl text-center font-bold text-white">{{__('app.community_management')}}</h1>
     <h1 class="text-2xl text-center font-bold text-white mb-4">{{$community->name}}</h1>
+    <a href="{{route('dashboard.communities.index')}}"
+        class="flex text-vtsas-blue font-bold text-white absolute top-36">
+        <x-icons.arrow-left></x-icons.arrow-left><span>{{__('app.return')}}</span>
+    </a>
 
     <div class="flex flex-wrap justify-center">
         @foreach ($sections as $item)
