@@ -87,11 +87,11 @@ class GetAllWaterStrategiesByCommunityTable extends LivewireDatatable
             Column::name('families_with_sewer')
             ->label(__('app.families_with_sewer')),
 
-            // Column::callback(['id'], function ($id) {
-            //     return view('livewire.dashboard.programs.actions.programs-table-actions', ['community_id' => $this->community_id, 'id' => $id]);
-            // })
-            //     ->label(__('app.actions'))
-            //     ->unsortable()
+            Column::callback(['id'], function ($id) {
+                return view('livewire.dashboard.water_strategy.actions.water_strategy-table-actions', ['community_id' => $this->community_id, 'id' => $id]);
+            })
+                ->label(__('app.actions'))
+                ->unsortable()
         ];
     }
 }
