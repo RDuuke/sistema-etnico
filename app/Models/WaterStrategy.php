@@ -23,6 +23,7 @@ class WaterStrategy extends Model
         'aqueduct',
         'aqueduct_date',
         'aqueduct_status',
+        'families_with_aqueduct',
         'septic_tank_sewer',
         'septic_tank_date',
         'septic_tank_status',

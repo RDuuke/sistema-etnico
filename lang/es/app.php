@@ -8,6 +8,7 @@ return [
 
     'add_community_census'  => 'Agregar censo para la comunidad',
     'add_community_program' => 'Agregar programa para la comunidad',
+    'add_water_strategy'    => 'Agregar estrategia de agua para la comunidad',
 
     'afro'          => 'Afro',
     'age'           => 'Edad',
@@ -91,6 +92,7 @@ return [
 /** E */
 
 /** F */
+    'families_with_aqueduct'        => 'Familias con acueducto',
     'families_with_drinking_water'  => 'Familias con agua potable',
     'families_with_sewer'           => 'Familias con alcantarillado',
 /** F */
@@ -213,6 +215,7 @@ return [
     'update_census'  => 'Actualizar censo',
     'update_community_census'  => 'Actualizar censo para la comunidad',
     'update_community_program' => 'Actualizar programa para la comunidad',
+    'update_water_strategy'    => 'Actualizar estrategia del agua para la comunidad',
 
     'user'              => 'Usuario',
     'user_management'   => 'Gestión de usuarios',
@@ -236,6 +239,7 @@ return [
 /** W */
     'which' => 'Cual',
 
+    'purification_system'              => 'Sistema de potabilización (SPA)',
     'water_purification_system'        => 'Sistema de potabilización de agua (SPA)',
     'water_purification_system_date'   => 'Año (SPA)',
     'water_purification_system_status' => 'Estado (SPA)',

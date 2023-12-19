@@ -11,7 +11,6 @@ final class WaterStrategyCreateAndEditController {
         session(['actualSection' => 'communities']);
         ValidateRoles::communityCoordinator();
         
-        dd(WaterStrategyCreateAndEditController::class);
         return view('dashboard.communities.water_strategies.create_and_edit', compact('community_id', 'id'));
     }
 }
