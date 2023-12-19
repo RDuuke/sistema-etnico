@@ -68,5 +68,9 @@ class Community extends Model
     public function hasManyPrograms() {
         return $this->hasMany(Programs::class, 'community_id', 'id');
     }
+
+    public function hasManyWaterStrategies() {
+        return $this->hasMany(WaterStrategy::class, 'community_id', 'id');
+    }
     
 }
