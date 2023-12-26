@@ -22,13 +22,18 @@ final class CommunityManageController
                 'params' => ['community_id' => $id]
             ],
             [
+                'section' => 'Estrategia del agua',
+                'route' => 'dashboard.water.index',
+                'params' => ['community_id' => $id]
+            ],
+            [
                 'section' => 'Estrategias y programas para el fortalecimiento comunitario',
                 'route' => 'dashboard.programs.index',
                 'params' => ['community_id' => $id]
             ],
             [
-                'section' => 'Estrategia del agua',
-                'route' => 'dashboard.water.index',
+                'section' => 'Áreas Protegidas desde el Gobierno Propio',
+                'route' => 'dashboard.protected-areas.index',
                 'params' => ['community_id' => $id]
             ],
         ];
