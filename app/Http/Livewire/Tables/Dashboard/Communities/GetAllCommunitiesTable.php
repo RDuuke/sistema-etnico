@@ -20,12 +20,8 @@ class GetAllCommunitiesTable extends LivewireDatatable
         $communities = PivotCommunityUser::where('user_id', auth()->guard('community')->user()->id)->pluck('community_id');
 
         return $this->model::query()
-<<<<<<< HEAD
             ->join('types_of_areas', 'communities.type_of_area_id', 'types_of_areas.id')
             ->whereIn('communities.id', $communities);
-=======
-                ->join('types_of_areas', 'communities.type_of_area_id', 'types_of_areas.id');
->>>>>>> bitbcuket/main
     }
 
     public function columns() {

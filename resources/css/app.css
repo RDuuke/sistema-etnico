@@ -105,10 +105,7 @@ body {
 
 .input-form {
     @apply block w-full border border-black py-1 p-2 text-gray-900 !important;
-<<<<<<< HEAD
-=======
     background: rgba(255, 255, 255, 0.7) !important;
->>>>>>> bitbcuket/main
     opacity: 80%;
 }
 
@@ -165,7 +162,6 @@ body {
 .sidebar__li {
     @apply flex items-center w-full p-2 transition duration-75 pl-11 hover:bg-project-sidebar select-none;
 }
-<<<<<<< HEAD
 
 .section-water__content3 {
     @apply grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 mb-8;
@@ -193,6 +189,4 @@ body {
 .management-card h5 {
     @apply text-xl font-bold text-white pb-10;
 }
-=======
 /*S*/
->>>>>>> bitbcuket/main

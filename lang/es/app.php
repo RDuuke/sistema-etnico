@@ -5,7 +5,6 @@ return [
     'actions'       => 'Acciones',
     'administrator' => 'Administrador',
     'add_community' => 'Agregar comunidad',
-<<<<<<< HEAD
 
     'add_community_census'  => 'Agregar censo para la comunidad',
     'add_community_program' => 'Agregar programa para la comunidad',
@@ -23,10 +22,6 @@ return [
     'aqueduct'               => 'Acueducto',
     'aqueduct_date'          => 'Año (Acueducto)',
     'aqueduct_status'        => 'Estado (Acueducto)',
-=======
-    'age'           => 'Edad',
-    'occupied_area' => 'Area ocupada (Ha)',
->>>>>>> bitbcuket/main
 /** A */
 
 /** B */
@@ -48,14 +43,10 @@ return [
     'collective_title'  => 'Título colectivo',
     'community'         => 'Comunidad',
     'communities'       => 'Comunidades',
-<<<<<<< HEAD
     'community_census'  => 'Censo para la comunidad',
     'community_of_census'  => 'Censo de la comunidad',
     'community_name'    => 'Nombre de la comunidad',
     'community_programs'=> 'Programas de la comunidad',
-=======
-    'community_name'    => 'Nombre de la comunidad',
->>>>>>> bitbcuket/main
     'community_users'   => 'Usuarios comunidades',
 
     'community_management_failure'        => '¡Error al gestionar la comunidad!',
@@ -65,16 +56,10 @@ return [
     'community_delete_successfully'       => '¡Comunidad eliminado exitosamente!',
     'community_update_failure'            => '¡Error al actualizar la comunidad!',
     'community_update_successfully'       => '¡Comunidad actualizado exitosamente!',
-<<<<<<< HEAD
     'community_water_strategy'            => 'Estrategia del agua de la comunidad',
 
     'community_management'   => 'Gestión de comunidad',
     'community_managements'  => 'Gestión de comunidades',
-=======
-
-
-    'community_management'   => 'Gestión de comunidades',
->>>>>>> bitbcuket/main
     'community_coordinator'  => 'Coordinador de comunidad',
     'contact_email'          => 'Correo electrónico de contacto',
     'contact_phone'          => 'Teléfono de contacto',
@@ -143,10 +128,7 @@ return [
 /** L */
 
 /** M */
-<<<<<<< HEAD
     'manage_community'  => 'Gestionar comunidad',
-=======
->>>>>>> bitbcuket/main
     'municipalities'    => 'Municipios',
     'municipality'      => 'Municipio',
 /** M */
@@ -156,20 +138,14 @@ return [
     'names'     => 'Nombres',
     'name_community_council'    => 'Nombre consejo comunitario',
     'not_registered'            => '¿No tienes cuenta?',
-<<<<<<< HEAD
     'number_of_families'        => 'Número de familias',
     'number_of_people'          => 'Número de personas',
-=======
->>>>>>> bitbcuket/main
 /** N */
 
 /** O */
     'observations'       => 'Observaciones',
     'occupation'         => 'Ocupación',
-<<<<<<< HEAD
     'occupied_area'      => 'Area ocupada (Ha)',
-=======
->>>>>>> bitbcuket/main
     'optional_fields'    => 'Campos opcionales',
     'other_phone_number' => 'Otro número de teléfono',
 /** O */
@@ -203,18 +179,12 @@ return [
 /** R */
     'reservation_name' => 'Nombre del resguardo',
 
-<<<<<<< HEAD
     'result'         => 'Resultado',
     'results'        => 'Resultados',
     'return'         => 'Volver',
     'return_census' => 'Volver al censo',
     
     'return_to_community_management' => 'Volver a gestionar la comunidad',
-=======
-    'result'    => 'Resultado',
-    'results'   => 'Resultados',
-    'return'    => 'Volver',
->>>>>>> bitbcuket/main
 
     'role_for_user'    => 'Rol para el usuario',
     
@@ -248,11 +218,8 @@ return [
     "type_of_community" => 'Tipo de comunidad',
     "type_of_area"      => 'Tipo de área',
     "types_of_areas"    => 'Tipos de áreas',
-<<<<<<< HEAD
     "type_of_program"   => 'Tipo de programa',
     "types_of_programs" => 'Tipos de programas',
-=======
->>>>>>> bitbcuket/main
 /** T */
 
 /** U */
