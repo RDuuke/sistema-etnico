@@ -9,6 +9,7 @@ return [
     'add_community_census'  => 'Agregar censo para la comunidad',
     'add_community_program' => 'Agregar programa para la comunidad',
     'add_water_strategy'    => 'Agregar estrategia de agua para la comunidad',
+    'add_strategies_and_programs_for_community_strengthening'    => 'Agregar estrategia y programa para el fortalecimiento comunitario para la comunidad ',
 
     'afro'          => 'Afro',
     'age'           => 'Edad',
@@ -66,6 +67,7 @@ return [
     'create'            => 'Crear',
     'create_user'       => 'Adicionar usuario',
     'create_community'  => 'Crear comunidad',
+
 /** C */
 
 /** D */
@@ -74,6 +76,7 @@ return [
     'district'      => 'Corregimiento',
     'districts'     => 'Corregimientos',
     'document'      => 'Documento',
+    'does_not_apply'=> 'No aplica',
 
     'disabled_community_user' => 'Usted se encuentra pendiente aprobación, comuníquese con el coordinador de su comunidad',
     'disabled_user'           => 'Deshabilitar usuario',
@@ -139,6 +142,7 @@ return [
 /** N */
 
 /** O */
+    'observations'       => 'Observaciones',
     'occupation'         => 'Ocupación',
     'occupied_area'      => 'Area ocupada (Ha)',
     'optional_fields'    => 'Campos opcionales',
@@ -187,6 +191,7 @@ return [
     'septic_tank_sewer'     => 'Alcantarillado - Pozo séptico',
     'septic_tank_date'      => 'Año (Alcantarillado)',
     'septic_tank_status'    => 'Estado (Alcantarillado)',
+    'strategies_and_programs_for_community_strengthening'    => 'Estrategias y programas para el fortalecimiento comunitario',
 /** S */
 
 /** T */
@@ -215,6 +220,9 @@ return [
     'update_census'  => 'Actualizar censo',
     'update_community_census'  => 'Actualizar censo para la comunidad',
     'update_community_program' => 'Actualizar programa para la comunidad',
+
+    'update_strategies_and_programs_for_community_strengthening'    => 'Actualizar estrategias y programas para el fortalecimiento comunitario para la comunidad ',
+
     'update_water_strategy'    => 'Actualizar estrategia del agua para la comunidad',
 
     'user'              => 'Usuario',

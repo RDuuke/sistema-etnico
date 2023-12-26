@@ -18,6 +18,8 @@ class Programs extends Model
         'which',
         'community_id',
         'type_program_id',
+        'year',
+        'observations',
     ];
 
     public function belongsToCommunity() {

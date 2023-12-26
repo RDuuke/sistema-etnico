@@ -105,7 +105,6 @@ body {
 
 .input-form {
     @apply block w-full border border-black py-1 p-2 text-gray-900 !important;
-    background: rgba(255, 255, 255, 0.7) !important;
     opacity: 80%;
 }
 
