@@ -105,7 +105,10 @@ body {
 
 .input-form {
     @apply block w-full border border-black py-1 p-2 text-gray-900 !important;
+<<<<<<< HEAD
+=======
     background: rgba(255, 255, 255, 0.7) !important;
+>>>>>>> bitbcuket/main
     opacity: 80%;
 }
 
@@ -162,4 +165,34 @@ body {
 .sidebar__li {
     @apply flex items-center w-full p-2 transition duration-75 pl-11 hover:bg-project-sidebar select-none;
 }
+<<<<<<< HEAD
+
+.section-water__content3 {
+    @apply grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 mb-8;
+}
+
+.section-water__content4 {
+    @apply grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-8 mb-8;
+}
+
+.section-water__p {
+    @apply mb-4 pb-4 pt-12 font-bold text-lg border-b border-gray-500 opacity-50;
+}
 /*S*/
+
+.button-card {
+    @apply inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white hover:bg-project-sidebar ml-auto;
+    background-color: rgba(132, 114, 103, 0.67);
+    color: #fff;
+}
+
+.management-card {
+    @apply max-w-sm p-6 border-4 border-project-sidebar shadow select-none;
+}
+
+.management-card h5 {
+    @apply text-xl font-bold text-white pb-10;
+}
+=======
+/*S*/
+>>>>>>> bitbcuket/main

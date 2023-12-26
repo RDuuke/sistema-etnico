@@ -17,7 +17,10 @@ use Exception;
 use Livewire\Component;
 
 final class IndexCommunity extends Component {
+<<<<<<< HEAD
+=======
 //TODO recordar que debo organizar los select dependientes de la ubicación
+>>>>>>> bitbcuket/main
     public $add_community;
     public $edit_community;
     public $municipalities;
@@ -33,6 +36,10 @@ final class IndexCommunity extends Component {
     public $editMode = false;
     public $community_id = null;
     public Community $community;
+<<<<<<< HEAD
+    public $administrator;
+=======
+>>>>>>> bitbcuket/main
 
 
     protected array $rules;
@@ -54,6 +61,10 @@ final class IndexCommunity extends Component {
     }
 
     public function mount() {
+<<<<<<< HEAD
+        $this->administrator = auth()->user();
+=======
+>>>>>>> bitbcuket/main
         $this->add_community    = false;
         $this->edit_community   = false;
 
@@ -70,7 +81,11 @@ final class IndexCommunity extends Component {
     }
 
     public function save() {
+<<<<<<< HEAD
+
+=======
         
+>>>>>>> bitbcuket/main
         if ($this->add_community) {
             $this->validate(array_merge(
                 $this->rules,['community.name' => 'required|unique:communities,name']
@@ -112,6 +127,8 @@ final class IndexCommunity extends Component {
         $this->edit_community = true;
         $this->community_id = $id;
         $this->community = Community::find($id);
+<<<<<<< HEAD
+=======
         $this->resetChecks();
         if ($this->community->name_community_council != "") $this->checkNameCommunityCouncil = true;
         if (!is_null($this->community->collective_title))   $this->checkCollectiveTitle = true;
@@ -124,6 +141,7 @@ final class IndexCommunity extends Component {
         $this->checkCollectiveTitle      = false;
         $this->checkReservationName      = false;
         $this->checkTownName             = false;
+>>>>>>> bitbcuket/main
     }
 
     public function add() {
@@ -134,11 +152,14 @@ final class IndexCommunity extends Component {
     public function preview() {
         $this->add_community = false;
         $this->edit_community = false;
+<<<<<<< HEAD
+=======
         $this->checkNameCommunityCouncil = false;
         $this->checkCollectiveTitle      = false;
         $this->checkReservationName      = false;
         $this->checkTownName             = false;
         $this->resetChecks();
+>>>>>>> bitbcuket/main
         $this->mount();
     }
 }

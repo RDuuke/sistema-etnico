@@ -6,6 +6,10 @@ final class CommunityRequest {
     public static function rules() {
         return  [
             'community.name'                    => 'required',
+<<<<<<< HEAD
+            'community.type_community'          => 'required',
+=======
+>>>>>>> bitbcuket/main
             'community.contact_phone'           => 'required',            
             'community.contact_email'           => 'required|email:rfc|regex:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/',            
             'community.type_of_area_id'         => 'required|numeric',            
@@ -18,10 +22,16 @@ final class CommunityRequest {
             'community.municipality_id'         => 'required|numeric',
 
             /**Optionals */
+<<<<<<< HEAD
+            'community.reservation_name'        => 'nullable|required_if:community.type_community,1',
+            'community.town_name'               => 'nullable|required_if:community.type_community,1',
+            'community.collective_title'        => 'nullable|required_if:community.type_community,2',
+=======
             'community.reservation_name'        => 'nullable|required_if:checkReservationName,true',
             'community.town_name'               => 'nullable|required_if:checkTownName,true',        
             'community.collective_title'        => 'nullable|required_if:checkCollectiveTitle,true',            
             'community.name_community_council'  => 'nullable|required_if:checkNameCommunityCouncil,true',                    
+>>>>>>> bitbcuket/main
         ];
     }
 

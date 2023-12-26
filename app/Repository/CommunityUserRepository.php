@@ -15,20 +15,20 @@ final class CommunityUserRepository {
 
     public function createPublic(array $data) : CommunityUser {
         return $this->model::create([
-            'enable '              => $data['enable'],
+            'enable'               => $data['enable'],
             'names'                => ucwords(strtolower($data['names'])),
             'surnames'             => ucwords(strtolower($data['surnames'])),
             'type_document_id'     => $data['type_document_id'],
             'document'             => $data['document'],
             'age'                  => $data['age'],
-            'gender_id'            => $data['gender_id'],
+/*             'gender_id'            => $data['gender_id'],
             'phone_1'              => $data['phone_1'],
-            'phone_2'              => $data['phone_2'],
+            'phone_2'              => $data['phone_2'], */
             'email'                => $data['email'],
-            'educational_level_id' => $data['educational_level_id'],
+/*             'educational_level_id' => $data['educational_level_id'],
             'training_area_id'     => $data['training_area_id'],
             'occupation_id'        => $data['occupation_id'],
-            'strategy_id'          => $data['strategy_id'],
+            'strategy_id'          => $data['strategy_id'], */
             'password'             => Hash::make($data['document']),
         ]);
     }
@@ -51,6 +51,7 @@ final class CommunityUserRepository {
             'strategy_id'          => $data['strategy_id'],
             'password'             => Hash::make($data['document']),
         ]);
+
     }
 
     public function update(string $id, array $data): CommunityUser {

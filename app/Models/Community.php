@@ -13,6 +13,10 @@ class Community extends Model
     protected $table = 'communities';
     protected $fillable = [
         'name',
+<<<<<<< HEAD
+        'type_community',
+=======
+>>>>>>> bitbcuket/main
         'contact_phone',
         'contact_email',
         'type_of_area_id',
@@ -25,7 +29,10 @@ class Community extends Model
         'municipality_id',
 
         /**Optionals */
+<<<<<<< HEAD
+=======
         'name_community_council',
+>>>>>>> bitbcuket/main
         'collective_title',
         'reservation_name',
         'town_name',
@@ -60,5 +67,24 @@ class Community extends Model
     public function belongsToMunicipality() {
         return $this->belongsTo(Municipality::class, 'municipality_id', 'id');
     }
+<<<<<<< HEAD
+
+    public function hasManyCensus() {
+        return $this->hasMany(Census::class, 'community_id', 'id');
+    }
+
+    public function hasManyPrograms() {
+        return $this->hasMany(Programs::class, 'community_id', 'id');
+    }
+
+    public function hasManyWaterStrategies() {
+        return $this->hasMany(WaterStrategy::class, 'community_id', 'id');
+    }
+
+    public function hasManyProtectedAreas() {
+        return $this->hasMany(ProtectedArea::class, 'community_id', 'id');
+    }
+=======
+>>>>>>> bitbcuket/main
     
 }
