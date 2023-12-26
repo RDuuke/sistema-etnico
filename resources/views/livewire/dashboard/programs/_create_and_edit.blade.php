@@ -14,15 +14,6 @@
             @error('program.type_program_id') <span class="error-form">{{ $message }}</span>@enderror
         </div>
 
-        @if($program['type_program_id'] == 6)
-        <div class="sm:col-span-2">
-            <label for="which" class="label-form">{{'¿' .__('app.which') . '?'}}</label>
-            <input placeholder="{{'¿' .__('app.which')  . '?'}}" type="text" name="which" wire:model="program.which"
-                class="input-form">
-            @error('program.which') <span class="error-form">{{ $message }}</span>@enderror
-        </div>
-        @endif
-
         <div class="sm:col-span-2">
             <label for="year" class="label-form">{{__('app.year')}}</label>
             <input placeholder="{{__('app.year')}}" type="number" name="year" wire:model="program.year"
