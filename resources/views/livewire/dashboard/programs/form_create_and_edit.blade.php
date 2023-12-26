@@ -1,10 +1,10 @@
 <div class="mt-10 px-10 sm:px-10 lg:px-10 relative" style="background: rgba(217, 217, 217, 0.85);">
     <h2 class="text-black py-6 text-xl text-center font-bold">
         @if ($this->add_program)
-            {{__('app.add_community_program')}} <br>
+            {{__('app.add_strategies_and_programs_for_community_strengthening')}}
             {{__($community->name)}}
         @else
-            {{__('app.update_community_program')}} <br>
+            {{__('app.update_strategies_and_programs_for_community_strengthening')}}
             {{__($community->name)}}
         @endif
     </h2>
