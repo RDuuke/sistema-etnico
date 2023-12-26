@@ -72,5 +72,9 @@ class Community extends Model
     public function hasManyWaterStrategies() {
         return $this->hasMany(WaterStrategy::class, 'community_id', 'id');
     }
+
+    public function hasManyProtectedAreas() {
+        return $this->hasMany(ProtectedArea::class, 'community_id', 'id');
+    }
     
 }
