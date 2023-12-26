@@ -76,6 +76,7 @@ return [
     'district'      => 'Corregimiento',
     'districts'     => 'Corregimientos',
     'document'      => 'Documento',
+    'does_not_apply'=> 'No aplica',
 
     'disabled_community_user' => 'Usted se encuentra pendiente aprobación, comuníquese con el coordinador de su comunidad',
     'disabled_user'           => 'Deshabilitar usuario',

@@ -18,6 +18,12 @@ return new class extends Migration
             if (!Schema::hasColumn('programs', 'observations')) {
                 $table->string('observations')->after('type_program_id')->nullable();
             }
+            if (Schema::hasColumn('programs', 'unit_of_measurement')) {
+                $table->string('unit_of_measurement')->nullable()->change();
+            }
+            if (Schema::hasColumn('programs', 'amount_of_participants')) {
+                $table->string('amount_of_participants')->nullable()->change();
+            }
         });
     }
 

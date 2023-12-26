@@ -39,6 +39,10 @@ final class FormCreateAndEdit extends Component
         return view('livewire.dashboard.programs.form_create_and_edit');
     }
 
+    // public function updated ($property) {
+    //     dd($this->program->apply);
+    // }
+
     public function mount(string $community_id, $program_id)
     {
         $this->administrator = auth()->user();
@@ -52,15 +56,11 @@ final class FormCreateAndEdit extends Component
             $this->add_program      = false;
             $this->edit_program     = true;
             $this->program          = Programs::find($this->program_id);
-            $this->types_programs   = TypeProgram::whereNotIn('id', $this->programs->pluck('type_program_id'))
-                ->orWhere('id', $this->program->type_program_id)
-                ->get();
-        } else {
-            $this->types_programs   = TypeProgram::whereNotIn('id', $this->programs->pluck('type_program_id'))->get();
-
         }
-    }
+        
+        $this->types_programs   = TypeProgram::all();
 
+    }
     public function save() {
         $this->validate();
         try {

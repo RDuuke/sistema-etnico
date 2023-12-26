@@ -15,6 +15,8 @@ final class ProgramsRepository {
             'which'                  => $data['which'],           
             'community_id'           => $data['community_id'],           
             'type_program_id'        => $data['type_program_id'],           
+            'year'                   => $data['year'],
+            'observations'           => $data['observations'],           
         ]);
     }
 
@@ -26,7 +28,9 @@ final class ProgramsRepository {
             'amount_of_participants' => $data['amount_of_participants'],           
             'which'                  => $data['which'],           
             'community_id'           => $data['community_id'],           
-            'type_program_id'        => $data['type_program_id'],   
+            'type_program_id'        => $data['type_program_id'],
+            'year'                   => $data['year'],
+            'observations'           => $data['observations'],              
         ]);
         $program->refresh();
         return $program;

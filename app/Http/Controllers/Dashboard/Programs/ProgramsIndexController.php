@@ -19,8 +19,7 @@ final class ProgramsIndexController
         $community = Community::find($community_id);
         $types_programs = TypeProgram::all()->count();
         $program = Programs::all()->count();
-        $complete = $program == $types_programs ? true : false;
 
-        return view('dashboard.communities.programs.index', compact('community', 'complete'));
+        return view('dashboard.communities.programs.index', compact('community'));
     }
 }
