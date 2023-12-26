@@ -9,6 +9,7 @@ return [
     'add_community_census'  => 'Agregar censo para la comunidad',
     'add_community_program' => 'Agregar programa para la comunidad',
     'add_water_strategy'    => 'Agregar estrategia de agua para la comunidad',
+    'add_protected_area'    => 'Agregar área protegida',
     'add_strategies_and_programs_for_community_strengthening'    => 'Agregar estrategia y programa para el fortalecimiento comunitario para la comunidad ',
 
     'afro'          => 'Afro',
@@ -150,6 +151,8 @@ return [
 /** O */
 
 /** P */
+    'payments_environmental_services'   => 'Pagos por servicios ambientales',
+
     'platform_users'     => 'Usuarios plataforma',
     'platform_role'      => 'Rol en plataforma',
     'phone_number'       => 'Número de teléfono',
@@ -159,6 +162,15 @@ return [
     'program_delete_successfully'       => '¡Programa eliminado exitosamente!',
     'program_update_failure'            => '¡Error al actualizar el programa!',
     'program_update_successfully'       => '¡Programa actualizado exitosamente!',
+
+    'protected_area_create_failure'             => '¡Error al crear el área protegida!',
+    'protected_area_update_failure'             => '¡Error al actualizar el área protegida!',
+    'protected_area_create_successfully'        => 'Área protegida creada exitosamente!',
+    'protected_area_update_successfully'        => 'Área protegida actualizada exitosamente!',
+    'protected_area_delete_failure'             => '¡Error al eliminar el área protegida!',
+    'protected_area_delete_successfully'        => '¡Área protegida eliminado exitosamente!',
+    'protected_areas_from_the_own_government'   => 'Áreas Protegidas desde el Gobierno Propio',
+    'protected_hectares'                        => 'Hectáreas Protegidas desde el Gobierno Propio',
 /** P */
 
 /** Q */
@@ -220,6 +232,8 @@ return [
     'update_census'  => 'Actualizar censo',
     'update_community_census'  => 'Actualizar censo para la comunidad',
     'update_community_program' => 'Actualizar programa para la comunidad',
+    'update_protected_area' => 'Actualizar área protegida',
+
 
     'update_strategies_and_programs_for_community_strengthening'    => 'Actualizar estrategias y programas para el fortalecimiento comunitario para la comunidad ',
 
