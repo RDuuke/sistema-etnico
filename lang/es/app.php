@@ -13,6 +13,7 @@ return [
     'add_strategies_and_programs_for_community_strengthening'    => 'Agregar estrategia y programa para el fortalecimiento comunitario para la comunidad ',
 
     'afro'          => 'Afro',
+    'afro-colombians'       => 'Afrocolombianos',
     'age'           => 'Edad',
 
     'amount_of_participants' => 'Cantidad de participantes',
@@ -103,6 +104,7 @@ return [
 
 /** G */
     'gender'            => 'Género',
+    'geographical-portal'  => 'Portal geográfico',
 /** G */
 
 /** H */
@@ -125,6 +127,7 @@ return [
 
 /** L */
     'logout' => 'Cerrar sesión',
+    'login'  => 'Iniciar sesión',
 /** L */
 
 /** M */
@@ -136,12 +139,13 @@ return [
 /** N */
     'name'      => 'Nombre',
     'names'     => 'Nombres',
+    'natives'    => 'Indigenas',
     'name_community_council'    => 'Nombre consejo comunitario',
     'not_registered'            => '¿No tienes cuenta?',
     'number_of_families'        => 'Número de familias',
     'number_of_people'          => 'Número de personas',
 /** N */
-
+    
 /** O */
     'observations'       => 'Observaciones',
     'occupation'         => 'Ocupación',
@@ -156,6 +160,7 @@ return [
     'platform_users'     => 'Usuarios plataforma',
     'platform_role'      => 'Rol en plataforma',
     'phone_number'       => 'Número de teléfono',
+    'presentation'       => 'Presentación',
     'program_create_failure'            => '¡Error al crear el programa!',
     'program_create_successfully'       => '¡Programa creado exitosamente!',
     'program_delete_failure'            => '¡Error al eliminar el programa!',
