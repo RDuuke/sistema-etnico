@@ -1,6 +1,6 @@
 <div class="space-y-12" id="form">
     <div class="border-gray-900/10 pb-12">
-<<<<<<< HEAD
+
         <div class="sm:col-span-6">
             <label for="district_id" class="label-form">{{__('app.type_of_community')}}</label>
             <select wire:model="community.type_community" name="type_community" class="select-form">
@@ -158,7 +158,7 @@
                     @error('community.type_of_area_id') <span class="error-form">{{ $message }}</span>@enderror
                 </div>
             @endif
-=======
+
         @include('livewire.dashboard.communities.includes.__optional_fields')
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div class="sm:col-span-6">
@@ -270,7 +270,6 @@
                 </select>
                 @error('community.type_of_area_id') <span class="error-form">{{ $message }}</span>@enderror
             </div>
->>>>>>> bitbcuket/main
         </div>
     </div>
 </div>
