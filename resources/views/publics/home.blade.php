@@ -9,7 +9,7 @@
             <img class="logo-circle" height="150" src="{{ asset('images/home/indigena.png') }}" alt="">
         </a>
     </div>
-    <p class="my-8 text-white">
+    <p class="my-8">
         Ut commodo massa vel justo volutpat, sit amet pretium risus tempus. Suspendisse nisi tellus, varius tristique ante quis, viverra auctor orci. Donec ultrices ante at leo tincidunt, quis tristique nisi aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mi lorem, tristique id erat congue, aliquet congue odio. Ut ligula nibh, ultrices nec nisi non, dictum vestibulum massa. Vivamus non convallis leo, a dapibus nibh. Nullam consectetur elit vitae erat rhoncus, in viverra ligula sodales. Sed at molestie ligula.
     </p>
     <div class="cards-container">

@@ -13,8 +13,15 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.min.js" defer></script>
     @yield('style')
 </head>
+@php
+    $currentRouteName = Route::currentRouteName();
+@endphp
 
-<body>
+@if(in_array($currentRouteName, ['afrocolombianos', 'geographical-portal', 'natives', 'home']))
+<body style="background: white">
+@else
+<body style="background-image: url({{ asset('images/background-body.png')}})">
+@endif
     <button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar"
         aria-controls="sidebar-multi-level-sidebar" type="button"
         class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600">

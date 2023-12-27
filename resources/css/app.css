@@ -10,7 +10,6 @@
 }
 
 body {
-    background-image: url("/public/images/background-body.png");
     background-size: cover;
     background-position: center;
     margin: 0;
