@@ -8,7 +8,7 @@ use App\Http\Controllers\LogoutController;
 
 /** @var Illuminate\Support\Facades\Route*/
 
-Route::get('/', FormLogInController::class)->name('form-login')->middleware('guest');
+Route::get('/login', FormLogInController::class)->name('form-login')->middleware('guest');
 Route::post('/login', LogInController::class)->name('login')->middleware('guest');
 Route::get('/logout', LogoutController::class)->name('logout');
 
