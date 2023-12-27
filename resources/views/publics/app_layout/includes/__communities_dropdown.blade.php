@@ -11,14 +11,6 @@
     </button>
     <ul class="py-1 ml-4 space-y-1" x-show="openCommunity" x-on:click.away="openCommunity = false">
         <li>
-            <a href="{{ route('home') }}"
-                class="sidebar__li {{ session('actualSection') == 'community_user' ? 'bg-project-sidebar' : '' }}">
-                <span
-                    class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">{{__('app.presentation')}}</span>
-                <x-icons.left-arrown></x-icons.left-arrown>
-            </a>
-        </li>
-        <li>
             <a href="{{ route('natives') }}"
                 class="sidebar__li {{ session('actualSection') == 'community_user' ? 'bg-project-sidebar' : '' }}">
                 <span
@@ -35,20 +27,10 @@
             </a>
         </li>
         <li>
-            <a href="{{ route('dashboard.communities.index') }}"
-                class="sidebar__li {{ session('actualSection') == 'communities' ? 'bg-project-sidebar' : '' }}">
-                <span
-                    class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">{{__('app.community_management')}}</span>
-                <x-icons.left-arrown></x-icons.left-arrown>
-            </a>
-        </li>
-    </ul>
-    <ul class="py-1 ml-4 space-y-1" x-show="openCommunity" x-on:click.away="openCommunity = false">
-        <li>
-            <a href="{{ route('dashboard.community-users.index') }}"
+            <a href="{{ route('home') }}"
                 class="sidebar__li {{ session('actualSection') == 'community_user' ? 'bg-project-sidebar' : '' }}">
                 <span
-                    class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">{{__('app.user_management')}}</span>
+                    class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">{{__('app.presentation')}}</span>
                 <x-icons.left-arrown></x-icons.left-arrown>
             </a>
         </li>

@@ -42,25 +42,38 @@
                 @if(Auth::guard('web')->user())
                     @include('dashboard.app_layout.includes.__users_dropdown')
                 @endif
+                @if(Auth::guest())
+                    @include('publics.app_layout.includes.__communities_dropdown')
+                @endif
+                @include('publics.app_layout.includes.__geographical_dropdown')
                 <li>
+                @if(Auth::guest())
+                    <a type="button" class="sidebar__button" href="{{ route('login') }}">
+                        <img src="{{ asset('images/sidebar/setting.png') }}" alt="">
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">{{__('app.login')}}</span>
+                    </a>
+                @else
                     <a type="button" class="sidebar__button" href="{{ route('logout') }}">
                         <img src="{{ asset('images/sidebar/setting.png') }}" alt="">
                         <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">{{__('app.logout')}}</span>
                     </a>
+                @endif
                 </li>
             </ul>
             @php
                 $admin = !is_null(auth()->user()) ? true : false;
             @endphp
-            <div class="absolute bottom-28 inset-x-0 text-center font-bold bg-project-sidebar w-full p-4 select-none" >{{
-                    !$admin ? 'Comunidad ' . App\Models\PivotCommunityUser::where('user_id', auth()->guard('community')->user()->id)->first()->community_name : 'Administrador'
-                }}
-            </div>
+            @if($admin)
+                <div class="absolute bottom-28 inset-x-0 text-center font-bold bg-project-sidebar w-full p-4 select-none" >{{
+                        !$admin ? 'Comunidad ' . App\Models\PivotCommunityUser::where('user_id', auth()->guard('community')->user()->id)->first()->community_name : 'Administrador'
+                    }}
+                </div>
+            @endif
         </div>
     </aside>
 
-    <div class="p-4 sm:ml-[21.375rem]">
-        <header>
+    <div class="p-4 sm:ml-[21.375rem] h-screen">
+        <main class="h-screen">
             @if(! is_null(session('processResult')))
             <x-helpers.alert type="{{ session('processResult')['status'] }}"
                 message="{{ session('processResult')['message'] }}"></x-helpers.alert>
