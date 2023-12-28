@@ -128,6 +128,8 @@ return [
 /** L */
     'logout' => 'Cerrar sesión',
     'login'  => 'Iniciar sesión',
+    'longitude' => 'Longitud',
+    'latitude' => 'Latitud',
 /** L */
 
 /** M */
@@ -149,7 +151,7 @@ return [
 /** O */
     'observations'       => 'Observaciones',
     'occupation'         => 'Ocupación',
-    'occupied_area'      => 'Area ocupada (Ha)',
+    'occupied_area'      => 'Area ocupada m² (Ha)',
     'optional_fields'    => 'Campos opcionales',
     'other_phone_number' => 'Otro número de teléfono',
 /** O */

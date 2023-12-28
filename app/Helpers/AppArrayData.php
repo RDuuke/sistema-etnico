@@ -12,7 +12,7 @@ class AppArrayData
             ],
          [
             'id' => 2,
-            'value' => 'app.Afro'
+            'value' => 'app.afro'
         ]
     ];
 

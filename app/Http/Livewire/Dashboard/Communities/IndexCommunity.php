@@ -71,6 +71,7 @@ final class IndexCommunity extends Component {
     }
 
     public function save() {
+
         if ($this->add_community) {
             $this->validate(array_merge(
                 $this->rules,['community.name' => 'required|unique:communities,name']
