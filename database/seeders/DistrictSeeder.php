@@ -15,9 +15,9 @@ class DistrictSeeder extends Seeder
     public function run()
     {
         $data = [
-            ['id' => '1', 'name' => 'Corregimiento 1', 'municipality_id' => '1'],
-            ['id' => '2', 'name' => 'Corregimiento 2', 'municipality_id' => '2'],
-            ['id' => '3', 'name' => 'Corregimiento 3', 'municipality_id' => '3'],
+            ['id' => '1', 'name' => 'Puerto Claver', 'municipality_id' => '1'],
+            ['id' => '2', 'name' => 'San Juan de ité', 'municipality_id' => '2'],
+            ['id' => '3', 'name' => 'San Pablo', 'municipality_id' => '3'],
         ];
 
         District::upsert($data, ['id'], ['name'], ['municipality_id']);

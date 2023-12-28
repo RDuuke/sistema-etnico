@@ -15,9 +15,9 @@ class MunicipalitySeeder extends Seeder
     public function run()
     {
         $data = [
-            ['id' => '1', 'name' => 'Municipio 1'],
-            ['id' => '2', 'name' => 'Municipio 2'],
-            ['id' => '3', 'name' => 'Municipio 3'],
+            ['id' => '1', 'name' => 'El Bagre'],
+            ['id' => '2', 'name' => 'Remedios'],
+            ['id' => '3', 'name' => 'Támesis'],
         ];
 
         Municipality::upsert($data, ['id'], ['name']);
