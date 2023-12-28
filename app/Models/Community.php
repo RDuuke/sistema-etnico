@@ -77,4 +77,8 @@ class Community extends Model
         return $this->hasMany(ProtectedArea::class, 'community_id', 'id');
     }
     
+    public function getLastCensusFamiliesAttribute()
+    {
+        return $this->hasManyCensus()->latest('year')->first()->number_of_families ?? 'N/A';
+    }
 }
