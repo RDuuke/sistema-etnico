@@ -12,7 +12,8 @@ class GetAllCommunitiesTable extends LivewireDatatable
     public $model = Community::class;
     public $user;
 
-    public function builder() {
+    public function builder()
+    {
         $this->user = auth()->user();
         if (!is_null($this->user)) return $this->model::query()
             ->join('types_of_areas', 'communities.type_of_area_id', 'types_of_areas.id');
@@ -24,35 +25,43 @@ class GetAllCommunitiesTable extends LivewireDatatable
             ->whereIn('communities.id', $communities);
     }
 
-    public function columns() {
+    public function columns()
+    {
         return [
+            Column::name('type_community')
+                ->callback(['type_community'], function ($type_community) {
+                    return ($type_community == 1) ? 'Indígena' : 'Afro';
+                })
+                ->label(__('app.type_of_community')),
+
             Column::name('belongsToIndigenousVillage.name')
+                ->callback(['belongsToIndigenousVillage.name'], function ($village) {
+                    return ($village == "") ? 'No aplica' : $village;
+                })
                 ->label(__('app.village')),
 
             Column::name('reservation_name')
+                ->callback(['reservation_name'], function ($reservation_name) {
+                    return ($reservation_name == "") ? 'No aplica' : $reservation_name;
+                })
                 ->label(__('app.reservation_name')),
 
             Column::name('name')
+                ->callback(['name'], function ($name) {
+                    return ($name == "") ? 'No aplica' : $name;
+                })
                 ->label(__('app.name_community')),
 
             Column::name('belongsToMunicipality.name')
                 ->label(__('app.municipality')),
 
-            // Column::name('belongsToDistrict.name')
-            //     ->label(__('app.district')),
-
-            // Column::name('belongsToHamlet.name')
-            //     ->label(__('app.hamlet')),
 
             Column::name('belongsToSubregion.name')
                 ->label(__('app.subregion')),
-                
-            Column::name('belongsToTerritorial.name')
-                ->label(__('app.territorial')),
 
             Column::callback(['id'], function ($id) {
                 $administrator = is_null($this->user) ? false : true;
-                return view('livewire.dashboard.communities.actions.communities-table-actions', ['id' => $id, 'administrator' => $administrator ]);
+                return view('livewire.dashboard.communities.actions.communities-table-actions', ['id' => $id, 'administrator' => $administrator]);
             })
                 ->label(__('app.actions'))
                 ->unsortable()

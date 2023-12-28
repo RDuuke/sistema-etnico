@@ -74,7 +74,7 @@ final class IndexCommunity extends Component {
     }
 
     public function save() {
-        
+
         if ($this->add_community) {
             $this->validate(array_merge(
                 $this->rules,['community.name' => 'nullable|required_if:community.type_community,2|unique:communities,name']
@@ -104,6 +104,7 @@ final class IndexCommunity extends Component {
             ]);
 
         } catch (Exception $e) {
+            dd($e->getMessage());
                 return redirect()->back()->with('processResult', [
                     'status' => 0,
                     'message' => __('app.community_management_failure')
