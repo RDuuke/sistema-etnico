@@ -17,7 +17,7 @@
     $currentRouteName = Route::currentRouteName();
 @endphp
 
-@if(in_array($currentRouteName, ['afrocolombianos', 'geographical-portal', 'natives', 'home']))
+@if(in_array($currentRouteName, ['afrocolombianos', 'geographical-portal', 'natives', 'home', 'community']))
 <body style="background: white">
 @else
 <body style="background-image: url({{ asset('images/background-body.png')}})">

@@ -13,9 +13,8 @@
             <!-- Más imágenes si es necesario -->
         </div>
 
-        <!-- Botones de control -->
-        <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white p-1 text-gray-800">Anterior</button>
-        <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-1 text-gray-800">Siguiente</button>
+        <button id="prev" class="carousel-arrow left-arrow"></button>
+        <button id="next" class="carousel-arrow right-arrow right-0"></button>
     </div>
     <div>
         <h1 class="text-[2.5rem] text-center my-6 text-[#0B0B61]">
@@ -32,12 +31,29 @@
     <div class="grid grid-cols-4 gap-4">
         <div class="flex items-center flex-col">
             <img class="w-[80px]" src="{{ asset('images/natives/icons/nativo-americano_2.gif')}}" alt="">
-            <span class="text-[#0B0B61] text-2xl font-bold my-2">50</span>
+            <span class="text-[#0B0B61] text-2xl font-bold my-2">{{ App\Models\Community::where('type_community', 1)->count(); }}</span>
             <p class="text-2xl text-[#61A5E4]">No. Consejos</p>
         </div>
         <div class="flex items-center flex-col">
             <img class="w-[80px]" src="{{ asset('images/natives/icons/mapas.gif')}}" alt="">
-            <span class="text-[#0B0B61] text-2xl font-bold my-2">75</span>
+            <span class="text-[#0B0B61] text-2xl font-bold my-2">
+            {{ 
+                DB::table('communities')
+                    ->join('census', 'communities.id', '=', 'census.community_id')
+                    ->joinSub(
+                        DB::table('census')
+                            ->select('community_id', DB::raw('MAX(year) as latest_date'))
+                            ->groupBy('community_id'),
+                        'latest_census',
+                        function ($join) {
+                            $join->on('census.community_id', '=', 'latest_census.community_id')
+                                 ->on('census.year', '=', 'latest_census.latest_date');
+                        }
+                    )
+                    ->where('communities.type_community', 1)
+                    ->sum('census.number_of_families');
+                }}
+            </span>
             <p class="text-2xl text-[#61A5E4]">No. Familias</p>
         </div>
         <div class="flex items-center flex-col">
