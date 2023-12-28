@@ -14,7 +14,7 @@
             <a href="{{ route('home') }}"
                 class="sidebar__li {{ session('actualSection') == 'community_user' ? 'bg-project-sidebar' : '' }}">
                 <span
-                    class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Inicio{__('app.presentation')}}</span>
+                    class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Inicio</span>
                 <x-icons.left-arrown></x-icons.left-arrown>
             </a>
         </li>
