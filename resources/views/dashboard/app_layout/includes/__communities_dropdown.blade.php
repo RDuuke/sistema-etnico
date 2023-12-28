@@ -1,7 +1,12 @@
 <li x-data="{ openCommunity:false }">
     <button type="button" x-on:click="openCommunity = !openCommunity"
         class="sidebar__button  
-        {{ session('actualSection') == 'communities' || session('actualSection') == 'community_user' ? 'bg-project-sidebar' : '' }}"
+        {{ session('actualSection') == 'communities' 
+            || session('actualSection') == 'community_user'
+            || session('actualSection') == 'presentation'
+            || session('actualSection') == 'natives'
+            || session('actualSection') == 'afrocolombianos'
+             ? 'bg-project-sidebar' : '' }}"
         >
         <img src="{{ asset('images/sidebar/communities.png') }}" alt="">
         <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Comunidades</span>
@@ -12,7 +17,7 @@
     <ul class="py-1 ml-4 space-y-1" x-show="openCommunity" x-on:click.away="openCommunity = false">
         <li>
             <a href="{{ route('home') }}"
-                class="sidebar__li {{ session('actualSection') == 'community_user' ? 'bg-project-sidebar' : '' }}">
+                class="sidebar__li {{ session('actualSection') == 'presentation' ? 'bg-project-sidebar' : '' }}">
                 <span
                     class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">{{__('app.presentation')}}</span>
                 <x-icons.left-arrown></x-icons.left-arrown>
@@ -20,7 +25,7 @@
         </li>
         <li>
             <a href="{{ route('natives') }}"
-                class="sidebar__li {{ session('actualSection') == 'community_user' ? 'bg-project-sidebar' : '' }}">
+                class="sidebar__li {{ session('actualSection') == 'natives' ? 'bg-project-sidebar' : '' }}">
                 <span
                     class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">{{__('app.natives')}}</span>
                 <x-icons.left-arrown></x-icons.left-arrown>
@@ -28,7 +33,7 @@
         </li>
         <li>
             <a href="{{ route('afrocolombianos') }}"
-                class="sidebar__li {{ session('actualSection') == 'community_user' ? 'bg-project-sidebar' : '' }}">
+                class="sidebar__li {{ session('actualSection') == 'afrocolombianos' ? 'bg-project-sidebar' : '' }}">
                 <span
                     class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">{{__('app.afro-colombians')}}</span>
                 <x-icons.left-arrown></x-icons.left-arrown>

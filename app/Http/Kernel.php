@@ -78,6 +78,7 @@ class Kernel extends HttpKernel
     protected $routeMiddleware = [
         // ...
         'multi.auth' => \App\Http\Middleware\MultiAuthMiddleware::class,
+        'actualSection' => \App\Http\Middleware\ActualSectionMiddleware::class,
     ];
 
 }
