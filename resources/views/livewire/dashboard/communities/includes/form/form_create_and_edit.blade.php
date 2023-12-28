@@ -96,7 +96,7 @@
                     <label for="hamlet_id" class="label-form">{{__('app.hamlet')}}</label>
                     <select wire:model="community.hamlet_id" name="hamlet_id" class="select-form">
                         <option>{{ __('app.select_option') }}</option>
-                        @foreach($hamlets->where('district_id', $community['district_id'])->all() as $hamlet)
+                        @foreach($hamlets->where('municipality_id', $community['municipality_id'])->all() as $hamlet)
                         <option value="{{ $hamlet->id }}">
                             {{ $hamlet->name }}
                         </option>
@@ -109,7 +109,7 @@
                     <label for="subregion_id" class="label-form">{{__('app.subregion')}}</label>
                     <select wire:model="community.subregion_id" name="subregion_id" class="select-form">
                         <option>{{ __('app.select_option') }}</option>
-                        @foreach($subregions->where('hamlet_id', $community['hamlet_id'])->all() as $subregion)
+                        @foreach($subregions->where('municipality_id', $community['municipality_id'])->all() as $subregion)
                         <option value="{{ $subregion->id }}">
                             {{ $subregion->name }}
                         </option>
@@ -122,7 +122,7 @@
                     <label for="territorial_id" class="label-form">{{__('app.territorial')}}</label>
                     <select wire:model="community.territorial_id" name="territorial_id" class="select-form">
                         <option>{{ __('app.select_option') }}</option>
-                        @foreach($territorials->where('subregion_id', $community['subregion_id'])->all() as $territorial)
+                        @foreach($territorials->where('municipality_id', $community['municipality_id'])->all() as $territorial)
                         <option value="{{ $territorial->id }}">
                             {{ $territorial->name }}
                         </option>

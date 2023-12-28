@@ -12,11 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('communities', function (Blueprint $table) {
-            if (!Schema::hasColumn('communities', 'latitude')) {
-                $table->string('latitude')->after('longitude')->nullable();
-            }
-            if (Schema::hasColumn('communities', 'coordinates')) {
-                $table->renameColumn('coordinates', 'longitude');
+            if (Schema::hasColumn('communities', 'longitude')) {
+                $table->string('longitude')->nullable()->change();
             }
         });
     }
@@ -27,11 +24,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('communities', function (Blueprint $table) {
-            if (Schema::hasColumn('communities', 'latitude')) {
-                $table->dropColumn('latitude');
-            }
             if (Schema::hasColumn('communities', 'longitude')) {
-                $table->renameColumn('longitude', 'coordinates');
+                $table->string('longitude')->nullable(false)->change();
             }
         });
     }
