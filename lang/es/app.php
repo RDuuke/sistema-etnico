@@ -140,6 +140,8 @@ return [
 /** M */
 
 /** N */
+    'name_community'      => 'Nombre de la comunidad',
+
     'name'      => 'Nombre',
     'names'     => 'Nombres',
     'natives'    => 'Indigenas',

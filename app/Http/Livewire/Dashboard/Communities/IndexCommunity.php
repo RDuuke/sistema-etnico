@@ -74,14 +74,14 @@ final class IndexCommunity extends Component {
     }
 
     public function save() {
-
+        
         if ($this->add_community) {
             $this->validate(array_merge(
-                $this->rules,['community.name' => 'required|unique:communities,name']
+                $this->rules,['community.name' => 'nullable|required_if:community.type_community,2|unique:communities,name']
             ));
         } else {
             $this->validate(array_merge(
-                $this->rules,['community.name' => 'required|unique:communities,name,' . $this->community_id]
+                $this->rules,['community.name' => 'nullable|required_if:community.type_community,2|unique:communities,name,' . $this->community_id]
             ));
         }
 

@@ -14,20 +14,15 @@
             @error('community.type_community') <span class="error-form">{{ $message }}</span>@enderror
         </div>
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-            <div class="sm:col-span-3">
-                @if($community['type_community'] == 1)
-                    <label for="name" class="label-form">{{__('app.community_name')}}</label>
-                    <input type="text" name="name" wire:model="community.name" placeholder="{{__('app.community_name')}}" class="input-form">
-                    @error('community.name') <span class="error-form">{{ $message }}</span>@enderror
-                @endif
-                @if($community['type_community'] == 2)
-                    <label for="name" class="label-form">{{__('app.name_community_council')}}</label>
-                    <input type="text" name="name" wire:model="community.name" placeholder="{{__('app.name_community_council')}}" class="input-form">
-                    @error('community.name') <span class="error-form">{{ $message }}</span>@enderror
-                @endif
-            </div>
 
             @if($community['type_community'] != 0)
+                <div class="sm:col-span-3">
+                    <label for="name" class="label-form">@if($community['type_community'] == 1){{__('app.community_name')}}@else{{__('app.name_community_council')}}@endif</label>
+                    <input type="text" name="name" wire:model="community.name"
+                        placeholder="@if($community['type_community'] == 1){{__('app.community_name')}}@else{{__('app.name_community_council')}}@endif"
+                        class="input-form">
+                    @error('community.name') <span class="error-form">{{ $message }}</span>@enderror
+                </div>
                 @if($community['type_community'] == 1)
                     <div class="sm:col-span-3">
                         <label for="reservation_name" class="label-form">{{__('app.reservation_name')}}</label>
@@ -36,7 +31,7 @@
                         @error('community.reservation_name') <span class="error-form">{{ $message }}</span>@enderror
                     </div>
                     <div class="sm:col-span-3">
-                        <label for="indigenous_village_id" class="label-form">{{__('app.indigenous_village_id')}}</label>
+                        <label for="indigenous_village_id" class="label-form">{{__('app.village')}}</label>
                         <select wire:model="community.indigenous_village_id" name="indigenous_village_id" class="select-form">
                             <option>{{ __('app.select_option') }}</option>
                             @foreach($indigenousVillages as $indigenous_village)

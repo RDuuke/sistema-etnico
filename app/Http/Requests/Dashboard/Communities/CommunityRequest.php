@@ -5,8 +5,8 @@ final class CommunityRequest {
 
     public static function rules() {
         return  [
-            'community.name'                    => 'required',
             'community.type_community'          => 'required',
+            'community.name'                    => 'nullable|required_if:community.type_community,2',
             'community.contact_phone'           => 'required',            
             'community.contact_email'           => 'required|email:rfc|regex:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/',            
             'community.type_of_area_id'         => 'required|numeric',            
@@ -15,8 +15,8 @@ final class CommunityRequest {
             'community.latitude'                => 'nullable|regex:/^[-0-9.]+$/',
             'community.territorial_id'          => 'required|numeric',            
             'community.subregion_id'            => 'required|numeric',        
-            'community.hamlet_id'               => 'required|numeric',        
-            'community.district_id'             => 'required|numeric',        
+            'community.hamlet_id'               => 'nullable',        
+            'community.district_id'             => 'nullable',        
             'community.municipality_id'         => 'required|numeric',
 
             /**Optionals */

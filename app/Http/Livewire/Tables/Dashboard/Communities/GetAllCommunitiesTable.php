@@ -29,17 +29,20 @@ class GetAllCommunitiesTable extends LivewireDatatable
             Column::name('belongsToIndigenousVillage.name')
                 ->label(__('app.village')),
 
+            Column::name('reservation_name')
+                ->label(__('app.reservation_name')),
+
             Column::name('name')
-                ->label(__('app.name')),
+                ->label(__('app.name_community')),
 
             Column::name('belongsToMunicipality.name')
                 ->label(__('app.municipality')),
 
-            Column::name('belongsToDistrict.name')
-                ->label(__('app.district')),
+            // Column::name('belongsToDistrict.name')
+            //     ->label(__('app.district')),
 
-            Column::name('belongsToHamlet.name')
-                ->label(__('app.hamlet')),
+            // Column::name('belongsToHamlet.name')
+            //     ->label(__('app.hamlet')),
 
             Column::name('belongsToSubregion.name')
                 ->label(__('app.subregion')),
