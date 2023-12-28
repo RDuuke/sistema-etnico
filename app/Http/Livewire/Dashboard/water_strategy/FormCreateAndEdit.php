@@ -6,6 +6,7 @@ namespace App\Http\Livewire\Dashboard\water_strategy;
 
 use App\Http\Requests\Dashboard\WaterStrategies\WaterStrategyRequest;
 use App\Models\Community;
+use App\Models\TypeWaterStrategy;
 use App\Models\WaterStrategy;
 use App\Repository\WaterStrategiesRepository;
 use Exception;
@@ -19,7 +20,7 @@ final class FormCreateAndEdit extends Component
     public $community;
     public $water_strategy;
     public $water_strategy_id;
-    public $types_programs;
+    public $types_water_strategies;
 
     protected array $rules;
     protected $messages;
@@ -46,10 +47,11 @@ final class FormCreateAndEdit extends Component
         $this->water_strategy_id    = $water_strategy_id;
 
         if ($this->water_strategy_id) {
-            $this->add_water_strategy      = false;
-            $this->edit_water_strategy     = true;
-            $this->water_strategy          = WaterStrategy::find($this->water_strategy_id);
+            $this->add_water_strategy           = false;
+            $this->edit_water_strategy          = true;
+            $this->water_strategy               = WaterStrategy::find($this->water_strategy_id);
         }
+        $this->types_water_strategies    = TypeWaterStrategy::all();
            
     }
 
