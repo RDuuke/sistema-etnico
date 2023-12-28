@@ -110,6 +110,7 @@ return [
 /** H */
     'hamlet'    => 'Vereda',
     'hamlets'   => 'Veredas',
+    'housing_with_service'   => 'Viviendas con el servicio',
 /** H */
 
 /** I */
@@ -214,6 +215,7 @@ return [
     'septic_tank_date'      => 'Año (Alcantarillado)',
     'septic_tank_status'    => 'Estado (Alcantarillado)',
     'strategies_and_programs_for_community_strengthening'    => 'Estrategias y programas para el fortalecimiento comunitario',
+    'state' => 'Estado',
 /** S */
 
 /** T */
@@ -230,6 +232,7 @@ return [
     "types_of_areas"    => 'Tipos de áreas',
     "type_of_program"   => 'Tipo de programa',
     "types_of_programs" => 'Tipos de programas',
+    "type_of_strategy"  => 'Tipos de estrategia',
 /** T */
 
 /** U */

@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
                 TerritorialSeeder::class,
                 TypeProgramSeeder::class,
                 IndigenousVillageSeeder::class,
+                TypesWaterStrategySeeder::class,
             ]
         );
     }
