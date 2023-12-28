@@ -26,8 +26,12 @@ class GetAllCommunitiesTable extends LivewireDatatable
 
     public function columns() {
         return [
+            Column::name('belongsToIndigenousVillage.name')
+                ->label(__('app.village')),
+
             Column::name('name')
                 ->label(__('app.name')),
+
             Column::name('belongsToMunicipality.name')
                 ->label(__('app.municipality')),
 

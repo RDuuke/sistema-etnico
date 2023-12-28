@@ -116,6 +116,7 @@ return [
     'incorrect_username_and_or_password' => 'Usuario y/o contraseña incorrectos',
 
     'indigenous'    => 'Indígena',
+    'village'       => 'Pueblo',
     'internal_user' => 'Usuarios internos',
 /** I */
 

@@ -36,10 +36,16 @@
                         @error('community.reservation_name') <span class="error-form">{{ $message }}</span>@enderror
                     </div>
                     <div class="sm:col-span-3">
-                        <label for="town_name" class="label-form">{{__('app.town_name')}}</label>
-                        <input type="text" name="town_name" wire:model="community.town_name" placeholder="{{__('app.town_name')}}"
-                            class="input-form">
-                        @error('community.town_name') <span class="error-form">{{ $message }}</span>@enderror
+                        <label for="indigenous_village_id" class="label-form">{{__('app.indigenous_village_id')}}</label>
+                        <select wire:model="community.indigenous_village_id" name="indigenous_village_id" class="select-form">
+                            <option>{{ __('app.select_option') }}</option>
+                            @foreach($indigenousVillages as $indigenous_village)
+                            <option value="{{ $indigenous_village->id }}">
+                                {{ $indigenous_village->name }}
+                            </option>
+                            @endforeach
+                        </select>
+                        @error('community.indigenous_village_id') <span class="error-form">{{ $message }}</span>@enderror
                     </div>
                 @endif
 

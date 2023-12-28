@@ -21,7 +21,7 @@ final class CommunityRequest {
 
             /**Optionals */
             'community.reservation_name'        => 'nullable|required_if:community.type_community,1',
-            'community.town_name'               => 'nullable|required_if:community.type_community,1',
+            'community.indigenous_village_id'   => 'nullable|required_if:community.type_community,1',
             'community.collective_title'        => 'nullable|required_if:community.type_community,2',
         ];
     }

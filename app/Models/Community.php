@@ -28,7 +28,7 @@ class Community extends Model
         /**Optionals */
         'collective_title',
         'reservation_name',
-        'town_name',
+        'indigenous_village_id',
 
     ];
 
@@ -75,6 +75,10 @@ class Community extends Model
 
     public function hasManyProtectedAreas() {
         return $this->hasMany(ProtectedArea::class, 'community_id', 'id');
+    }
+
+    public function belongsToIndigenousVillage() {
+        return $this->belongsTo(IndigenousVillage::class, 'indigenous_village_id', 'id');
     }
     
 }

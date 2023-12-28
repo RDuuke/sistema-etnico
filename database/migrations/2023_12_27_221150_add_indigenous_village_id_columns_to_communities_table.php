@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -12,8 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('communities', function (Blueprint $table) {
-             if(! Schema::hasColumn('communities', 'indigenous_village_id')) {
-                $table->foreignId('indigenous_village_id')->after('id')->constrained('indigenous_villages')->cascadeOnDelete()->cascadeOnUpdate();
+            if (!Schema::hasColumn('communities', 'indigenous_village_id')) {
+                $table->foreignId('indigenous_village_id')->after('id')->nullable()->constrained('indigenous_villages')->cascadeOnDelete()->cascadeOnUpdate();
+            }
+            if (Schema::hasColumn('communities', 'town_name')) {
+                $table->dropColumn('town_name');
             }
         });
     }
@@ -24,9 +27,12 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('communities', function (Blueprint $table) {
-            if(Schema::hasColumn('communities', 'indigenous_village_id')) {
+            if (Schema::hasColumn('communities', 'indigenous_village_id')) {
                 $table->dropForeign('communities_indigenous_village_id_foreign');
                 $table->dropColumn('indigenous_village_id');
+            }
+            if (!Schema::hasColumn('communities', 'town_name')) {
+                $table->string('name');
             }
         });
     }

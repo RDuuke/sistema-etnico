@@ -26,7 +26,7 @@ final class CommunityRepository {
             'municipality_id'           => $data['municipality_id'],           
             'collective_title'          => $data['collective_title'],           
             'reservation_name'          => ucfirst(strtolower($data['reservation_name'])),           
-            'town_name'                 => ucfirst(strtolower($data['town_name'])),       
+            'indigenous_village_id'                 => ucfirst(strtolower($data['indigenous_village_id'])),       
         ]);
         } catch (Exception $e) {
             dd($e->getMessage());
@@ -51,7 +51,7 @@ final class CommunityRepository {
             'municipality_id'           => $data['municipality_id'],
             'collective_title'          => $data['collective_title'],
             'reservation_name'          => ucfirst(strtolower($data['reservation_name'])),
-            'town_name'                 => ucfirst(strtolower($data['town_name'])),       
+            'indigenous_village_id'                 => ucfirst(strtolower($data['indigenous_village_id'])),       
         ]);
         $community->refresh();
         return $community;

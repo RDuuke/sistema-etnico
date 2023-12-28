@@ -13,5 +13,9 @@ class IndigenousVillage extends Model
     protected $fillable = [
         'name',
     ];
+
+    public function hasManyCommunities() {
+        return $this->hasMany(Community::class, 'indigenous_village_id', 'id');
+    }
   
 }
