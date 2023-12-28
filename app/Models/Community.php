@@ -81,4 +81,8 @@ class Community extends Model
         return $this->belongsTo(IndigenousVillage::class, 'indigenous_village_id', 'id');
     }
     
+    public function getLastCensusFamiliesAttribute()
+    {
+        return $this->hasManyCensus()->latest('year')->first()->number_of_families ?? 'N/A';
+    }
 }

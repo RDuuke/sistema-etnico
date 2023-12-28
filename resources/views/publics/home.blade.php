@@ -2,10 +2,10 @@
 @section('content')
 <div class="mx-6 py-6 sm:px-6 lg:px-10">
     <div class="flex justify-center">
-        <a href="">
+        <a href="{{ route('afrocolombianos') }}">
             <img class="logo-circle" src="{{ asset('images/home/afros.png') }}" alt="">
         </a>
-        <a href="">
+        <a href="{{ route('natives') }}">
             <img class="logo-circle" height="150" src="{{ asset('images/home/indigena.png') }}" alt="">
         </a>
     </div>
