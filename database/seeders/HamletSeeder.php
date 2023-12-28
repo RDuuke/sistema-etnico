@@ -15,12 +15,12 @@ class HamletSeeder extends Seeder
     public function run()
     {
         $data = [
-            ['id' => '1', 'name' => 'Vereda 1', 'district_id' => '1'],
-            ['id' => '2', 'name' => 'Vereda 2', 'district_id' => '2'],
-            ['id' => '3', 'name' => 'Vereda 3', 'district_id' => '3'],
+            ['id' => '1', 'municipality_id' => '1', 'name' => 'Vereda 1', 'district_id' => '1'],
+            ['id' => '2', 'municipality_id' => '2', 'name' => 'Vereda 2', 'district_id' => '2'],
+            ['id' => '3', 'municipality_id' => '3', 'name' => 'Vereda 3', 'district_id' => '3'],
         ];
 
-        Hamlet::upsert($data, ['id'], ['name'], ['district_id']);
+        Hamlet::upsert($data, ['id'], ['municipality_id'], ['name'], ['district_id']);
             
     }
 }

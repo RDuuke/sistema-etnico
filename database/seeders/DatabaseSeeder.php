@@ -29,7 +29,8 @@ class DatabaseSeeder extends Seeder
                 HamletSeeder::class,
                 SubregionSeeder::class,
                 TerritorialSeeder::class,
-                TypeProgramSeeder::class
+                TypeProgramSeeder::class,
+                IndigenousVillageSeeder::class,
             ]
         );
     }

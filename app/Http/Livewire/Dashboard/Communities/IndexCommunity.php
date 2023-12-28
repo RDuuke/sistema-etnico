@@ -8,6 +8,7 @@ use App\Http\Requests\Dashboard\Communities\CommunityRequest;
 use App\Models\Community;
 use App\Models\District;
 use App\Models\Hamlet;
+use App\Models\IndigenousVillage;
 use App\Models\Municipality;
 use App\Models\Subregion;
 use App\Models\Territorial;
@@ -33,6 +34,7 @@ final class IndexCommunity extends Component {
     public $community_id = null;
     public Community $community;
     public $administrator;
+    public $indigenousVillages;
 
 
     protected array $rules;
@@ -64,6 +66,7 @@ final class IndexCommunity extends Component {
         $this->subregions     = Subregion::all();
         $this->territorials   = Territorial::all();
         $this->types_of_ares  = TypeArea::all();
+        $this->indigenousVillages = IndigenousVillage::all();
 
         $this->community      = new Community();
         $this->emit('my-event');
@@ -71,13 +74,14 @@ final class IndexCommunity extends Component {
     }
 
     public function save() {
+        
         if ($this->add_community) {
             $this->validate(array_merge(
-                $this->rules,['community.name' => 'required|unique:communities,name']
+                $this->rules,['community.name' => 'nullable|required_if:community.type_community,2|unique:communities,name']
             ));
         } else {
             $this->validate(array_merge(
-                $this->rules,['community.name' => 'required|unique:communities,name,' . $this->community_id]
+                $this->rules,['community.name' => 'nullable|required_if:community.type_community,2|unique:communities,name,' . $this->community_id]
             ));
         }
 

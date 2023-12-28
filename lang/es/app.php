@@ -116,6 +116,7 @@ return [
     'incorrect_username_and_or_password' => 'Usuario y/o contraseña incorrectos',
 
     'indigenous'    => 'Indígena',
+    'village'       => 'Pueblo',
     'internal_user' => 'Usuarios internos',
 /** I */
 
@@ -128,6 +129,8 @@ return [
 /** L */
     'logout' => 'Cerrar sesión',
     'login'  => 'Iniciar sesión',
+    'longitude' => 'Longitud',
+    'latitude' => 'Latitud',
 /** L */
 
 /** M */
@@ -137,6 +140,8 @@ return [
 /** M */
 
 /** N */
+    'name_community'      => 'Nombre de la comunidad',
+
     'name'      => 'Nombre',
     'names'     => 'Nombres',
     'natives'    => 'Indigenas',
@@ -149,7 +154,7 @@ return [
 /** O */
     'observations'       => 'Observaciones',
     'occupation'         => 'Ocupación',
-    'occupied_area'      => 'Area ocupada (Ha)',
+    'occupied_area'      => 'Area ocupada m² (Ha)',
     'optional_fields'    => 'Campos opcionales',
     'other_phone_number' => 'Otro número de teléfono',
 /** O */

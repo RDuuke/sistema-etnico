@@ -4,11 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Community extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory;
 
     protected $table = 'communities';
     protected $fillable = [
@@ -18,7 +17,8 @@ class Community extends Model
         'contact_email',
         'type_of_area_id',
         'occupied_area',
-        'coordinates',
+        'longitude',
+        'latitude',
         'territorial_id',
         'subregion_id',
         'hamlet_id',
@@ -28,7 +28,7 @@ class Community extends Model
         /**Optionals */
         'collective_title',
         'reservation_name',
-        'town_name',
+        'indigenous_village_id',
 
     ];
 
@@ -75,6 +75,10 @@ class Community extends Model
 
     public function hasManyProtectedAreas() {
         return $this->hasMany(ProtectedArea::class, 'community_id', 'id');
+    }
+
+    public function belongsToIndigenousVillage() {
+        return $this->belongsTo(IndigenousVillage::class, 'indigenous_village_id', 'id');
     }
     
     public function getLastCensusFamiliesAttribute()
