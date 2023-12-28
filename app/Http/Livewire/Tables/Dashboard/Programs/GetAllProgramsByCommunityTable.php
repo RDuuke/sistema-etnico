@@ -25,11 +25,11 @@ class GetAllProgramsByCommunityTable extends LivewireDatatable
             Column::name('belongsToTypeProgram.name')
             ->label(__('app.type_of_program')),
 
-            Column::name('which')
-            ->callback(['which', 'belongsToTypeProgram.name'], function ($which, $typeProgram) {
-                return !empty($which) ? $which : $typeProgram;
-            })
-            ->label('¿' . __('app.which') . '?' ),
+            // Column::name('which')
+            // ->callback(['which', 'belongsToTypeProgram.name'], function ($which, $typeProgram) {
+            //     return !empty($which) ? $which : $typeProgram;
+            // })
+            // ->label('¿' . __('app.which') . '?' ),
 
             Column::name('apply')
             ->callback(['apply'], function ($apply) {
@@ -49,11 +49,11 @@ class GetAllProgramsByCommunityTable extends LivewireDatatable
             })
             ->label(__('app.amount_of_participants')),
 
-            Column::name('observations')
-            ->callback(['observations'], function ($observations) {
-                return !empty($observations) ? $observations : self::DOES_NOT_APPLY;
-            })
-            ->label(__('app.observations')),
+            // Column::name('observations')
+            // ->callback(['observations'], function ($observations) {
+            //     return !empty($observations) ? $observations : self::DOES_NOT_APPLY;
+            // })
+            // ->label(__('app.observations')),
 
             Column::callback(['id'], function ($id) {
                 return view('livewire.dashboard.programs.actions.programs-table-actions', ['community_id' => $this->community_id, 'id' => $id]);
